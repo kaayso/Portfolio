@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'muli';
+  font-weight: normal;
+  font-style: normal;
+  src: local("Muli"), url(./fonts/muli/Muli-Regular.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'muli-bold';
+  font-weight: bold;
+  font-style: normal;
+  src: local("Muli"), url(./fonts/muli/Muli-Bold.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'muli-light';
+  font-weight: normal;
+  font-style: normal;
+  src: local("Muli"), url(./fonts/muli/Muli-Light.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'muli-extra-light';
+  font-weight: normal;
+  font-style: normal;
+  src: local("Muli"), url(./fonts/muli/Muli-ExtraLight.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'raleway';
+  font-weight: normal;
+  font-style: normal;
+  src: local("raleway"), url(./fonts/raleway/Raleway-Regular.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'raleway-bold';
+  font-weight: normal;
+  font-style: normal;
+  src: local("raleway"), url(./fonts/raleway/Raleway-Bold.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'raleway-light';
+  font-weight: normal;
+  font-style: normal;
+  src: local("raleway"), url(./fonts/raleway/Raleway-Light.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'raleway-extra-light';
+  font-weight: normal;
+  font-style: normal;
+  src: local("raleway"), url(./fonts/raleway/Raleway-ExtraLight.ttf) format("opentype"); }

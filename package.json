@@ -1,0 +1,45 @@
+{
+  "name": "cv-web-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.8.2",
+    "@material-ui/icons": "^4.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "dotenv": "^8.2.0",
+    "node-sass-chokidar": "^1.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "3.3.0"
+  },
+  "scripts": {
+    "start": "npm-run-all -p watch-scss start-js ",
+    "watch-scss": "node-sass-chokidar ./src -o ./src --watch --recursive",
+    "start-js": "react-scripts start",
+    "build-css": "node-sass-chokidar ./src -o ./src",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
