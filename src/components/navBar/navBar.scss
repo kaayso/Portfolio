@@ -1,11 +1,64 @@
-.navBar{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #181826;
-    height: 80px;
+.navBar.MuiToolbar-root{
+    background-image: url('../../assets/images/menu_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: 'muli';
     color: #fff;
     text-transform: uppercase;
+    height: 15em;
+    margin-top: -5em;
+    padding-top: 1.5em;
+}
+.appBar.MuiPaper-elevation4{
+    background-color: transparent;
+    box-shadow: none;
+}
+.navBar__logo {
+    height: 5em;
+    max-width: 21em;
+}
+
+.navBar__btn .MuiButton-label{
+    color: #969696;
+    text-transform: uppercase;
+    font-family: 'muli';
+
+    &:hover {
+        color: #fff;
+    }
+}
+.MuiButton-root.navBar__btn{
+    min-width: 29px;
+    padding: 4px 20px;
+}
+
+.navBar__logo--mobile{
+    height: 6em;
+    margin-top: 1em;
+
+}
+
+.navBar__drawer-content{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navBar__drawer-btn span{
+    color: "#323030";
+    font-family: 'muli';
+    text-transform: uppercase;
+    font-size: .9em;
+}
+
+.navBar__drawer-icon {
+    margin-right: .7em;
+    color: #969696;
+}
+
+.navBar__logo--mobile--drawer{
+    height: 8em;
+    margin: 1em auto; 
+    width: 8em;
 }
