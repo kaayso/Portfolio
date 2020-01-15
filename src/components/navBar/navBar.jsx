@@ -17,6 +17,7 @@ import AccountCircle from "@material-ui/icons/Work";
 import CodeRounded from "@material-ui/icons/CodeRounded";
 import ContactMail from "@material-ui/icons/ContactSupportRounded";
 import Divider from "@material-ui/core/Divider";
+import LightSpeed from "react-reveal/LightSpeed";
 
 // Used only for media queries
 const useStyles = makeStyles(theme => ({
@@ -76,10 +77,15 @@ export default function NavBar(props) {
       <div className={classes.sectionDesktop}>
         <AppBar position="fixed" className="appBar">
           <Toolbar className="navBar">
-            <Button href="/">
-              <img className="navBar__logo" src={Logo} alt="Faycel Benyoussa" />
-            </Button>
-
+            <LightSpeed>
+              <Button href="/">
+                <img
+                  className="navBar__logo"
+                  src={Logo}
+                  alt="Faycel Benyoussa"
+                />
+              </Button>
+            </LightSpeed>
             <div className="navBar__btn-container">
               {["présentation", "curriculum vitae", "projets", "contact"].map(
                 text => (
@@ -107,15 +113,17 @@ export default function NavBar(props) {
               color="inherit"
               aria-label="menu"
             >
-              <MenuIcon />
+              <MenuIcon className="navBar_menuIcon" />
             </IconButton>
-            <Button href="/">
-              <img
-                className="navBar__logo--mobile"
-                src={BFLogo}
-                alt="Faycel Benyoussa"
-              />
-            </Button>
+            <LightSpeed>
+              <Button href="/">
+                <img
+                  className="navBar__logo--mobile"
+                  src={BFLogo}
+                  alt="Faycel Benyoussa"
+                />
+              </Button>
+            </LightSpeed>
           </Toolbar>
           <Drawer open={openLeft} onClose={toggleDrawer(false)}>
             <div

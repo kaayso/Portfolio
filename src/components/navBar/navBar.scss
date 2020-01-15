@@ -51,16 +51,22 @@
     color: "#323030";
     font-family: 'muli';
     text-transform: uppercase;
-    font-size: .9em;
+    font-size: .8em;
 }
 
 .navBar__drawer-icon {
     margin-right: .7em;
     color: #969696;
+    padding: .08em;
 }
 
 .navBar__logo--mobile--drawer{
     height: 8em;
     margin: 1em auto; 
     width: 8em;
+}
+
+.navBar_menuIcon.MuiSvgIcon-root{
+    width: 1.5em;
+    height: 1.5em;
 }
