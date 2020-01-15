@@ -23,9 +23,7 @@ const useStyles = makeStyles(theme => ({
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between"
+      display: "flex"
     },
     flexGrow: 1,
     paddingLeft: "6em",
@@ -33,8 +31,6 @@ const useStyles = makeStyles(theme => ({
   },
   sectionMobile: {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
     [theme.breakpoints.up("md")]: {
       display: "none"
     },
@@ -77,85 +73,88 @@ export default function NavBar(props) {
 
   return (
     <Fragment>
-      <AppBar position="fixed" className="appBar">
-        <Toolbar className={[classes.sectionDesktop, "navBar"]}>
-          <Button href="/">
-            <img className="navBar__logo" src={Logo} alt="Faycel Benyoussa" />
-          </Button>
+      <div className={classes.sectionDesktop}>
+        <AppBar position="fixed" className="appBar">
+          <Toolbar className="navBar">
+            <Button href="/">
+              <img className="navBar__logo" src={Logo} alt="Faycel Benyoussa" />
+            </Button>
 
-          <div className="navBar__btn-container">
-            {["présentation", "curriculum vitae", "projets", "contact"].map(
-              text => (
-                <Button
-                  key={text}
-                  href={`${text
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f-\s]/g, "")}`}
-                  size="small"
-                  className="navBar__btn"
-                >
-                  {text}
-                </Button>
-              )
-            )}
-          </div>
-        </Toolbar>
-      </AppBar>
-
-      <AppBar position="relative" className="appBar">
-        <Toolbar className={[classes.sectionMobile, "navBar"]}>
-          <IconButton
-            onClick={toggleDrawer(true)}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Button href="/">
-            <img
-              className="navBar__logo--mobile"
-              src={BFLogo}
-              alt="Faycel Benyoussa"
-            />
-          </Button>
-        </Toolbar>
-        <Drawer open={openLeft} onClose={toggleDrawer(false)}>
-          <div
-            className="navBar__drawer-content"
-            role="presentation"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
-          >
-            <img
-              className="navBar__logo--mobile--drawer"
-              src={BFLogo}
-              alt="Faycel Benyoussa"
-            />
-            <Divider />
-            <List>
+            <div className="navBar__btn-container">
               {["présentation", "curriculum vitae", "projets", "contact"].map(
-                (text, index) => (
-                  <ListItem
-                    onClick={() =>
-                      `location.href='${(window.location.href = text
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f-\s]/g, ""))}`
-                    }
-                    button
+                text => (
+                  <Button
                     key={text}
+                    href={`${text
+                      .normalize("NFD")
+                      .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                    size="small"
+                    className="navBar__btn"
                   >
-                    {getIcon(index)}
-                    <ListItemText
-                      className="navBar__drawer-btn"
-                      primary={text}
-                    />
-                  </ListItem>
+                    {text}
+                  </Button>
                 )
               )}
-            </List>
-          </div>
-        </Drawer>
-      </AppBar>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+      <div className={classes.sectionMobile}>
+        <AppBar position="relative" className="appBar">
+          <Toolbar className="navBar">
+            <IconButton
+              onClick={toggleDrawer(true)}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Button href="/">
+              <img
+                className="navBar__logo--mobile"
+                src={BFLogo}
+                alt="Faycel Benyoussa"
+              />
+            </Button>
+          </Toolbar>
+          <Drawer open={openLeft} onClose={toggleDrawer(false)}>
+            <div
+              className="navBar__drawer-content"
+              role="presentation"
+              onClick={toggleDrawer(false)}
+              onKeyDown={toggleDrawer(false)}
+            >
+              <img
+                className="navBar__logo--mobile--drawer"
+                src={BFLogo}
+                alt="Faycel Benyoussa"
+              />
+              <Divider />
+              <List>
+                {["présentation", "curriculum vitae", "projets", "contact"].map(
+                  (text, index) => (
+                    <ListItem
+                      onClick={() =>
+                        `location.href='${(window.location.href = text
+                          .normalize("NFD")
+                          .replace(/[\u0300-\u036f-\s]/g, ""))}`
+                      }
+                      button
+                      key={text}
+                    >
+                      {getIcon(index)}
+                      <ListItemText
+                        className="navBar__drawer-btn"
+                        primary={text}
+                      />
+                    </ListItem>
+                  )
+                )}
+              </List>
+            </div>
+          </Drawer>
+        </AppBar>
+      </div>
     </Fragment>
   );
 }
