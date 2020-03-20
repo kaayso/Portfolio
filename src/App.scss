@@ -1,0 +1,21 @@
+#app-root{
+    position: relative;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.g-scroll {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    // For Chrome in Mac
+    -webkit-overflow-scrolling: touch;
+    }
+
+
+    #curriculumvitae{
+        background-color: #fff;
+    }

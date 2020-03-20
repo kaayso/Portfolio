@@ -1,0 +1,23 @@
+#presentation{
+    min-height: calc(100vh - 10em);
+    width: 100%;
+    padding-top: 5em;
+    position: relative;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-image: linear-gradient(to right bottom, #fd746c, #fe7b6a, #ff8269, #ff8968, #ff9068);
+}
+
+#curve{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#t-pink{
+    width: 50%;
+    margin-top: 150px;
+}

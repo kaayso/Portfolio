@@ -17,7 +17,6 @@ import AccountCircle from "@material-ui/icons/Work";
 import CodeRounded from "@material-ui/icons/CodeRounded";
 import ContactMail from "@material-ui/icons/ContactSupportRounded";
 import Divider from "@material-ui/core/Divider";
-import LightSpeed from "react-reveal/LightSpeed";
 
 // Used only for media queries
 const useStyles = makeStyles(theme => ({
@@ -77,21 +76,15 @@ export default function NavBar(props) {
       <div className={classes.sectionDesktop}>
         <AppBar position="fixed" className="appBar">
           <Toolbar className="navBar">
-            <LightSpeed>
-              <Button href="/">
-                <img
-                  className="navBar__logo"
-                  src={Logo}
-                  alt="Faycel Benyoussa"
-                />
-              </Button>
-            </LightSpeed>
+            <Button href="/">
+              <img className="navBar__logo" src={Logo} alt="Faycel Benyoussa" />
+            </Button>
             <div className="navBar__btn-container">
               {["présentation", "curriculum vitae", "projets", "contact"].map(
                 text => (
                   <Button
                     key={text}
-                    href={`${text
+                    href={`#${text
                       .normalize("NFD")
                       .replace(/[\u0300-\u036f-\s]/g, "")}`}
                     size="small"
@@ -115,15 +108,13 @@ export default function NavBar(props) {
             >
               <MenuIcon className="navBar_menuIcon" />
             </IconButton>
-            <LightSpeed>
-              <Button href="/">
-                <img
-                  className="navBar__logo--mobile"
-                  src={BFLogo}
-                  alt="Faycel Benyoussa"
-                />
-              </Button>
-            </LightSpeed>
+            <Button href="/">
+              <img
+                className="navBar__logo--mobile"
+                src={BFLogo}
+                alt="Faycel Benyoussa"
+              />
+            </Button>
           </Toolbar>
           <Drawer open={openLeft} onClose={toggleDrawer(false)}>
             <div
@@ -141,20 +132,19 @@ export default function NavBar(props) {
               <List>
                 {["présentation", "curriculum vitae", "projets", "contact"].map(
                   (text, index) => (
-                    <ListItem
-                      onClick={() =>
-                        `location.href='${(window.location.href = text
+                    <ListItem button key={text}>
+                      <a
+                        href={`#${text
                           .normalize("NFD")
-                          .replace(/[\u0300-\u036f-\s]/g, ""))}`
-                      }
-                      button
-                      key={text}
-                    >
-                      {getIcon(index)}
-                      <ListItemText
-                        className="navBar__drawer-btn"
-                        primary={text}
-                      />
+                          .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                        className="navBar__drawer-link"
+                      >
+                        {getIcon(index)}
+                        <ListItemText
+                          className="navBar__drawer-btn"
+                          primary={text}
+                        />
+                      </a>
                     </ListItem>
                   )
                 )}
