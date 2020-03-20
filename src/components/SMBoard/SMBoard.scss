@@ -1,0 +1,71 @@
+.social-media-board{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    z-index: 1;
+}
+
+.social-media-board__phone{
+    height: 34px;
+    width: 34px;
+    margin: 5px 5px 10px 10px;;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        svg{
+            path:nth-child(1){
+                fill:  #202235;
+            }
+        }
+    }
+}
+
+.social-media-board__email{
+    height: 34px;
+    width: 34px;
+    margin: 5px 5px 10px 10px;;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+
+        svg{
+            path:nth-child(1){
+                fill:  #202235;
+            }
+        }
+    }
+}
+
+.social-media-board__github{
+    height: 34px;
+    width: 34px;
+    margin: 5px 5px 10px 10px;;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+
+        svg{
+            path{
+                fill: #202235;
+            }
+        }
+    }
+
+}
+
+.social-media-board__linkedIN{
+    height: 34px;
+    width: 34px;
+    margin: 5px 5px 10px 10px;;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+
+        svg{
+            path:nth-child(1){
+                fill:  #202235;
+            }
+        }
+    }
+}
+

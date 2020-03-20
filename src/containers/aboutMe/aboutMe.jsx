@@ -1,10 +1,11 @@
-import React from "react";
 import "./aboutMe.css";
+import React from "react";
+import SMBoard from "components/SMBoard/SMBoard";
 
 export default function AboutMe() {
   return (
     <section id="presentation">
-      <div>zedezf</div>
+      <SMBoard />
 
       <svg xmlns="http://www.w3.org/2000/svg" id="curve" viewBox="0 0 1800 279">
         <path
