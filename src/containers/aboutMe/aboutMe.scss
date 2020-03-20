@@ -1,5 +1,5 @@
 #presentation{
-    min-height: calc(100vh - 10em);
+    min-height: 100vh;
     width: 100%;
     padding-top: 5em;
     position: relative;
@@ -7,7 +7,7 @@
     background-size: cover;
     background-repeat:no-repeat;
     background-position:center;
-    background-image: linear-gradient(to right bottom, #fd746c, #fe7b6a, #ff8269, #ff8968, #ff9068);
+    background-image: linear-gradient(180deg, rgba(255, 201, 63, 0.43) 23.96%, rgba(250, 100, 154, 0.43) 73.44%, rgba(254, 54, 54, 0.43) 99%, rgba(255, 255, 255, 1) 100%);
 }
 
 #curve{
@@ -15,6 +15,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    transform: rotate(180deg);
 }
 
 #t-pink{
