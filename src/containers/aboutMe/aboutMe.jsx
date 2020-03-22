@@ -6,7 +6,6 @@ export default function AboutMe() {
   return (
     <section id="presentation">
       <SMBoard />
-
       <svg xmlns="http://www.w3.org/2000/svg" id="curve" viewBox="0 0 1800 279">
         <path
           xmlns="http://www.w3.org/2000/svg"
