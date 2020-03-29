@@ -4,6 +4,7 @@ import NavBar from "components/navBar/navBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AboutMe from "containers/aboutMe/aboutMe";
 import Loader from "components/loader/loader";
+import SMBoard from "components/SMBoard/SMBoard";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -20,6 +21,7 @@ function App() {
       {!visible && (
         <div>
           <NavBar />
+          <SMBoard />
           <AboutMe />
           <div id="curriculumvitae" style={{ height: "100vh" }}></div>
           <div

@@ -17,6 +17,8 @@ import AccountCircle from "@material-ui/icons/Work";
 import CodeRounded from "@material-ui/icons/CodeRounded";
 import ContactMail from "@material-ui/icons/ContactSupportRounded";
 import Divider from "@material-ui/core/Divider";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Slide from "@material-ui/core/Slide";
 
 // Used only for media queries
 const useStyles = makeStyles(theme => ({
@@ -58,6 +60,9 @@ const getIcon = index => {
 export default function NavBar(props) {
   const classes = useStyles();
   const [openLeft, setState] = useState(false);
+  const { window } = props;
+
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
   // Open/close the drawer for mobile
   const toggleDrawer = open => event => {
@@ -73,31 +78,45 @@ export default function NavBar(props) {
 
   return (
     <Fragment>
-      <div className={classes.sectionDesktop}>
-        <AppBar position="fixed" className="appBar">
-          <Toolbar className="navBar">
-            <Button href="/">
-              <img className="navBar__logo" src={Logo} alt="Faycel Benyoussa" />
-            </Button>
-            <div className="navBar__btn-container">
-              {["présentation", "curriculum vitae", "projets", "contact"].map(
-                text => (
-                  <Button
-                    key={text}
-                    href={`#${text
-                      .normalize("NFD")
-                      .replace(/[\u0300-\u036f-\s]/g, "")}`}
-                    size="small"
-                    className="navBar__btn"
-                  >
-                    {text}
-                  </Button>
-                )
-              )}
-            </div>
-          </Toolbar>
-        </AppBar>
-      </div>
+      <Slide
+        appear={false}
+        direction="down"
+        in={!trigger}
+        timeout={{
+          enter: 1000,
+          exit: 0
+        }}
+      >
+        <div className={classes.sectionDesktop}>
+          <AppBar position="fixed" className="appBar">
+            <Toolbar className="navBar">
+              <Button href="/">
+                <img
+                  className="navBar__logo"
+                  src={Logo}
+                  alt="Faycel Benyoussa"
+                />
+              </Button>
+              <div className="navBar__btn-container">
+                {["présentation", "curriculum vitae", "projets", "contact"].map(
+                  text => (
+                    <Button
+                      key={text}
+                      href={`#${text
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                      size="small"
+                      className="navBar__btn"
+                    >
+                      {text}
+                    </Button>
+                  )
+                )}
+              </div>
+            </Toolbar>
+          </AppBar>
+        </div>
+      </Slide>
       <div className={classes.sectionMobile}>
         <AppBar position="relative" className="appBar">
           <Toolbar className="navBar">
