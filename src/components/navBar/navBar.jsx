@@ -78,15 +78,7 @@ export default function NavBar(props) {
 
   return (
     <Fragment>
-      <Slide
-        appear={false}
-        direction="down"
-        in={!trigger}
-        timeout={{
-          enter: 1000,
-          exit: 0
-        }}
-      >
+      <Slide appear={false} direction="down" in={!trigger}>
         <div className={classes.sectionDesktop}>
           <AppBar position="fixed" className="appBar">
             <Toolbar className="navBar">

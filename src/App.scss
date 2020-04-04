@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+.g-reverse-text{
+    unicode-bidi:bidi-override;
+    direction:rtl;
+}
+
 .g-scroll {
     scroll-behavior: smooth;
     overflow-y: scroll;
@@ -15,17 +20,15 @@
     -webkit-overflow-scrolling: touch;
     }
 
-
-    #curriculumvitae{
-        background-color: #fff;
-    }
-
 // color
-$ligth-dark: rgb(24, 24, 24);
+$ligth-dark: #525252;
 $ligth-dark-p: rgb(34, 34, 34);
 $grey: rgb(65, 64, 64);
 $light-grey: rgb(104, 103, 103);
 $primary-grey: #aaaaaa;
+$dark-blue: #202235;
+$primary-blue: #2665ad;
+$primary-orange: #CB6C6C;
 
 // font size
 $md-font-size: 1.2em;

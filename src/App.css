@@ -6,10 +6,11 @@
   padding: 0;
   box-sizing: border-box; }
 
+.g-reverse-text {
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
 .g-scroll {
   scroll-behavior: smooth;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
-
-#curriculumvitae {
-  background-color: #fff; }

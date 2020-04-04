@@ -10,8 +10,7 @@
     background-size: cover;
     background-repeat:no-repeat;
     background-position:center;
-    background-image: linear-gradient(180deg, rgba(255, 92, 0, 0.43) 23.96%, rgba(193, 100, 250, 0.43) 73.44%, rgba(4, 243, 229, 0.43) 99%, rgba(255, 255, 255, 1) 100%);
-    // background-image:linear-gradient(180deg, rgba(209, 28, 28, 0.43) 23.96%, rgba(157, 100, 250, 0.43) 73.44%, rgba(2, 231, 217, 0.43) 99%, rgba(255, 255, 255, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 92, 0, 0.43) 23.96%, rgba(217, 160, 253, 0.43) 73.44%, rgba(2, 255, 238, 0.43) 99%, rgba(255, 255, 255, 1) 100%);
 }
 
 #curve{
@@ -114,7 +113,7 @@
     margin-right: 0;
     background-color: transparent;
     div{
-        background: linear-gradient(10.3deg, #B2CCF9 -43.47%, #536FB0 100%);
+        background: #536FB0;
     }
 }
 
@@ -134,7 +133,7 @@
 
     background-color: transparent;
     div{
-        background-image:linear-gradient(192.19deg, rgba(203, 108, 108, 0.570886) 0%, #CB6C6C 100%);
+        background:#CB6C6C;
     }
 }
 
@@ -147,6 +146,6 @@
     margin-right: 0;
     background-color: transparent;
     div{
-        background-image:linear-gradient(193.58deg, rgba(174, 215, 230, 0.331) 0%, rgb(117, 214, 214) 100%);
+        background: rgb(56, 170, 164)
     }
 }

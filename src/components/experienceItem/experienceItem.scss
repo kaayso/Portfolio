@@ -1,0 +1,67 @@
+@import '../../app.scss';
+
+.experienceItem{
+    font-family: 'muli';
+    font-size: $md-m-font-size;
+    text-decoration: none;
+    margin-bottom: 20px;
+    .experienceItem__title{
+        font-family: 'muli-bold';
+        padding-bottom: 5px;
+        color: $ligth-dark;
+
+        .experienceItem__year{
+            font-family: 'muli-bold';
+            text-align: center;
+            color: $primary-orange;
+        }
+
+        
+    }
+    .experienceItem__content{
+        font-family: 'muli-light';
+        font-size: $md-m-font-size;
+        text-decoration: none;
+        text-align: justify;
+        max-width: 700px;
+        div{
+            font-family: 'muli-bold';
+            font-size: $sm-font-size;
+            padding-top: 5px;
+        }
+    }
+}
+
+.experienceItem__shapes{
+    position: relative;
+    height: 100%;
+    .experienceItem__point{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: $primary-orange;
+        margin: auto;
+    }
+    .experienceItem__vertical-line{
+        height: calc(100% + 5px);
+        width: 2px;
+        position: absolute;
+        top: 0;
+        right: calc(50% - 1px);
+        background-color: $primary-orange;
+    }
+    .experienceItem__shape-content{
+        height: 20px;
+        width: 20px;
+        margin: auto;
+    }
+    .experienceItem__vertical-line-content{
+        height: calc(100% + 20px);
+        width: 2px;
+        position: absolute;
+        top: 0;
+        right: calc(50% - 1px);
+        background-color:$primary-orange;
+    }
+}
+

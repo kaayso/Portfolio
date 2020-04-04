@@ -1,8 +1,16 @@
+
+@import "../../app.scss";
+
 .social-media-board{
     position: fixed;
     left: 0;
     top: 30%;
     z-index: 1;
+    ul {
+        li {
+            list-style: none;
+        }
+    }
 }
 
 .social-media-board__phone{
@@ -14,7 +22,7 @@
         transform: scale(1.1);
         svg{
             path:nth-child(1){
-                fill:  #202235;
+                fill:  $dark-blue;
             }
         }
     }
@@ -30,7 +38,7 @@
 
         svg{
             path:nth-child(1){
-                fill:  #202235;
+                fill:  $dark-blue;
             }
         }
     }
@@ -46,7 +54,7 @@
 
         svg{
             path{
-                fill: #202235;
+                fill: $dark-blue;
             }
         }
     }
@@ -63,7 +71,7 @@
 
         svg{
             path:nth-child(1){
-                fill:  #202235;
+                fill:  $dark-blue;
             }
         }
     }
