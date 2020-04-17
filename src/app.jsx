@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaderVisibility(false);
-    }, 1500);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
   return (

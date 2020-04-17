@@ -1,59 +1,28 @@
-
 @font-face {
-  font-family: 'muli';
+  font-family: 'poppins';
   font-weight: normal;
   font-style: normal;
-  src: local('Muli'), url(./fonts/muli/Muli-Regular.ttf) format('opentype');
+  src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('opentype');
 }
 
 
 @font-face {
-  font-family: 'muli-bold';
-  font-weight: bold;
+  font-family: 'poppins-extra-bold';
+  font-weight: normal;
   font-style: normal;
-  src: local('Muli'), url(./fonts/muli/Muli-Bold.ttf) format('opentype');
+  src: local('Poppins'), url(./fonts/Poppins/Poppins-ExtraBold.ttf) format('opentype');
 }
 
 @font-face {
-  font-family: 'muli-light';
+  font-family: 'poppins-light';
   font-weight: normal;
   font-style: normal;
-  src: local('Muli'), url(./fonts/muli/Muli-Light.ttf) format('opentype');
+  src: local('Poppins'), url(./fonts/Poppins/Poppins-Light.ttf) format('opentype');
 }
 
 @font-face {
-  font-family: 'muli-extra-light';
+  font-family: 'cookie';
   font-weight: normal;
   font-style: normal;
-  src: local('Muli'), url(./fonts/muli/Muli-ExtraLight.ttf) format('opentype');
-}
-
-
-@font-face {
-  font-family: 'raleway';
-  font-weight: normal;
-  font-style: normal;
-  src: local('raleway'), url(./fonts/raleway/Raleway-Regular.ttf) format('opentype');
-}
-
-
-@font-face {
-  font-family: 'raleway-bold';
-  font-weight: normal;
-  font-style: normal;
-  src: local('raleway'), url(./fonts/raleway/Raleway-Bold.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'raleway-light';
-  font-weight: normal;
-  font-style: normal;
-  src: local('raleway'), url(./fonts/raleway/Raleway-Light.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'raleway-extra-light';
-  font-weight: normal;
-  font-style: normal;
-  src: local('raleway'), url(./fonts/raleway/Raleway-ExtraLight.ttf) format('opentype');
+  src: local('Cookie'), url(./fonts/Cookie/Cookie-Regular.ttf) format('opentype');
 }

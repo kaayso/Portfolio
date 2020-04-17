@@ -7,7 +7,7 @@ export default class SMBoard extends PureComponent {
     phone: "06 74 54 68 30",
     mail: ["faycel.benyoussa", "@", "gmail.com"],
     github: "https://github.com/kaayso?tab=repositories",
-    linkedIn: "https://www.linkedin.com/in/faycel-benyoussa-4525a2157/"
+    linkedIn: "https://www.linkedin.com/in/faycel-benyoussa-4525a2157/",
   };
   render() {
     return (
