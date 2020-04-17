@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./app.css";
 import NavBar from "components/navBar/navBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import AboutMe from "containers/aboutMe/aboutMe";
 import Loader from "components/loader/loader";
 import SMBoard from "components/SMBoard/SMBoard";
-import Cv from "containers/cv/cv";
+import Introduction from "containers/introduction/introduction";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -26,12 +25,7 @@ function App() {
         <>
           <NavBar />
           <SMBoard />
-          <AboutMe />
-          <Cv />
-          <div
-            id="projets"
-            style={{ height: "100vh", backgroundColor: "green" }}
-          ></div>
+          <Introduction />
         </>
       )}
     </div>
