@@ -9,18 +9,21 @@ import Cv from "containers/cv/cv";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaderVisibility(false);
-    }, 100);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <div id="app-root">
       <CssBaseline />
-      <Loader visible={visible} />
-      {!visible && (
-        <div>
+      {visible ? (
+        <Loader visible={visible} />
+      ) : (
+        <>
           <NavBar />
           <SMBoard />
           <AboutMe />
@@ -29,7 +32,7 @@ function App() {
             id="projets"
             style={{ height: "100vh", backgroundColor: "green" }}
           ></div>
-        </div>
+        </>
       )}
     </div>
   );

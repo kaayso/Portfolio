@@ -1,5 +1,7 @@
+@import'../../app.scss';
+
 .loader{
-    background-color: #181726;
+    background-color: $primary-dark;
     min-height: 100vh;
     z-index: 1;
     display: flex;
@@ -12,16 +14,51 @@
     display: none;
 }
 
-.loader__logo{
-    height: 100px;
-    width: 100px;
-}
-
-.loader__bubble1, .loader__bubble2, .loader__bubble3 {
+.loader__bubble1 {
 
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: rgb(203, 108, 108);
+    background-color: $primary-green;
     margin: 5px;
+    animation: 400ms jump ease-in-out infinite alternate ;
 }
+
+.loader__bubble2{
+
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $primary-green;
+    margin: 5px;
+    animation: 400ms jump 250ms ease-in-out infinite alternate ;
+}
+
+.loader__bubble3 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $primary-green;
+    margin: 5px;
+    animation: 400ms jump 400ms ease-in-out infinite alternate ;
+}
+
+@-webkit-keyframes jump {
+    from {
+        transform: translateY(0);
+    }
+  
+    to {
+        transform: translateY(-20px);
+    }
+  }
+  
+@keyframes jump {
+    from {
+        transform: translateY(0);
+    }
+  
+    to {
+        transform: translateY(-20px);
+    }
+  }

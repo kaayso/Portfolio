@@ -97,7 +97,7 @@
         .navbar__btn--left-line, .navbar__btn--right-line{
             height: 2px;
             background-color: $primary-white;
-            animation: 200ms width-extension 200ms ease-out forwards;
+            animation: 600ms width-extension 100ms ease-out forwards;
 
         }
         .navbar__btn--point{
@@ -107,7 +107,7 @@
             background-color: $primary-green;
             margin: auto 5px;
             opacity: 0;
-            animation: 300ms fadeIn  ease-out forwards;
+            animation: 200ms fadeIn  ease-out forwards;
         }
     }
 }
