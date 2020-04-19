@@ -6,15 +6,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import List from "@material-ui/core/List";
 import Drawer from "@material-ui/core/Drawer";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import HomeIcon from "@material-ui/icons/Home";
-import AccountCircle from "@material-ui/icons/Work";
-import CodeRounded from "@material-ui/icons/CodeRounded";
-import ContactMail from "@material-ui/icons/ContactSupportRounded";
 import Divider from "@material-ui/core/Divider";
 
 // Used only for media queries
@@ -34,29 +29,16 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
     flexGrow: 1,
+    position: "fixed",
+    bottom: 15,
+    right: 20,
+    zIndex: 3,
   },
 }));
 
-// Get icon according to index
-
-const getIcon = (index) => {
-  switch (index) {
-    case 0:
-      return <HomeIcon className="navBar__drawer-icon" />;
-    case 1:
-      return <CodeRounded className="navBar__drawer-icon" />;
-    case 2:
-      return <AccountCircle className="navBar__drawer-icon" />;
-    case 3:
-      return <ContactMail className="navBar__drawer-icon" />;
-    default:
-      return;
-  }
-};
-
 export default function NavBar(props) {
   const classes = useStyles();
-  const [openLeft, setOpenLeft] = useState(false);
+  const [openBottom, setOpenBottom] = useState(false);
 
   // Open/close the drawer for mobile
   const toggleDrawer = (open) => (event) => {
@@ -67,7 +49,7 @@ export default function NavBar(props) {
       return;
     }
 
-    setOpenLeft(open);
+    setOpenBottom(open);
   };
 
   const links = ["accueil", "créations", "parcours", "contact"];
@@ -101,27 +83,44 @@ export default function NavBar(props) {
         </Toolbar>
       </div>
       <div className={classes.sectionMobile}>
-        <Toolbar className="navBar">
-          <IconButton
-            onClick={toggleDrawer(true)}
-            color="inherit"
-            aria-label="menu"
+        <IconButton
+          onClick={toggleDrawer(true)}
+          color="inherit"
+          aria-label="menu"
+        >
+          <svg
+            className="MuiSvgIcon-root navBar__menuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            role="presentation"
           >
-            <MenuIcon className="navBar_menuIcon" />
-          </IconButton>
-          <Button href="/">
-            <img
-              className="navBar__logo--mobile"
-              src={Logo}
-              alt="Faycel Benyoussa"
-            />
-          </Button>
-        </Toolbar>
+            <path d="M3 18h12v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>{" "}
+        </IconButton>
         <Drawer
           className="navBar__drawer-root"
-          open={openLeft}
+          open={openBottom}
           onClose={toggleDrawer(false)}
+          anchor="bottom"
         >
+          <List>
+            {links.map((text, index) => (
+              <a
+                href={`#${text
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                onClick={toggleDrawer(false)}
+                className="navBar__drawer-link"
+                key={text}
+              >
+                <ListItem button>
+                  <ListItemText className="navBar__drawer-btn" primary={text} />
+                </ListItem>
+              </a>
+            ))}
+          </List>
+          <Divider />
           <div
             className="navBar__drawer-content"
             role="presentation"
@@ -133,25 +132,12 @@ export default function NavBar(props) {
               src={Logo}
               alt="Faycel Benyoussa"
             />
-            <Divider />
-            <List>
-              {links.map((text, index) => (
-                <ListItem button key={text}>
-                  <a
-                    href={`#${text
-                      .normalize("NFD")
-                      .replace(/[\u0300-\u036f-\s]/g, "")}`}
-                    className="navBar__drawer-link"
-                  >
-                    {getIcon(index)}
-                    <ListItemText
-                      className="navBar__drawer-btn"
-                      primary={text}
-                    />
-                  </a>
-                </ListItem>
-              ))}
-            </List>
+          </div>
+          <div
+            onClick={toggleDrawer(false)}
+            className="navBar__drawer-content--closer"
+          >
+            X
           </div>
         </Drawer>
       </div>

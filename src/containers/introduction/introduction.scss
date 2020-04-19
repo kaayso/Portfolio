@@ -1,0 +1,116 @@
+@import'../../app.scss';
+
+#accueil {
+    min-height: calc(100vh - 6.25em);
+    position: relative;
+    
+    background-color: #FFF;
+}
+
+.accueil-left-container{
+    background-color: #FFF;
+    position: relative;
+    min-height: 70vh;
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        path{
+            fill: $primary-brown;
+        }
+    }
+}
+
+.accueil-right-container{
+    position: relative;
+    background-image: url('../../assets/images/trees-on-mountain.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+
+    .accueil-right-container__filter{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $dark-filter;
+    }
+    .accueil-right-container__separator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        
+        path{
+            fill: $primary-brown;
+        }
+    }
+    .accueil-right-container__mobile-separator {
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        transform: rotate(180deg);
+        
+        path{
+            fill: #FFF;
+        }
+    }
+}
+
+.accueil-right-container__content{
+    position: absolute;
+    margin-left: .8em;
+    margin-top: 2.7em;
+    z-index: 2;
+    color: #FFF;
+    font-size: $huge-font-size;
+    text-transform: uppercase;
+    font-family: "poppins-extra-bold";
+}
+
+.accueil-left-container__content{
+    width: 320px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .accueil-left-container__title{
+        margin-top: 2.7em;
+        font-size: $huge-font-size;
+        text-transform: uppercase;
+        font-family: "poppins-extra-bold";
+    }
+    .accueil-left-container__sub-title{
+        font-size: $lg-font-size;
+        font-family: "pacifico";
+        text-transform: capitalize;
+        width: 250px;
+        font-weight: bold;
+        text-align: center;
+        background-color: $primary-brown;
+        color: #FFF;
+        padding: 5px;
+    }
+
+    .accueil-left-container__paragraph{
+        margin-top: 2em;
+        color: $primary-brown;
+        font-family: "poppins";
+        font-weight: 100;
+        text-align: center;
+        font-size: 1.8em;
+        line-height: 1.7em;
+        b{
+            font-family: "poppins-extra-bold";
+        }
+    }
+}

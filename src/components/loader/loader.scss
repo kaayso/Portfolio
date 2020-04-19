@@ -2,12 +2,22 @@
 
 .loader{
     background-color: $primary-dark;
-    min-height: 100vh;
-    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
+}
+
+.loader__bubbles-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50vh;
 }
 
 .loader--hidden{

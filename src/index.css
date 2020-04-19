@@ -21,3 +21,9 @@
   font-weight: normal;
   font-style: normal;
   src: local("Cookie"), url(./fonts/Cookie/Cookie-Regular.ttf) format("opentype"); }
+
+@font-face {
+  font-family: 'pacifico';
+  font-weight: normal;
+  font-style: normal;
+  src: local("Pacifico"), url(./fonts/Pacifico/Pacifico-Regular.ttf) format("opentype"); }
