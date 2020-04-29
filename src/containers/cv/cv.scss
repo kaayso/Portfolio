@@ -1,0 +1,36 @@
+@import'../../app.scss';
+
+#cv {
+    background-color: $primary-dark;
+    position: relative;
+}
+
+.cv__grid{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.cv__text{
+    font-size: $paragraph-size;
+    color: $primary-white;
+    font-family: "poppins";
+    text-align: center;
+    margin: auto 5px;
+    b{
+        text-transform: uppercase;
+        font-family: 'poppins-extra-bold';
+    }
+}
+
+.cv__btn{
+    margin: 10px auto;
+}

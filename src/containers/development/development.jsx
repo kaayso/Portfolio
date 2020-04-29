@@ -24,7 +24,7 @@ export default function Development() {
       subject: "dev-back",
       title: "développement back",
       content:
-        "La partie serveur de mes applications est généralement réalisée à l'aide du framework <b>Express</b> (JavaScript) ou <b>Django</b> (Python). La base de données quant à elle, est réalisée avec <b>MongoDB</b> (NoSql) ou <b>Postgres</b> (Relationelle). Pour séparer les différentes responsabilités des applications, j'utilise <b>l'architecture microservices</b> avec <b>Docker</b>.",
+        "La partie serveur de mes applications est généralement réalisée à l'aide du framework <b>Express</b> (JavaScript) ou <b>Django</b> (Python). J'utilise <b>MongoDB</b> (NoSql) ou <b>Postgres</b> (Relationelle) pour la base de données. Afin de séparer les différentes responsabilités d'une applications, j'utilise <b>l'architecture microservices</b> avec <b>Docker</b>.",
     },
   ];
 
@@ -61,7 +61,19 @@ export default function Development() {
         </Grid>
       </div>
       <Navigator navigate={navigate} index={index} />
-      <Button title="mes créations" />
+      <Button className="dev__btn" href="#creations" title="mes créations" />
+      <svg
+        className="dev__bottom-separator"
+        width="1800"
+        height="186"
+        viewBox="0 0 1800 186"
+        fill="none"
+      >
+        <path
+          d="M1488 119.5L989.5 80.4995L588 119.5L217.5 119.5L-1.00004 174.497L-0.0359209 10.9995L1807.5 11L1488 119.5Z"
+          fill="#716060"
+        />
+      </svg>
     </section>
   );
 }
