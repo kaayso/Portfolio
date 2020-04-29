@@ -3,7 +3,6 @@
 #accueil {
     min-height: calc(100vh - 6.25em);
     position: relative;
-    
     background-color: #FFF;
 }
 
@@ -30,7 +29,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
+    min-height: 650px;
 
     .accueil-right-container__filter{
         position: absolute;
@@ -68,7 +67,7 @@
 .accueil-right-container__content{
     position: absolute;
     margin-left: .8em;
-    margin-top: 2.7em;
+    margin-top: 17%;
     z-index: 2;
     color: #FFF;
     font-size: $huge-font-size;
@@ -82,9 +81,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 17%;
 
     .accueil-left-container__title{
-        margin-top: 2.7em;
         font-size: $huge-font-size;
         text-transform: uppercase;
         font-family: "poppins-extra-bold";
@@ -107,8 +106,9 @@
         font-family: "poppins";
         font-weight: 100;
         text-align: center;
-        font-size: 1.8em;
+        font-size: $paragraph-size;
         line-height: 1.7em;
+        padding-bottom: 20px;
         b{
             font-family: "poppins-extra-bold";
         }

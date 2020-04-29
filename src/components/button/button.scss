@@ -1,0 +1,47 @@
+@import '../../app.scss';
+
+.l-button {
+    padding: 10px 15px;
+    background-color: $primary-green;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 15%;
+    position: relative;  
+    overflow: hidden;
+    text-decoration: none;
+
+    span{
+        text-transform: uppercase;
+        font-size: $md-font-size;
+        color: $primary-dark;
+        font-family: 'poppins';
+        z-index: 1;
+    }
+    .l-button__layout{
+        background-color: $primary-dark;
+        position: absolute;
+        bottom: -50px;
+        left: -50px; 
+        width: 25%;
+        height: 100%;
+        border-radius: 50%;
+      }
+  
+      &:hover .l-button__layout{
+        animation: scale-bg 400ms ease-in forwards; 
+      }
+      &:hover span{
+          color: $primary-white;
+          transition: all 800ms;
+      }
+}
+
+@media (max-width: 578px) {
+    .l-button {
+        margin: auto;
+    }
+  }

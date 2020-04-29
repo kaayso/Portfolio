@@ -1,0 +1,74 @@
+@import'../../app.scss';
+
+.carouselNav{
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 30px auto;
+}
+
+.carouselNav__btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 2px $primary-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    cursor: pointer;
+
+    .back{
+        transform: rotate(-180deg) translateX(2px);
+    }
+    .forward{
+        transform: translateX(1px);
+    }
+
+    &:hover{
+        svg{
+            path {
+                fill: $primary-brown;
+            }
+        }
+        background-color: $primary-green;
+        border-color: transparent;
+    }
+      
+    &:active{
+        transform: scale(1.1);
+    }
+
+}
+
+.carouselNav__state{
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: $primary-white;
+    margin: 10px;
+    cursor: pointer;    
+}
+
+.carouselNav__state--active{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: solid 2px $primary-green;
+    margin: 5px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border 300ms;
+
+    div{
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: $primary-green;
+        transition: background-color 3OOms;
+    }
+}

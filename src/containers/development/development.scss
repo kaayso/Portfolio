@@ -1,0 +1,41 @@
+@import '../../app.scss';
+
+
+#dev{
+  background-color: $primary-brown;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.carousel-container{
+  margin-top: 5em;
+  width: 90%;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+@media (max-width: 578px) {
+  .carousel-container{
+    width: 100%;
+  }
+}
+
+.slide-left{
+  animation: 700ms slide-left forwards;
+}
+
+.slide-right{
+  animation: 700ms slide-right forwards;
+  transform: scale(.7);
+}
+
+.slide-from-left{
+  animation: 400ms slide-from-left forwards;
+}
+
+.slide-from-right{
+  animation: 400ms slide-from-right forwards;
+}
