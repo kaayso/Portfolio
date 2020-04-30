@@ -25,11 +25,12 @@
 }
 
 .slide-left{
-  animation: 700ms slide-left forwards;
+  animation: 800ms slide-left forwards;
+  transform: scale(.7);
 }
 
 .slide-right{
-  animation: 700ms slide-right forwards;
+  animation: 800ms slide-right forwards;
   transform: scale(.7);
 }
 
@@ -44,7 +45,7 @@
 .dev__btn{
   margin-left: auto;
   margin-right: 15%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .dev__bottom-separator{
@@ -52,5 +53,5 @@
   bottom: 0;
   left: 0;
   transform: translateY(70%);
-  z-index: 1;
+  z-index: 2;
 }

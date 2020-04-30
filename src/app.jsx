@@ -6,6 +6,7 @@ import Loader from "components/loader/loader";
 import Introduction from "containers/introduction/introduction";
 import Development from "containers/development/development";
 import Cv from "containers/cv/cv";
+import Projects from "containers/projects/projects";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -27,6 +28,7 @@ function App() {
       <Introduction />
       <Development />
       <Cv />
+      <Projects />
     </div>
   );
 }

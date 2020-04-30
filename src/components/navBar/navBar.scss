@@ -114,8 +114,8 @@
     .navbar__btn--left-line, .navbar__btn--right-line{
         height: 2px;
         background-color: $primary-white;
-        animation: 400ms width-extension-r ease-out forwards;
-        -webkit-animation: 400ms width-extension-r ease-out forwards;
+        animation: 200ms width-extension-r ease-out forwards;
+        -webkit-animation: 200ms width-extension-r ease-out forwards;
 
     }
     .navbar__btn--point{
@@ -125,8 +125,8 @@
         background-color: $primary-green;
         margin: auto 5px;
         opacity: 0;
-        animation: 700ms fadeOut  ease-out forwards;
-        -webkit-animation: 700ms fadeOut  ease-out forwards;
+        animation: 400ms fadeOut  ease-out forwards;
+        -webkit-animation: 400ms fadeOut  ease-out forwards;
     }
   }
 }
@@ -134,24 +134,14 @@
 .MuiButton-root.navBar__btn:hover {
   .navbar__btn--hover{
       .navbar__btn--left-line, .navbar__btn--right-line{
-          animation: 600ms width-extension 100ms ease-out forwards;
-          -webkit-animation: 600ms width-extension 100ms ease-out forwards;
+          animation: 300ms width-extension 100ms ease-out forwards;
+          -webkit-animation: 300ms width-extension 100ms ease-out forwards;
       }
       .navbar__btn--point{
-          animation: 700ms fadeIn  ease-out forwards;
-          -webkit-animation: 700ms fadeIn  ease-out forwards;
+          animation: 400ms fadeIn  ease-out forwards;
+          -webkit-animation: 400ms fadeIn  ease-out forwards;
       }
   }
-}
-
-.widtth-extension-r{
-  animation: 400ms width-extension-r ease-out forwards;
-  -webkit-animation: 400ms width-extension-r ease-out forwards;
-}
-
-.fadeOut{
-  animation: 1s fadeOut  ease-out forwards;
-  -webkit-animation: 1s fadeOut  ease-out forwards;
 }
 
 .navBar__drawer-content--closer {

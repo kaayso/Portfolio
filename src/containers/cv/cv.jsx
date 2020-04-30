@@ -11,7 +11,7 @@ export default function Cv() {
           <div className="cv__text">
             <p>
               Si vous souhaitez, vous pouvez &nbsp;<b>télécharger</b>
-              &nbsp; mon Curriculum vitae !
+              &nbsp; mon Curriculum Vitae !
             </p>
           </div>
         </Grid>
