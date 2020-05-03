@@ -6,3 +6,4 @@ To do at the end ✅
 [ ] Animation on scroll
 [ ] navBar dev fixed
 [✅] responsive pViewer
+[ ] not found page

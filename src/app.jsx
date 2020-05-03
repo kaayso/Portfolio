@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./app.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "components/navBar/navBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Loader from "components/loader/loader";
-import Introduction from "containers/introduction/introduction";
-import Development from "containers/development/development";
-import Cv from "containers/cv/cv";
-import Projects from "containers/projects/projects";
+import Home from "containers/home/home";
+import pDescription from "containers/pDescription/pDescription";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -22,13 +21,16 @@ function App() {
 
   return (
     <div id="app-root">
-      <CssBaseline />
-      <Loader visible={visible} />
-      <NavBar />
-      <Introduction />
-      <Development />
-      <Cv />
-      <Projects />
+      <Router>
+        <CssBaseline />
+        <Loader visible={visible} />
+
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/:slug" component={pDescription} />
+        </Switch>
+      </Router>
     </div>
   );
 }

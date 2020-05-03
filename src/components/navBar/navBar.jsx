@@ -11,6 +11,7 @@ import Drawer from "@material-ui/core/Drawer";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
+import { useLocation } from "react-router-dom";
 
 // Used only for media queries
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar(props) {
   const classes = useStyles();
   const [openBottom, setOpenBottom] = useState(false);
+  const [links, setLinks] = useState([]);
+  let location = useLocation();
 
   // Open/close the drawer for mobile
   const toggleDrawer = (open) => (event) => {
@@ -52,7 +55,13 @@ export default function NavBar(props) {
     setOpenBottom(open);
   };
 
-  const links = ["accueil", "créations", "parcours", "contact"];
+  React.useEffect(() => {
+    if (location.pathname === "/") {
+      setLinks(["accueil", "créations", "parcours", "contact"]);
+    } else {
+      setLinks(["accueil", "contact"]);
+    }
+  }, [location.pathname]);
 
   return (
     <Fragment>
@@ -65,9 +74,13 @@ export default function NavBar(props) {
             {links.map((text) => (
               <Button
                 key={text}
-                href={`#${text
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                href={`${
+                  text === `accueil`
+                    ? `/`
+                    : `#${text
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f-\s]/g, "")}`
+                }`}
                 size="small"
                 className="navBar__btn"
               >
@@ -96,7 +109,7 @@ export default function NavBar(props) {
             role="presentation"
           >
             <path d="M3 18h12v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-          </svg>{" "}
+          </svg>
         </IconButton>
         <Drawer
           className="navBar__drawer-root"
@@ -107,9 +120,13 @@ export default function NavBar(props) {
           <List>
             {links.map((text, index) => (
               <a
-                href={`#${text
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f-\s]/g, "")}`}
+                href={`${
+                  text === `accueil`
+                    ? `/`
+                    : `#${text
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f-\s]/g, "")}`
+                }`}
                 onClick={toggleDrawer(false)}
                 className="navBar__drawer-link"
                 key={text}
