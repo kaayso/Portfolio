@@ -4,4 +4,5 @@ To do at the end ✅
 [ ] Google insights
 [ ] EmailJs
 [ ] Animation on scroll
-[ ] Carousel draggable
+[ ] navBar dev fixed
+[✅] responsive pViewer

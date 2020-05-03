@@ -4,9 +4,6 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Navigation(props) {
   const mobileBreakPoint = useMediaQuery("(max-width:440px)");
-  React.useEffect(() => {
-    console.log(mobileBreakPoint);
-  });
   return (
     <div
       className={`navigation ${mobileBreakPoint ? "navigation--mobile" : ""} ${
