@@ -21,8 +21,6 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
     },
     flexGrow: 1,
-    paddingLeft: "6em",
-    paddingRight: "6em",
   },
   sectionMobile: {
     display: "flex",
