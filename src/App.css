@@ -68,23 +68,23 @@
   from {
     width: 0; }
   to {
-    width: calc((50%-20px)/2); } }
+    width: 20px; } }
 
 @keyframes width-extension {
   from {
     width: 0; }
   to {
-    width: calc((50%-20px)/2); } }
+    width: 20px; } }
 
 @keyframes width-extension-r {
   from {
-    width: calc((50%-20px)/2); }
+    width: 20px; }
   to {
     width: 0; } }
 
 @-webkit-keyframes width-extension-r {
   from {
-    width: calc((50%-20px)/2); }
+    width: 20px; }
   to {
     width: 0; } }
 

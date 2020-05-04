@@ -117,7 +117,7 @@ $paragraph-size: 1.8em;
       }
     
       to {
-        width: calc((50%-20px)/2);
+        width: 20px
       }
     }
   
@@ -127,13 +127,13 @@ $paragraph-size: 1.8em;
         }
       
       to {
-          width: calc((50%-20px)/2);
+          width: 20px
       }
   }
   
   @keyframes width-extension-r {
     from {
-        width: calc((50%-20px)/2);
+        width: 20px
   
       }
     
@@ -145,7 +145,7 @@ $paragraph-size: 1.8em;
   
   @-webkit-keyframes width-extension-r {
     from {
-        width: calc((50%-20px)/2);
+        width:20px
   
       }
     
