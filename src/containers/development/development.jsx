@@ -12,19 +12,19 @@ export default function Development() {
       subject: "dev-front",
       title: "développement front",
       content:
-        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b> et le préprocesseur <b>SASS</b> et également la librarie <b>React</b> ainsi que les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de ça je m’auto-forme sur le framework <b>Angular</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
+        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>Angular</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
     },
     {
       subject: "dev-mob",
       title: "développement mobile",
       content:
-        "Je suis capable de créer des applications mobile <b>cross-plateforme</b> (Android et IOS) et pour celà j'utilise le framework <b>React-Native</b>. Pour la réalisation des <b>applications natives</b> (Android), j'utilise les languages <b>JAVA/XML</b> avec Android Studio.",
+        "Je suis capable de créer des applications mobile <b>cross-plateforme</b> (Android et IOS) en utilisant le framework <b>React-Native</b> avec la librairie <b>NativeBase</b>. Je suis également capable de réaliser des <b>applications 100% natives</b> (Android). Pour ce faire, j'utilise les languages <b>JAVA/XML</b> avec Android Studio.",
     },
     {
       subject: "dev-back",
       title: "développement back",
       content:
-        "La partie serveur de mes applications est généralement réalisée à l'aide du framework <b>Express</b> (JavaScript) ou <b>Django</b> (Python). J'utilise <b>MongoDB</b> (NoSql) ou <b>Postgres</b> (Relationelle) pour la base de données. Afin de séparer les différentes responsabilités d'une applications, j'utilise <b>l'architecture microservices</b> avec <b>Docker</b>.",
+        "La gestion des données est réalisée à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>Postgres</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> avec <b>Docker</b> afin de séparer les différentes responsabilités d'une applications.",
     },
   ];
 
