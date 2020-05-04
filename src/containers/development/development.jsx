@@ -64,13 +64,13 @@ export default function Development() {
       <Button className="dev__btn" href="#creations" title="mes créations" />
       <svg
         className="dev__bottom-separator"
-        width="1800"
-        height="186"
-        viewBox="0 0 1800 186"
+        width="2656"
+        height="196"
+        viewBox="0 0 2656 196"
         fill="none"
       >
         <path
-          d="M1488 119.5L989.5 80.4995L588 119.5L217.5 119.5L-1.00004 174.497L-0.0359209 10.9995L1807.5 11L1488 119.5Z"
+          d="M1488 124.499L989.5 85.4994L588 124.499L217.5 124.499L-1.00065 179.497L-0.0365342 15.9994L2656 15.9996L2358 108.5L1923 85.4994L1488 124.499Z"
           fill="#716060"
         />
       </svg>

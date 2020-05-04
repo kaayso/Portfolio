@@ -157,15 +157,16 @@ export default function Projects() {
           ))}
         </div>
       </Container>
+
       <svg
         className="creations__top-separator"
-        width="1800"
+        width="2656"
         height="95"
-        viewBox="0 0 1800 95"
+        viewBox="0 0 2656 95"
         fill="none"
       >
         <path
-          d="M0 0H1800V44L1322 86L847.5 62L410.5 95L0 50V0Z"
+          d="M0 0H2656L2468 44L2248.5 62L1800 44L1322 86L847.5 62L410.5 95L0 50V0Z"
           fill="#353535"
         />
       </svg>
