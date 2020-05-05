@@ -1,6 +1,7 @@
 #app-root {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #EFEAE4; }
 
 * {
   margin: 0;

@@ -12,7 +12,7 @@ export default function Development() {
       subject: "dev-front",
       title: "développement front",
       content:
-        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>Angular</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
+        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>AngularJS</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
     },
     {
       subject: "dev-mob",
@@ -24,7 +24,7 @@ export default function Development() {
       subject: "dev-back",
       title: "développement back",
       content:
-        "La gestion des données est réalisée à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>Postgres</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> avec <b>Docker</b> afin de séparer les différentes responsabilités d'une applications.",
+        "La gestion des données est réalisée à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>PostgreSQL</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> via <b>Docker</b> afin de séparer les différentes responsabilités d'une application.",
     },
   ];
 

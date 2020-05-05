@@ -140,8 +140,8 @@ export default function Projects() {
         <div className="projects__title">créations</div>
         <div className="projects__sub-title">
           <p>
-            Un petit aperçus de mes projets <b>scolaires</b>,&nbsp;
-            <b>pro</b> et <b>perso</b>.
+            Un petit aperçus de mes projets <b>pro</b>,&nbsp;
+            <b>scolaires</b> et <b>perso</b>.
           </p>
         </div>
         <Navigation click={handleNavigationClick} items={nav} index={index} />

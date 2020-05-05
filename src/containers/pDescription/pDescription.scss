@@ -1,6 +1,82 @@
-.pDescription{
+@import'../../app.scss';
+
+.pDescription {
     min-height: calc(100vh - 6.25em);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $primary-white;
+}
+
+.pDescription-wrapper {
+    margin-top: 100px;
+}
+
+.pDescription__title {
+    font-family: 'pacifico';
+    text-transform: uppercase;
+    color: $primary-dark;
+}
+
+.pDescription__type,
+.pDescription__society {
+    display: inline-block;
+    font-family: 'poppins';
+    color: $primary-brown;
+    font-size: $md-font-size;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.pDescription__point {
+    display: inline-block;
+    background-color: $primary-green;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.pDescription__purpose-title,
+.pDescription__description-title,
+.pDescription__technos-title {
+    font-family: 'pacifico';
+    text-transform: uppercase;
+    color: $primary-brown;
+    margin-top: 50px;
+}
+
+.pDescription__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+
+    img {
+        height: 280px;
+        width: 280px;
+
+    }
+}
+
+.pDescription__text-content {
+    font-family: 'poppins';
+    color: $primary-dark;
+    font-size: $md-font-size;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.pDescription__link {
+    svg {
+        fill: $primary-orange;
+        margin: auto 15px;
+    }
+}
+
+.pDescription__header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }

@@ -1,6 +1,9 @@
-#app-root{
+@import'./app.scss';
+
+#app-root {
   position: relative;
   overflow: hidden;
+  background-color: $primary-white;
 }
 
 * {
@@ -9,9 +12,9 @@
   box-sizing: border-box;
 }
 
-.g-reverse-text{
-  unicode-bidi:bidi-override;
-  direction:rtl;
+.g-reverse-text {
+  unicode-bidi: bidi-override;
+  direction: rtl;
 }
 
 .g-scroll {
@@ -19,7 +22,7 @@
   overflow-y: scroll;
   // For Chrome in Mac
   -webkit-overflow-scrolling: touch;
-  }
+}
 
 @font-face {
   font-family: 'poppins';
@@ -91,6 +94,7 @@
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -101,7 +105,7 @@
   }
 }
 
-@-webkit-keyframes fadeOut{
+@-webkit-keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -111,7 +115,7 @@
   }
 }
 
-@keyframes fadeOut{
+@keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -132,31 +136,30 @@
 }
 
 @-webkit-keyframes width-extension {
-    from {
-      width: 0;
-    }
-  
-    to {
-      width: 20px
-    }
+  from {
+    width: 0;
   }
 
+  to {
+    width: 20px
+  }
+}
+
 @keyframes width-extension {
-    from {
-        width: 0;
-      }
-    
-    to {
-        width: 20px
-    }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20px
+  }
 }
 
 @keyframes width-extension-r {
   from {
-      width: 20px
+    width: 20px
+  }
 
-    }
-  
   to {
     width: 0;
 
@@ -165,48 +168,51 @@
 
 @-webkit-keyframes width-extension-r {
   from {
-      width:20px
+    width: 20px
+  }
 
-    }
-  
   to {
     width: 0;
 
   }
 }
 
-@-webkit-keyframes slide-left{
+@-webkit-keyframes slide-left {
   0% {
     transform: translateX(0) scale(1);
   }
+
   50% {
     transform: translateX(-75%) scale(.2);
 
   }
+
   100% {
     transform: translateX(-150%) scale(0);
   }
 }
 
-@keyframes  slide-left{
+@keyframes slide-left {
   0% {
     transform: translateX(0) scale(1);
   }
+
   50% {
     transform: translateX(-75%) scale(.2);
 
   }
+
   100% {
     transform: translateX(-150%) scale(0);
   }
 }
 
-@-webkit-keyframes slide-right{
+@-webkit-keyframes slide-right {
   0% {
     transform: translateX(0) scale(1);
   }
-  
-  50%{
+
+  50% {
     transform: translateX(75%) scale(.2);
 
   }
@@ -216,12 +222,12 @@
   }
 }
 
-@keyframes  slide-right{
+@keyframes slide-right {
   0% {
     transform: translateX(0) scale(1);
   }
-  
-  50%{
+
+  50% {
     transform: translateX(75%) scale(.2);
 
   }
@@ -232,7 +238,7 @@
 }
 
 
-@-webkit-keyframes slide-from-left{
+@-webkit-keyframes slide-from-left {
   from {
     transform: translateX(-200%);
   }
@@ -242,7 +248,7 @@
   }
 }
 
-@keyframes  slide-from-left{
+@keyframes slide-from-left {
   from {
     transform: translateX(-200%);
   }
@@ -252,7 +258,7 @@
   }
 }
 
-@-webkit-keyframes slide-from-right{
+@-webkit-keyframes slide-from-right {
   from {
     transform: translateX(200%);
   }
@@ -262,7 +268,7 @@
   }
 }
 
-@keyframes  slide-from-right{
+@keyframes slide-from-right {
   from {
     transform: translateX(200%);
 
@@ -274,13 +280,14 @@
 }
 
 
-@keyframes scale-bg{
-  from{
+@keyframes scale-bg {
+  from {
     width: 25%;
     height: 100%;
     opacity: 0;
   }
-  to{
+
+  to {
     width: 100%;
     height: 100%;
     left: 0;
@@ -291,13 +298,14 @@
 }
 
 
-@-webkit-keyframes scale-bg{
-  from{
+@-webkit-keyframes scale-bg {
+  from {
     width: 25%;
     height: 100%;
     opacity: 0;
   }
-  to{
+
+  to {
     width: 100%;
     height: 100%;
     left: 0;
@@ -313,6 +321,7 @@
     height: 100%;
     opacity: 1;
   }
+
   to {
     width: 0%;
     height: 0%;
@@ -326,6 +335,7 @@
     height: 100%;
     opacity: 1;
   }
+
   to {
     width: 0%;
     height: 0%;
@@ -334,41 +344,45 @@
 }
 
 @keyframes zoom-out-translate-y {
-  from{
+  from {
     transform: scale(1) translateY(0);
   }
-  to{
+
+  to {
     transform: scale(.8) translateY(-45px);
-    
+
   }
 }
 
 @-webkit-keyframes zoom-out-translate-y {
-  from{
+  from {
     transform: scale(1) translateY(0);
   }
-  to{
+
+  to {
     transform: scale(.8) translateY(-45px);
-    
+
   }
 }
 
 @keyframes up {
-  from{
-    transform:  translateY(0);
+  from {
+    transform: translateY(0);
   }
-  to{
+
+  to {
     transform: translateY(-35px);
-    
+
   }
 }
 
 @-webkit-keyframes up {
-  from{
-    transform:  translateY(0);
+  from {
+    transform: translateY(0);
   }
-  to{
+
+  to {
     transform: translateY(-35px);
-    
+
   }
 }
