@@ -99,23 +99,23 @@
   from {
     width: 0; }
   to {
-    width: 20px; } }
+    width: 15px; } }
 
 @keyframes width-extension {
   from {
     width: 0; }
   to {
-    width: 20px; } }
+    width: 15px; } }
 
 @keyframes width-extension-r {
   from {
-    width: 20px; }
+    width: 15px; }
   to {
     width: 0; } }
 
 @-webkit-keyframes width-extension-r {
   from {
-    width: 20px; }
+    width: 15px; }
   to {
     width: 0; } }
 
