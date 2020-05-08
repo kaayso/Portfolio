@@ -1,0 +1,25 @@
+@import '../../app.scss';
+
+.PNavigator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.PNavigator__left-btn.MuiButton-root,
+.PNavigator__right-btn.MuiButton-root {
+  background-color: $primary-light-brown;
+  border-radius: 1px;
+
+  &:hover {
+    background-color: $primary-dark;
+
+  }
+
+  svg {
+    path {
+      fill: $primary-green;
+    }
+  }
+}

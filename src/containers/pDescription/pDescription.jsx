@@ -1,12 +1,13 @@
 import React from "react";
 import "./pDescription.css";
 import { useParams, Redirect } from "react-router-dom";
-import Projects from "helpers/projects.js";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import Badge from "components/badge/badge";
 import LanguageIcon from "@material-ui/icons/Language";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Badge from "components/badge/badge";
+import Projects from "helpers/projects.js";
+import PNavigator from "components/pNavigator/pNavigator";
 
 export default function PDescription() {
   const [currentP, setCurrentP] = React.useState(null);
@@ -15,7 +16,7 @@ export default function PDescription() {
   const root = React.createRef();
 
   React.useEffect(() => {
-    root.current.scrollTo(0, 0);
+    if (root.current) root.current.scrollTo(0, 0);
     const getCurrentP = () => {
       let result = null;
       Projects.forEach((p) => {
@@ -27,7 +28,24 @@ export default function PDescription() {
     };
     const pFound = getCurrentP();
     pFound ? setCurrentP(pFound) : setRedirection(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
+
+  const previousP = () => {
+    let index = Projects.indexOf(currentP);
+    if (index === 0) {
+      index = Projects.length;
+    }
+    setCurrentP(Projects[index - 1]);
+  };
+
+  const nextP = () => {
+    let index = Projects.indexOf(currentP);
+    if (index === Projects.length - 1) {
+      index = -1;
+    }
+    setCurrentP(Projects[index + 1]);
+  };
 
   if (redirect) {
     return <Redirect to="/" />; // TODO : redirect to 404 not found page
@@ -36,6 +54,8 @@ export default function PDescription() {
       <Container ref={root} className="pDescription" maxWidth="lg">
         {currentP && (
           <div className="pDescription-wrapper">
+            <PNavigator onPrevious={previousP} onNext={nextP} />
+
             <div className="pDescription__header">
               <h1 className="pDescription__title">{currentP.name}</h1>
               <a
