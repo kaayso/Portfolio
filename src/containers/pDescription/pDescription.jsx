@@ -12,8 +12,10 @@ export default function PDescription() {
   const [currentP, setCurrentP] = React.useState(null);
   const [redirect, setRedirection] = React.useState(false);
   let { slug } = useParams();
+  const root = React.createRef();
 
   React.useEffect(() => {
+    root.current.scrollTo(0, 0);
     const getCurrentP = () => {
       let result = null;
       Projects.forEach((p) => {
@@ -31,7 +33,7 @@ export default function PDescription() {
     return <Redirect to="/" />; // TODO : redirect to 404 not found page
   } else {
     return (
-      <Container className="pDescription" maxWidth="lg">
+      <Container ref={root} className="pDescription" maxWidth="lg">
         {currentP && (
           <div className="pDescription-wrapper">
             <div className="pDescription__header">
@@ -90,6 +92,15 @@ export default function PDescription() {
                 <img src={currentP.image} alt="" />
               </Grid>
             </Grid>
+            <div
+              className={`pDescription__pImage ${
+                currentP.dev === "mobile" ? "pDescription__pImage--mobile" : ""
+              }`}
+            >
+              {currentP.ressources.map((item) => {
+                return <img key={item.id} src={item.img} alt="" />;
+              })}
+            </div>
           </div>
         )}
       </Container>

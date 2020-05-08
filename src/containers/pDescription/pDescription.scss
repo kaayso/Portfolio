@@ -80,3 +80,25 @@
     flex-direction: row;
     align-items: flex-end;
 }
+
+.pDescription__pImage {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        margin: 50px auto;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.pDescription__pImage--mobile {
+    img {
+        margin: 50px auto;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
