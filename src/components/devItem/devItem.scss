@@ -1,153 +1,155 @@
 @import '../../app.scss';
 
 
-.bg-logo{
-    position: absolute; 
-    height: 100%;
-    max-width: 400px;
-    width: 90vw;
-    background-image: url('../../assets/images/bg-logo.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.bg-logo {
+  position: absolute;
+  height: 100%;
+  max-width: 400px;
+  width: 90vw;
+  background-image: url('../../assets/images/bg-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.dev-text {
+  max-width: 600px;
+  margin: auto 15px;
+
+  .dev-text__title {
+    font-family: 'pacifico';
+    color: #FFF;
+    font-size: $lg-font-size;
+    text-transform: capitalize;
+    margin-bottom: 20px;
   }
-  
-  
-  .dev-text{
-    max-width: 600px;
-    margin: auto 15px;
-    .dev-text__title{
-      font-family: 'pacifico';
-      color: #FFF;
-      font-size: $lg-font-size;
-      text-transform: capitalize;
-      margin-bottom: 20px;
+
+  .dev-text__content {
+    font-family: 'poppins';
+    color: $primary-white;
+    font-size: $paragraph-size;
+    text-align: left;
+
+    b {
+      font-family: 'poppins-extra-bold';
     }
-  
-    .dev-text__content{
-      font-family: 'poppins';
-      color: $primary-white;
-      font-size: $paragraph-size;
-      text-align: left;
-      b{
-        font-family: 'poppins-extra-bold';
-      }
-    }
   }
+}
 
-  .carousel-container__left-part  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 500px;
-  }
-  
-  .carousel-container__right-part  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-  }
+.carousel-container__left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+}
 
-  .animation-square{
-    position: absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width: 100%;
-    animation: rotateIn 12s linear infinite;
-  }
-  
-  .animation-square--speed{
-    position: absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width: 100%;
-    animation: rotateIn 8s linear infinite;
-  }
-  
-  .animation-circle-one {
-    height: 30px;
-    width: 30px;
-    border: solid 1px $primary-green;
-    position: absolute;
-    bottom: 0;
-    right: 35px;
-    border-radius: 50%;
-  }
-  
-  .animation-circle-two {
-    height: 20px;
-    width: 20px;
-    border: solid 1px $primary-white;
-    position: absolute;
-    bottom: 0;
-    left: 50px;
-    border-radius: 50%;
-  }
-  
-  .animation-circle-three {
-    height: 25px;
-    width: 25px;
-    border: solid 1px #FFF;
-    position: absolute;
-    top: 0;
-    left: 40px;
-    border-radius: 50%;
-  }
-  
-  .animation-circle-four {
-    height: 15px;
-    width: 15px;
-    border: solid 1px $primary-green;
-    position: absolute;
-    top: 0;
-    right: 70px;
-    border-radius: 50%;
-  }
-  
-  .animation-circle-five {
-    height: 25px;
-    width: 25px;
-    border: solid 1px $primary-green;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    border-radius: 50%;
-  }
-  
-  .animation-wrapper-dev-front{
-    height: 300px;
-    width: 300px;
-    position: relative;
-    border-radius: 50%;
-    background-image: url('../../assets/images/dev_web.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.carousel-container__right-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
 
-  .animation-wrapper-dev-mob{
-    height: 300px;
-    width: 300px;
-    position: relative;
-    border-radius: 50%;
-    background-image: url('../../assets/images/dev_mob.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.animation-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: rotateIn 12s linear infinite;
+}
 
-  .animation-wrapper-dev-back{
-    height: 300px;
-    width: 300px;
-    position: relative;
-    border-radius: 50%;
-    background-image: url('../../assets/images/dev_back.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.animation-square--speed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: rotateIn 8s linear infinite;
+}
+
+.animation-circle-one {
+  height: 30px;
+  width: 30px;
+  border: solid 1px $primary-green;
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  border-radius: 50%;
+}
+
+.animation-circle-two {
+  height: 20px;
+  width: 20px;
+  border: solid 1px $primary-white;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  border-radius: 50%;
+}
+
+.animation-circle-three {
+  height: 25px;
+  width: 25px;
+  border: solid 1px #FFF;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  border-radius: 50%;
+}
+
+.animation-circle-four {
+  height: 15px;
+  width: 15px;
+  border: solid 1px $primary-green;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  border-radius: 50%;
+}
+
+.animation-circle-five {
+  height: 25px;
+  width: 25px;
+  border: solid 1px $primary-green;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.animation-wrapper-dev-front {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 50%;
+  background-image: url('../../assets/images/dev_web.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.animation-wrapper-dev-mob {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 50%;
+  background-image: url('../../assets/images/dev_mob.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.animation-wrapper-dev-back {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 50%;
+  background-image: url('../../assets/images/dev_back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
