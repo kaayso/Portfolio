@@ -5,7 +5,7 @@ import NavBar from "components/navBar/navBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Loader from "components/loader/loader";
 import Home from "containers/home/home";
-import pDescription from "containers/pDescription/pDescription";
+import PDescription from "containers/pDescription/pDescription";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -28,7 +28,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/:slug" component={pDescription} />
+          <Route path="/:slug" component={PDescription} />
         </Switch>
       </Router>
     </div>

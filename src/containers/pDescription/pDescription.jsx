@@ -52,7 +52,7 @@ export default function PDescription() {
   } else {
     return (
       <Container ref={root} className="pDescription" maxWidth="lg">
-        {currentP && (
+        {currentP ? (
           <div className="pDescription-wrapper">
             <PNavigator onPrevious={previousP} onNext={nextP} />
 
@@ -122,6 +122,8 @@ export default function PDescription() {
               })}
             </div>
           </div>
+        ) : (
+          <div />
         )}
       </Container>
     );
