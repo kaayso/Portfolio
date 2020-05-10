@@ -12,7 +12,6 @@ const ItarverneFormation2 = require("assets/images/itarverne_formation2.png");
 const ItarverneFormation3 = require("assets/images/itarverne_formation3.png");
 const Sscraping0 = require("assets/images/sscraping0.png");
 const Sscraping1 = require("assets/images/sscraping1.png");
-const Sscraping2 = require("assets/images/sscraping2.png");
 const PicShare0 = require("assets/images/picshare0.jpg");
 const PicShare1 = require("assets/images/picshare1.jpg");
 const PicShare2 = require("assets/images/picshare2.jpg");
@@ -35,7 +34,7 @@ const projects = [{
     type: "Projet professionnel",
     period: "Avril 2019 - septembre 2019",
     society: "ITArverne",
-    technos: ["React", "Redux", "GraphQL", "Jest", "Enzyme", "SemanticUi", "GitlabCICD", "Codeclimate", "Docker"],
+    technos: ["React", "Redux", "GraphQL", "Relay", "Jest", "Enzyme", "SemanticUi", "GitlabCICD", "Codeclimate", "Docker"],
     description: "L'application Sscraping est une application de type SAAS. Elle permet d'optimiser le contenu CSS d’un site web. A partir de l'URL du site web, l’application parcourt récursivement le contenu pour en extraire les fichiers HTML/CSS. Ensuite, le contenu est analysé afin de vérifier si le CSS est utilisé de manière optimale en s’appuyant notamment sur la pertinence de chaque sélecteur. Enfin, les résultats de l’analyse sont visibles dans le tableau de bord de l’application. L’utilisateur peut alors visualiser grâce à des indicateurs de performance le nombre de sélecteurs supprimés, le poids total gagné, etc.... Il a également la possibilité de parcourir les fichiers CSS/HTML grâce à un graphe, de parcourir la liste des sélecteurs non utilisés, de consulter un résumé reprenant le nom de chaque page HTML avec les fichiers CSS associés, et de naviguer entre plusieurs résultats de scan grâce à \"l’historique des scans\".Les fichiers CSS optimisés sont disponibles directement en téléchargement depuis le tableau de bord ou alors accessibles via un CDN.",
     purpose: "Développement front-end de l'application Sscraping.",
     image: sscraping,
@@ -47,10 +46,6 @@ const projects = [{
       {
         id: 'Sscraping1',
         img: Sscraping1
-      },
-      {
-        id: 'Sscraping2',
-        img: Sscraping2
       }
     ],
     webSite: "http://sscraping.io/"
