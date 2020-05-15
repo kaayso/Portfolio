@@ -29,7 +29,7 @@ export default function Development() {
   ];
 
   const navigate = (i) => {
-    if (i < 0 || i > 2) return;
+    if (i < 0 || i > 2 || i === index) return;
     if (i < index) {
       document.getElementById("devItem-wrapper").className =
         "MuiGrid-root MuiGrid-container slide-right";

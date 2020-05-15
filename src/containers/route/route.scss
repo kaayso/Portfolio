@@ -1,0 +1,118 @@
+@import "../../app.scss";
+
+#parcours {
+  min-height: 100vh;
+  position: relative;
+  background-color: $primary-dark;
+  padding-top: 100px;
+}
+
+.parcours__title {
+  font-family: "pacifico";
+  color: $primary-white;
+  font-size: $lg-font-size;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.parcours__wrapper {
+  margin-top: 100px;
+}
+
+.parcours-content__title {
+  font-family: "poppins-extra-bold";
+  color: $primary-white;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.slide-left {
+  animation: 800ms slide-left forwards;
+  transform: scale(0.7);
+}
+
+.slide-right {
+  animation: 800ms slide-right forwards;
+  transform: scale(0.7);
+}
+
+.slide-from-left {
+  animation: 400ms slide-from-left forwards;
+}
+
+.slide-from-right {
+  animation: 400ms slide-from-right forwards;
+}
+
+#vertical-separator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+
+  path {
+    fill: rgba($color: #ffffff, $alpha: 0.05);
+  }
+}
+
+.parcours-grid {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.parcours-grid__item--tasks {
+  min-height: 675px;
+
+  ul {
+    li {
+      font-family: "poppins";
+      font-size: 1.4em;
+      text-align: center;
+    }
+  }
+}
+
+.parcours-grid__item--infos {
+  height: 200px;
+
+  ul {
+    li {
+      font-family: "pacifico";
+
+      font-size: $md-font-size;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.parcours-grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  ul {
+    margin: 15px;
+    position: relative;
+
+    li {
+      color: $primary-white;
+      margin: 15px auto;
+      list-style: none;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.li-number {
+  color: $primary-green;
+  font-family: 'poppins-extra-bold';
+  font-size: 1.5em;
+}

@@ -1,7 +1,7 @@
 @import '../../app.scss';
 
 
-#dev{
+#dev {
   background-color: $primary-brown;
   min-height: 100vh;
   display: flex;
@@ -11,7 +11,7 @@
   position: relative;
 }
 
-.carousel-container{
+.carousel-container {
   margin-top: 5em;
   width: 90%;
   max-width: 1344px;
@@ -19,36 +19,18 @@
 }
 
 @media (max-width: 578px) {
-  .carousel-container{
+  .carousel-container {
     width: 100%;
   }
 }
 
-.slide-left{
-  animation: 800ms slide-left forwards;
-  transform: scale(.7);
-}
-
-.slide-right{
-  animation: 800ms slide-right forwards;
-  transform: scale(.7);
-}
-
-.slide-from-left{
-  animation: 400ms slide-from-left forwards;
-}
-
-.slide-from-right{
-  animation: 400ms slide-from-right forwards;
-}
-
-.dev__btn{
+.dev__btn {
   margin-left: auto;
   margin-right: 15%;
   z-index: 3;
 }
 
-.dev__bottom-separator{
+.dev__bottom-separator {
   position: absolute;
   bottom: 0;
   left: 0;

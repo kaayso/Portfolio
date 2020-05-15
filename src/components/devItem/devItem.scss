@@ -153,3 +153,21 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.slide-left {
+  animation: 800ms slide-left forwards;
+  transform: scale(.7);
+}
+
+.slide-right {
+  animation: 800ms slide-right forwards;
+  transform: scale(.7);
+}
+
+.slide-from-left {
+  animation: 400ms slide-from-left forwards;
+}
+
+.slide-from-right {
+  animation: 400ms slide-from-right forwards;
+}
