@@ -3,41 +3,16 @@
 .badge {
   position: relative;
   display: inline-block;
-
-  .badge__text {
-    position: relative;
-    font-family: 'poppins';
-    font-weight: bold;
-    font-size: $sm-font-size;
-    color: $primary-white;
-    text-transform: capitalize;
-  }
-
+  padding: 0 1em;
+  margin: 5px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  color: $primary-white;
   background-color: $primary-dark;
-  margin: 10px 15px;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.badge__c1,
-.badge__c2 {
-  position: absolute;
-  background-color: $primary-dark;
-  height: 100%;
-  width: 30px;
-  border-radius: 50%;
-}
-
-.badge__c1 {
-  top: 0;
-  left: 0;
-  transform: translateX(-40%);
-}
-
-.badge__c2 {
-  top: 0;
-  right: 0;
-  transform: translateX(40%);
+  font-family: 'poppins';
+  font-size: $sm-font-size;
+  font-weight: 700;
+  text-transform: capitalize;
+  list-style: none;
 }

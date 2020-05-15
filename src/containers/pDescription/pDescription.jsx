@@ -96,11 +96,11 @@ export default function PDescription() {
                 </div>
 
                 <h2 className="pDescription__technos-title">technologies</h2>
-                <div>
+                <ul>
                   {currentP.technos.map((item) => {
                     return <Badge key={item} text={item} />;
                   })}
-                </div>
+                </ul>
               </Grid>
               <Grid
                 item
