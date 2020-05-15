@@ -25,7 +25,8 @@ export default function Route() {
         "Ajout de nouvelles fonctionnalités à l’application",
         "Réalisation des tests de couvertures et tests unitaires.",
       ],
-      title: "Développeur full-stack React/Java",
+      title: "Développeur front-end React",
+      subTitle: "stage",
     },
     {
       id: 1,
@@ -41,6 +42,7 @@ export default function Route() {
         "Intégration de Graphcool dans le projet.",
       ],
       title: "Développeur front-end React",
+      subTitle: "stage",
     },
     {
       id: 2,
@@ -57,6 +59,7 @@ export default function Route() {
         "Participation aux entretiens de stage.",
       ],
       title: "Développeur full-stack React/Django",
+      subTitle: "cdd",
     },
   ];
   const size = useWindowSize();
@@ -104,6 +107,9 @@ export default function Route() {
           <div id="parcours-content-wrapper">
             <div className="parcours-content__title">
               {route[activeIndex].title}
+            </div>
+            <div className="parcours-content__sub-title">
+              {route[activeIndex].subTitle}
             </div>
             <Grid container className="parcours-grid">
               <Grid
