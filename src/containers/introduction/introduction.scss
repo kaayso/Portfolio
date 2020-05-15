@@ -14,8 +14,8 @@
     svg {
         position: absolute;
         bottom: -1px;
-        left: 0;
-        width: 100%;
+        right: -1px;
+        width: 101%;
         z-index: 1;
 
         path {
@@ -44,8 +44,8 @@
     .accueil-right-container__separator {
         position: absolute;
         bottom: -1px;
-        left: 0;
-        width: 100%;
+        left: -1px;
+        width: 101%;
         z-index: 1;
 
         path {
