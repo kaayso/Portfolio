@@ -60,6 +60,7 @@ export default function Route() {
     },
   ];
   const size = useWindowSize();
+  const largeScreen = size.width > 1540;
 
   const translateSvg = () => {
     setSvgTranslation((REFERENCE_WIDTH - size.width) / 1.8);
@@ -154,7 +155,10 @@ export default function Route() {
         fill="none"
         id="vertical-separator"
         style={{
-          transform: `translateX(${svgTranslation + DEFAULT_TRANSLATEX}px)`,
+          transform: `translateX(${
+            svgTranslation +
+            (largeScreen ? DEFAULT_TRANSLATEX - 100 : DEFAULT_TRANSLATEX)
+          }px)`,
         }}
       >
         <path
