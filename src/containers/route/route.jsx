@@ -2,17 +2,13 @@ import React from "react";
 import "./route.css";
 import Container from "@material-ui/core/Container";
 import TimeLine from "components/timeLine/timeLine";
-import useWindowSize from "helpers/windowSizeHook";
 import Grid from "@material-ui/core/Grid";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import EventIcon from "@material-ui/icons/Event";
 
-const REFERENCE_WIDTH = 1315;
-const DEFAULT_TRANSLATEX = 400;
 export default function Route() {
   const [activeIndex, setActiveIndex] = React.useState(1);
-  const [svgTranslation, setSvgTranslation] = React.useState(0);
   const route = [
     {
       id: 0,
@@ -62,16 +58,6 @@ export default function Route() {
       subTitle: "cdd",
     },
   ];
-  const size = useWindowSize();
-  const largeScreen = size.width > 1540;
-
-  const translateSvg = () => {
-    setSvgTranslation((REFERENCE_WIDTH - size.width) / 1.8);
-  };
-
-  React.useEffect(() => {
-    if (REFERENCE_WIDTH - size.width > 0) translateSvg();
-  });
 
   const navigate = (i) => {
     if (i < 0 || i > 2 || i === activeIndex) return;
@@ -160,12 +146,7 @@ export default function Route() {
         viewBox="0 0 1219 1249"
         fill="none"
         id="vertical-separator"
-        style={{
-          transform: `translateX(${
-            svgTranslation +
-            (largeScreen ? DEFAULT_TRANSLATEX - 100 : DEFAULT_TRANSLATEX)
-          }px)`,
-        }}
+        preserveAspectRatio="none"
       >
         <path
           d="M37 590.5L143.5 245.5L107 115.5L198.5 0H1238.5V568V1248.5H0L54 1156L44.5 1061.5L107 903L37 590.5Z"

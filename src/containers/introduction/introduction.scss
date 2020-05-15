@@ -6,24 +6,25 @@
     background-color: #FFF;
 }
 
-.accueil-left-container{
+.accueil-left-container {
     background-color: #FFF;
     position: relative;
     min-height: 70vh;
 
     svg {
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         width: 100%;
         z-index: 1;
-        path{
+
+        path {
             fill: $primary-brown;
         }
     }
 }
 
-.accueil-right-container{
+.accueil-right-container {
     position: relative;
     background-image: url('../../assets/images/trees-on-mountain.png');
     background-position: center;
@@ -31,7 +32,7 @@
     background-size: cover;
     min-height: 650px;
 
-    .accueil-right-container__filter{
+    .accueil-right-container__filter {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -39,17 +40,19 @@
         width: 100%;
         background-color: $dark-filter;
     }
+
     .accueil-right-container__separator {
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         width: 100%;
         z-index: 1;
-        
-        path{
+
+        path {
             fill: $primary-brown;
         }
     }
+
     .accueil-right-container__mobile-separator {
         position: absolute;
         top: -15px;
@@ -57,14 +60,14 @@
         width: 100%;
         z-index: 1;
         transform: rotate(180deg);
-        
-        path{
+
+        path {
             fill: #FFF;
         }
     }
 }
 
-.accueil-right-container__content{
+.accueil-right-container__content {
     position: absolute;
     margin-left: .8em;
     margin-top: 17%;
@@ -75,7 +78,7 @@
     font-family: "poppins-extra-bold";
 }
 
-.accueil-left-container__content{
+.accueil-left-container__content {
     width: 320px;
     margin: auto;
     display: flex;
@@ -83,12 +86,13 @@
     flex-direction: column;
     margin-top: 17%;
 
-    .accueil-left-container__title{
+    .accueil-left-container__title {
         font-size: $huge-font-size;
         text-transform: uppercase;
         font-family: "poppins-extra-bold";
     }
-    .accueil-left-container__sub-title{
+
+    .accueil-left-container__sub-title {
         font-size: $lg-font-size;
         font-family: "pacifico";
         text-transform: capitalize;
@@ -100,7 +104,7 @@
         padding: 5px;
     }
 
-    .accueil-left-container__paragraph{
+    .accueil-left-container__paragraph {
         color: $primary-brown;
         font-family: "poppins";
         font-weight: 100;
@@ -108,7 +112,8 @@
         font-size: $paragraph-size;
         line-height: 1.7em;
         padding-bottom: 20px;
-        b{
+
+        b {
             font-family: "poppins-extra-bold";
         }
     }

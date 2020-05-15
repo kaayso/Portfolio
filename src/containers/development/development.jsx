@@ -63,14 +63,15 @@ export default function Development() {
       <Navigator navigate={navigate} index={index} />
       <Button className="dev__btn" href="#creations" title="mes créations" />
       <svg
-        className="dev__bottom-separator"
-        width="2656"
-        height="196"
-        viewBox="0 0 2656 196"
+        width="1800"
+        height="194"
+        viewBox="0 0 1800 194"
         fill="none"
+        className="dev__bottom-separator"
+        preserveAspectRatio="none"
       >
         <path
-          d="M1488 124.499L989.5 85.4994L588 124.499L217.5 124.499L-1.00065 179.497L-0.0365342 15.9994L2656 15.9996L2358 108.5L1923 85.4994L1488 124.499Z"
+          d="M1488 123.5L989.5 84.5005L588 123.5L217.501 123.5L-1.00002 178.498L-0.0359101 15.0005L2509.5 15.0006L2144 123.5L1836 84.5005L1488 123.5Z"
           fill="#716060"
         />
       </svg>

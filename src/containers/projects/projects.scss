@@ -1,6 +1,6 @@
 @import'../../app.scss';
 
-#creations{
+#creations {
     background-color: $primary-white;
     min-height: 100vh;
     position: relative;
@@ -10,26 +10,27 @@
 
 
 @media (min-width: 608px) {
-    .MuiContainer-root.creations__container{
+    .MuiContainer-root.creations__container {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
 }
 
 @media (max-width: 607px) {
-    .MuiContainer-root.creations__container{
+    .MuiContainer-root.creations__container {
         padding-left: 14px;
         padding-right: 14px;
     }
-    
+
 }
 
-.creations__top-separator{
+.creations__top-separator {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-25%) ;
+    width: 100%;
+    transform: translateY(-25%);
 }
 
 .projects__title {
@@ -40,18 +41,18 @@
     margin-bottom: 20px;
 }
 
-.projects__sub-title{
+.projects__sub-title {
     font-size: 1.5em;
     font-family: "poppins";
     color: $primary-dark;
     margin-bottom: 30px;
 
-    b{
+    b {
         font-family: 'poppins-extra-bold';
     }
 }
 
-.projects__content-container{
+.projects__content-container {
     margin-top: 50px;
     display: flex;
     justify-content: flex-start;
@@ -60,7 +61,7 @@
 }
 
 @media (max-width: 587px) {
-    .projects__content-container{
+    .projects__content-container {
         justify-content: center;
 
     }

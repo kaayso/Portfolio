@@ -60,7 +60,8 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: auto;
+  width: 100%;
+  transform: translateX(40%);
 
   path {
     fill: rgba($color: #ffffff, $alpha: 0.05);

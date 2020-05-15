@@ -11,7 +11,12 @@ export default function Introduction() {
       <Grid container id="accueil">
         <Grid item xs={12} md={6} lg={6} className="accueil-left-container">
           {!mobileBreakPoint && (
-            <svg viewBox="0 0 899 115" fill="none" preserveAspectRatio="none">
+            <svg
+              className="accueil__mobile-svg"
+              viewBox="0 0 899 115"
+              fill="none"
+              preserveAspectRatio="none"
+            >
               <path d="M0 115L691 0.5L899 19V115H0Z" fill="none" />
             </svg>
           )}
