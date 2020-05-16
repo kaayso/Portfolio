@@ -1,11 +1,11 @@
+@import "app.scss";
 
-@import "../../app.scss";
-
-.social-media-board{
+.social-media-board {
     position: fixed;
     left: 0;
     top: 30%;
     z-index: 1;
+
     ul {
         li {
             list-style: none;
@@ -13,47 +13,54 @@
     }
 }
 
-.social-media-board__phone{
+.social-media-board__phone {
     height: 34px;
     width: 34px;
-    margin: 5px 5px 10px 10px;;
+    margin: 5px 5px 10px 10px;
+    ;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
-        svg{
-            path:nth-child(1){
-                fill:  #E4E4E4;
+
+        svg {
+            path:nth-child(1) {
+                fill: #E4E4E4;
             }
         }
     }
 }
 
-.social-media-board__email{
+.social-media-board__email {
     height: 34px;
     width: 34px;
-    margin: 5px 5px 10px 10px;;
+    margin: 5px 5px 10px 10px;
+    ;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
 
-        svg{
-            path:nth-child(1){
-                fill:  #E4E4E4;
+        svg {
+            path:nth-child(1) {
+                fill: #E4E4E4;
             }
         }
     }
 }
 
-.social-media-board__github{
+.social-media-board__github {
     height: 34px;
     width: 34px;
-    margin: 5px 5px 10px 10px;;
+    margin: 5px 5px 10px 10px;
+    ;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
 
-        svg{
-            path{
+        svg {
+            path {
                 fill: #E4E4E4;
             }
         }
@@ -61,19 +68,20 @@
 
 }
 
-.social-media-board__linkedIN{
+.social-media-board__linkedIN {
     height: 34px;
     width: 34px;
-    margin: 5px 5px 10px 10px;;
+    margin: 5px 5px 10px 10px;
+    ;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
 
-        svg{
-            path:nth-child(1){
-                fill:  #E4E4E4;
+        svg {
+            path:nth-child(1) {
+                fill: #E4E4E4;
             }
         }
     }
 }
-

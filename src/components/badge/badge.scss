@@ -1,4 +1,4 @@
-@import'../../app.scss';
+@import "app.scss";
 
 .badge {
   position: relative;
@@ -10,7 +10,7 @@
   border-radius: 16px;
   color: $primary-white;
   background-color: $primary-dark;
-  font-family: 'poppins';
+  font-family: "poppins";
   font-size: $sm-font-size;
   font-weight: 700;
   text-transform: capitalize;

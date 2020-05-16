@@ -1,4 +1,4 @@
-@import '../../app.scss';
+@import "app.scss";
 
 .l-button {
     padding: 10px 15px;
@@ -8,43 +8,46 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: relative;  
+    position: relative;
     overflow: hidden;
     text-decoration: none;
     border: solid 1px transparent;
 
-    span{
+    span {
         text-transform: uppercase;
         font-size: $md-font-size;
         color: $primary-dark;
         font-family: 'poppins';
         z-index: 1;
     }
-    .l-button__layout{
+
+    .l-button__layout {
         background-color: $primary-dark;
         position: absolute;
         bottom: -50px;
-        left: -50px; 
+        left: -50px;
         width: 25%;
         height: 100%;
         border-radius: 50%;
-      }
-  
-      &:hover .l-button__layout{
-        animation: scale-bg 400ms ease-in forwards; 
-      }
-      &:hover span{
-          color: $primary-white;
-          transition: all 800ms;
-      }
-      &:hover {
-          border: solid 1px $primary-white;
-          transition: all 800ms;
-      }
+    }
+
+    &:hover .l-button__layout {
+        animation: scale-bg 400ms ease-in forwards;
+    }
+
+    &:hover span {
+        color: $primary-white;
+        transition: all 800ms;
+    }
+
+    &:hover {
+        border: solid 1px $primary-white;
+        transition: all 800ms;
+    }
 }
 
 @media (max-width: 578px) {
     .l-button {
         margin: auto;
     }
-  }
+}

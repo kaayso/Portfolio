@@ -1,4 +1,4 @@
-@import'../../app.scss';
+@import "app.scss";
 
 #cv {
     background-color: $primary-dark;
@@ -6,13 +6,14 @@
     z-index: 1;
 }
 
-.cv__grid{
+.cv__grid {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 120px;
+
     div {
         display: flex;
         justify-content: center;
@@ -20,18 +21,19 @@
     }
 }
 
-.cv__text{
+.cv__text {
     font-size: $paragraph-size;
     color: $primary-white;
     font-family: "poppins";
     text-align: center;
     margin: auto 5px;
-    b{
+
+    b {
         text-transform: uppercase;
         font-family: 'poppins-extra-bold';
     }
 }
 
-.cv__btn{
+.cv__btn {
     margin: 10px auto;
 }

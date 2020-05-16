@@ -18,9 +18,9 @@
   },
   "scripts": {
     "start": "npm-run-all -p watch-scss start-js ",
-    "watch-scss": "node-sass-chokidar ./src -o ./src --watch --recursive",
+    "watch-scss": "node-sass-chokidar --include-path ./src ./src -o ./src --watch --recursive",
     "start-js": "react-scripts start",
-    "build-css": "node-sass-chokidar ./src -o ./src",
+    "build-css": "node-sass-chokidar --include-path ./src ./src -o ./src",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
