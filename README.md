@@ -9,3 +9,4 @@ To do at the end ✅
 [✅] responsive pViewer
 [ ] not found page
 [ ] set title in index.html
+[ ] footer
