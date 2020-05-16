@@ -1,6 +1,6 @@
 @import'../../app.scss';
 
-.loader{
+.loader {
     background-color: $primary-dark;
     position: absolute;
     top: 0;
@@ -13,7 +13,7 @@
     flex-direction: row;
 }
 
-.loader__bubbles-container{
+.loader__bubbles-container {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     margin-top: 50vh;
 }
 
-.loader--hidden{
+.loader--hidden {
     display: none;
 }
 
@@ -32,17 +32,17 @@
     border-radius: 50%;
     background-color: $primary-green;
     margin: 5px;
-    animation: 400ms jump ease-in-out infinite alternate ;
+    animation: 400ms jump ease-in-out infinite alternate;
 }
 
-.loader__bubble2{
+.loader__bubble2 {
 
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: $primary-green;
     margin: 5px;
-    animation: 400ms jump 250ms ease-in-out infinite alternate ;
+    animation: 400ms jump 250ms ease-in-out infinite alternate;
 }
 
 .loader__bubble3 {
@@ -51,25 +51,25 @@
     border-radius: 50%;
     background-color: $primary-green;
     margin: 5px;
-    animation: 400ms jump 400ms ease-in-out infinite alternate ;
+    animation: 400ms jump 400ms ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes jump {
     from {
         transform: translateY(0);
     }
-  
+
     to {
         transform: translateY(-20px);
     }
-  }
-  
+}
+
 @keyframes jump {
     from {
         transform: translateY(0);
     }
-  
+
     to {
         transform: translateY(-20px);
     }
-  }
+}
