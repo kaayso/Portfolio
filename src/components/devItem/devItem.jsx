@@ -32,6 +32,9 @@ export default function DevItem(props) {
           <div className="animation-square">
             <div className="animation-circle-five"></div>
           </div>
+          <div className="animation-square">
+            <div className="animation-circle-six"></div>
+          </div>
         </div>
       </Grid>
       <Grid

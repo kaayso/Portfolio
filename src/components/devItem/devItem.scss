@@ -121,9 +121,19 @@
   border-radius: 50%;
 }
 
+.animation-circle-six {
+  height: 40px;
+  width: 40px;
+  border: solid 1px $primary-white;
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  border-radius: 50%;
+}
+
 .animation-wrapper-dev-front {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   position: relative;
   border-radius: 50%;
   background-image: url('../../assets/images/dev_web.png');
@@ -133,8 +143,8 @@
 }
 
 .animation-wrapper-dev-mob {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   position: relative;
   border-radius: 50%;
   background-image: url('../../assets/images/dev_mob.png');
@@ -144,8 +154,8 @@
 }
 
 .animation-wrapper-dev-back {
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   position: relative;
   border-radius: 50%;
   background-image: url('../../assets/images/dev_back.png');
@@ -170,4 +180,14 @@
 
 .slide-from-right {
   animation: 400ms slide-from-right forwards;
+}
+
+@media (max-width: 400px) {
+
+  .animation-wrapper-dev-back,
+  .animation-wrapper-dev-mob,
+  .animation-wrapper-dev-front {
+    height: 290px;
+    width: 290px;
+  }
 }
