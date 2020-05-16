@@ -10,3 +10,4 @@ To do at the end ✅
 [ ] not found page
 [ ] set title in index.html
 [ ] footer
+[ ] contact modal
