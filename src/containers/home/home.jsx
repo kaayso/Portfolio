@@ -4,6 +4,7 @@ import Development from "containers/development/development";
 import Cv from "containers/cv/cv";
 import Projects from "containers/projects/projects";
 import Route from "containers/route/route";
+import Skills from 'containers/skills/skills';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Cv />
       <Projects />
       <Route />
+      <Skills />
     </>
   );
 }

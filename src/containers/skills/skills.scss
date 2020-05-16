@@ -1,0 +1,62 @@
+@import '../../app.scss';
+
+#skills {
+  min-height: 100vh;
+  position: relative;
+  background-color: $primary-white;
+  padding-bottom: 50px;
+}
+
+.skills-grid.MuiGrid-root {
+  position: relative;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.skills-item {
+  margin: 50px 0 0 0;
+  max-width: 600px;
+
+  .skills-item__title {
+    font-family: 'pacifico';
+    font-size: $lg-font-size;
+    text-transform: capitalize;
+    color: $primary-grey;
+    margin-bottom: .7em;
+  }
+
+  .skills-item__content {
+
+
+    .skills-item__line {
+      font-family: 'poppins';
+      font-size: $md-font-size;
+      color: $brown-text;
+      margin-left: 25px;
+    }
+
+    .skills-item__content--paragraph {
+      list-style: none;
+      margin-left: 5px;
+
+    }
+  }
+}
+
+.skills-container.MuiGrid-item {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#skills-separator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}

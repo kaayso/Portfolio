@@ -52,6 +52,7 @@ export default function Development() {
   return (
     <section id="dev">
       <div className="carousel-container">
+        <Navigator navigate={navigate} index={index} />
         <Grid id="devItem-wrapper" container>
           <DevItem
             title={dico[index].title}
@@ -60,7 +61,6 @@ export default function Development() {
           />
         </Grid>
       </div>
-      <Navigator navigate={navigate} index={index} />
       <Button className="dev__btn" href="#creations" title="mes créations" />
       <svg
         width="1800"

@@ -31,7 +31,7 @@
 .parcours-content__title {
   font-family: "poppins-extra-bold";
   color: $primary-white;
-  font-size: 1.5em;
+  font-size: $paragraph-size;
   text-align: center;
   text-transform: uppercase;
   margin-top: 10px;
@@ -92,7 +92,6 @@
   ul {
     li {
       font-family: "pacifico";
-
       font-size: 1.5em;
       display: flex;
       justify-content: center;
