@@ -13,10 +13,10 @@ export default function PDescription() {
   const [currentP, setCurrentP] = React.useState(null);
   const [redirect, setRedirection] = React.useState(false);
   let { slug } = useParams();
-  const root = React.createRef();
 
   React.useEffect(() => {
-    if (root.current) root.current.scrollTo(0, 0);
+    // Scroll to top
+    window.scrollTo(0, 0);
     const getCurrentP = () => {
       let result = null;
       Projects.forEach((p) => {
@@ -51,7 +51,7 @@ export default function PDescription() {
     return <Redirect to="/" />; // TODO : redirect to 404 not found page
   } else {
     return (
-      <Container ref={root} className="pDescription" maxWidth="lg">
+      <Container className="pDescription" maxWidth="lg">
         {currentP ? (
           <div className="pDescription-wrapper">
             <PNavigator onPrevious={previousP} onNext={nextP} />
