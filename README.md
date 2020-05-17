@@ -8,6 +8,6 @@ To do at the end ✅
 [ ] to top button
 [✅] responsive pViewer
 [ ] not found page
-[ ] set title in index.html
+[✅] set title in index.html
 [✅] footer
 [ ] contact modal
