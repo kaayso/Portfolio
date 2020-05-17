@@ -4,10 +4,10 @@ To do at the end ✅
 [ ] Google insights
 [ ] EmailJs
 [ ] Animation on scroll
-[✅ ] navBar dev fixed
+[✅] navBar dev fixed
 [ ] to top button
 [✅] responsive pViewer
 [ ] not found page
 [ ] set title in index.html
-[ ] footer
+[✅] footer
 [ ] contact modal

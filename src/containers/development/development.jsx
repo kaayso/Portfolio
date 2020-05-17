@@ -24,7 +24,7 @@ export default function Development() {
       subject: "dev-back",
       title: "développement back",
       content:
-        "La gestion des données est réalisée à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>PostgreSQL</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> via <b>Docker</b> afin de séparer les différentes responsabilités d'une application.",
+        "Le développement des fonctionnalités et le traitement des données sont réalisés à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>PostgreSQL</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> via <b>Docker</b> afin de séparer les différentes responsabilités d'une application.",
     },
   ];
 

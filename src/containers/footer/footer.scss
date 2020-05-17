@@ -1,0 +1,130 @@
+@import "app.scss";
+
+#footer {
+  width: 100%;
+  position: relative;
+}
+
+.footer__band {
+  background-color: $primary-brown;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__grid {
+  background-color: $primary-dark;
+}
+
+.footer__logo {
+  height: 1em;
+  width: auto;
+  margin: 0 5px;
+}
+
+.footer__copy-right {
+  font-family: 'poppins';
+  color: $primary-white;
+  font-size: .7em;
+}
+
+.footer__grid-item.MuiGrid-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5em auto;
+  font-family: 'poppins';
+  color: $primary-white;
+  text-transform: uppercase;
+
+  div {
+    width: 132px;
+    margin-top: 1em;
+  }
+
+  .footer__section-title {
+    font-family: 'poppins-extra-bold';
+    font-size: $md-font-size;
+    padding: 6px 8px;
+  }
+
+  div {
+    ul {
+      li {
+        color: $primary-white;
+        list-style: none;
+
+        a,
+        button {
+          span {
+            color: $primary-white;
+            font-size: .9em;
+            text-transform: capitalize;
+
+            svg {
+              margin-right: 5px;
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.intro.MuiGrid-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  div {
+    max-width: 500px;
+    height: auto;
+    padding: 1.3em .5em;
+    text-align: justify;
+    background-color: rgba($color: #716060, $alpha: .2);
+    position: relative;
+
+    .intro__title {
+      font-family: 'pacifico';
+      color: $primary-white;
+      font-size: 1.5em;
+      padding-left: 7px;
+      background-color: transparent;
+    }
+
+    .intro__header {
+      height: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-90%);
+      background-color: #423E3E;
+      width: 100%;
+    }
+
+    .intro__header::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      width: 0;
+      height: 0;
+      border-top: 33px solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 25px solid #2E2A2A;
+    }
+
+    .intro__content {
+      font-family: 'poppins';
+      color: $primary-white;
+      font-size: 1em;
+      background-color: transparent;
+
+    }
+  }
+}

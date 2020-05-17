@@ -62,28 +62,31 @@ export default function Skills() {
     <section id="skills">
       <Grid container className="skills-grid">
         <Grid item sm={10} md={10} lg={4} className="skills-container">
-          {leftWrapper.map((item) => (
-            <div className="skills-item">
+          {leftWrapper.map((item, index) => (
+            <div key={index} className="skills-item">
               <div className="skills-item__title">{item.title}</div>
               <ul className="skills-item__content">
                 {item.badge
-                  ? item.content.map((element) => (
-                      <Badge text={element} color="#716060" />
+                  ? item.content.map((element, index) => (
+                      <Badge key={index} text={element} color="#716060" />
                     ))
-                  : item.content.map((element) => (
-                      <li className="skills-item__line">{element}</li>
+                  : item.content.map((element, index) => (
+                      <li key={index} className="skills-item__line">
+                        {element}
+                      </li>
                     ))}
               </ul>
             </div>
           ))}
         </Grid>
         <Grid className="skills-container" item sm={10} md={10} lg={4}>
-          {rightWrapper.map((item) => (
-            <div className="skills-item">
+          {rightWrapper.map((item, index) => (
+            <div className="skills-item" key={index}>
               <div className="skills-item__title">{item.title}</div>
               <ul className="skills-item__content">
-                {item.content.map((element) => (
+                {item.content.map((element, index) => (
                   <li
+                    key={index}
                     className={`skills-item__line ${
                       item.title === "savoir être"
                         ? "skills-item__content--paragraph"

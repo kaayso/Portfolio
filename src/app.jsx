@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Loader from "components/loader/loader";
 import Home from "containers/home/home";
 import PDescription from "containers/pDescription/pDescription";
+import Footer from "containers/footer/footer";
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -24,12 +25,12 @@ function App() {
       <Router>
         <CssBaseline />
         <Loader visible={visible} />
-
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/:slug" component={PDescription} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
