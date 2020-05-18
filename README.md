@@ -2,7 +2,7 @@ To do at the end ✅
 
 [ ] GA
 [ ] Google insights
-[ ] EmailJs
+[✅] EmailJs
 [ ] Animation on scroll
 [✅] navBar dev fixed
 [ ] to top button
@@ -10,4 +10,4 @@ To do at the end ✅
 [ ] not found page
 [✅] set title in index.html
 [✅] footer
-[ ] contact modal
+[✅] contact modal
