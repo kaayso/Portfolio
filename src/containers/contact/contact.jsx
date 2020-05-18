@@ -1,23 +1,24 @@
-import React from "react";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import "./contact.css";
-import TextField from "@material-ui/core/TextField";
-import TextareaAutosize from "@material-ui/core/TextareaAutosize";
-import Button from "components/button/button";
-import emailjs from "emailjs-com";
+import React from 'react';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import './contact.css';
+import TextField from '@material-ui/core/TextField';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import Button from 'components/button/button';
+import emailjs from 'emailjs-com';
 
 export default function Contact(props) {
   const [inputs, setInputs] = React.useState({
     name: {
-      text: "",
+      text: '',
       error: false,
     },
     email: {
-      text: "",
+      text: '',
       error: false,
     },
     message: {
-      text: "",
+      text: '',
+      error: false,
     },
   });
 
@@ -36,10 +37,11 @@ export default function Contact(props) {
     if (
       checkedInputs.name.error ||
       checkedInputs.email.error ||
-      !checkedInputs.message.text
+      checkedInputs.message.error
     ) {
       // set error
       setInputs(checkedInputs);
+      console.log(checkedInputs);
     } else {
       // remove error before
       setInputs(checkedInputs);
@@ -48,7 +50,7 @@ export default function Contact(props) {
       props.toggleDrawer(false, event);
 
       // send email
-      var templateParams = {
+      const templateParams = {
         name: inputs.name.text,
         email: inputs.email.text,
         message: inputs.message.text,
@@ -62,10 +64,10 @@ export default function Contact(props) {
         )
         .then(
           function (response) {
-            console.log("SUCCESS!", response.status, response.text);
+            console.log('SUCCESS!', response.status, response.text);
           },
           function (error) {
-            console.log("FAILED...", error);
+            console.log('FAILED...', error);
           }
         );
     }
@@ -76,7 +78,7 @@ export default function Contact(props) {
 
     // check if any field is empty
     tmpInputs.name.error = !tmpInputs.name.text;
-    tmpInputs.email.error = !tmpInputs.email.text;
+    tmpInputs.message.error = !tmpInputs.message.text;
 
     // check if email respect correct format
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -104,29 +106,35 @@ export default function Contact(props) {
             <div className="contact-title">contact</div>
             <TextField
               id="filled-basic"
-              className="contact-input"
+              className={`contact-input ${
+                inputs.name.error ? 'input-error' : ''
+              }`}
               label="Nom"
               variant="filled"
-              onChange={handleValue("name")}
+              onChange={handleValue('name')}
               required
               error={inputs.name.error}
             />
             <TextField
               id="filled-basic"
-              className="contact-input"
-              label="Adresse mail"
+              className={`contact-input ${
+                inputs.email.error ? 'input-error' : ''
+              }`}
+              label="Adresse e-mail"
               variant="filled"
               type="email"
               required
               error={inputs.email.error}
-              onChange={handleValue("email")}
+              onChange={handleValue('email')}
             />
             <TextareaAutosize
-              className="contact-text-area"
+              className={`contact-text-area ${
+                inputs.message.error ? 'text-area-error' : ''
+              }`}
               aria-label="message"
               rowsMin={6}
               placeholder="Message..."
-              onChange={handleValue("message")}
+              onChange={handleValue('message')}
             />
             <Button
               onClick={handleSubmit()}

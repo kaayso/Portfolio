@@ -156,3 +156,16 @@
     margin: .8em auto 0 auto;
   }
 }
+
+
+.input-error.MuiTextField-root {
+  .MuiFilledInput-root.MuiFilledInput-underline {
+    &::after {
+      border-bottom-color: red;
+    }
+  }
+}
+
+.text-area-error {
+  border: 2px solid red;
+}

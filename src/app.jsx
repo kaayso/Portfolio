@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./app.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "components/navBar/navBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Loader from "components/loader/loader";
-import Home from "containers/home/home";
-import PDescription from "containers/pDescription/pDescription";
-import Footer from "containers/footer/footer";
-import Contact from "containers/contact/contact";
+import React, { useState, useEffect } from 'react';
+import './app.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from 'components/navBar/navBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Loader from 'components/loader/loader';
+import Home from 'containers/home/home';
+import PDescription from 'containers/pDescription/pDescription';
+import Footer from 'containers/footer/footer';
+import Contact from 'containers/contact/contact';
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -25,8 +25,8 @@ function App() {
   const toggleDrawer = (open, event) => {
     if (
       event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
     ) {
       return;
     }
