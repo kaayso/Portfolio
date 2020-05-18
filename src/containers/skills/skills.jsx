@@ -1,58 +1,59 @@
-import React from "react";
-import "./skills.css";
-import Grid from "@material-ui/core/Grid";
-import Badge from "components/badge/badge";
+import React from 'react';
+import './skills.css';
+import Grid from '@material-ui/core/Grid';
+import Badge from 'components/badge/badge';
 
 export default function Skills() {
   const rightWrapper = [
     {
-      title: "compétences",
+      title: 'compétences',
       content: [
-        "Développement Front-end et Back-end",
-        "Développement mobile cross-platform",
-        "Responsive Design",
-        "Microservices",
-        "UI Design",
-        "Déploiement",
+        'Développement Front-end et Back-end',
+        'Développement mobile cross-platform',
+        'Responsive Design',
+        'Microservices',
+        'UI Design',
+        'Déploiement',
       ],
     },
     {
-      title: "savoir être",
+      title: 'savoir être',
       content: [
-        "Sérieux, responsable, dynamique, entreprenant, soucieux du détail, curieux, aime le travail en équipe, et passionné par mon métier.",
+        'Sérieux, responsable, dynamique, entreprenant, soucieux du détail, curieux, aime le travail en équipe, et passionné par mon métier.',
       ],
     },
   ];
 
   const leftWrapper = [
     {
-      title: "technologies",
+      title: 'technologies',
       content: [
-        "react",
-        "docker",
-        "node",
-        "django",
-        "mongoDB",
-        "redux",
-        "REST",
-        "SemanticUI",
-        "MaterialUI",
-        "Bootstrap",
+        'react',
+        'docker',
+        'node',
+        'django',
+        'mongoDB',
+        'PostgreSQL',
+        'redux',
+        'REST',
+        'SemanticUI',
+        'MaterialUI',
+        'Bootstrap',
       ],
       badge: true,
     },
     {
-      title: "auto-formation et initiations",
-      content: ["express", "react-native", "android", "AngularJS", "graphQL"],
+      title: 'auto-formation et initiations',
+      content: ['express', 'react-native', 'android', 'AngularJS', 'graphQL'],
       badge: true,
     },
     {
-      title: "outils",
+      title: 'outils',
       content: [
-        "Versionnement du code: Git (Github ou Gitlab)",
-        "Wireframes et mockups: Figma",
-        "Éditeur de code : VSCODE",
-        "Environnement de développement : MacOS, Linux",
+        'Versionnement du code: Git (Github ou Gitlab)',
+        'Wireframes et mockups: Figma',
+        'Éditeur de code : VSCODE',
+        'Environnement de développement : MacOS, Linux',
       ],
       badge: false,
     },
@@ -88,9 +89,9 @@ export default function Skills() {
                   <li
                     key={index}
                     className={`skills-item__line ${
-                      item.title === "savoir être"
-                        ? "skills-item__content--paragraph"
-                        : ""
+                      item.title === 'savoir être'
+                        ? 'skills-item__content--paragraph'
+                        : ''
                     }`}
                   >
                     {element}
