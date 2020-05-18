@@ -4,6 +4,7 @@ import "./contact.css";
 import TextField from "@material-ui/core/TextField";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import Button from "components/button/button";
+import emailjs from "emailjs-com";
 
 export default function Contact(props) {
   const [inputs, setInputs] = React.useState({
@@ -32,14 +33,41 @@ export default function Contact(props) {
     // check inputs
     const checkedInputs = checkInputs();
 
-    if (checkedInputs.name.error || checkedInputs.email.error) {
+    if (
+      checkedInputs.name.error ||
+      checkedInputs.email.error ||
+      !checkedInputs.message.text
+    ) {
       // set error
       setInputs(checkedInputs);
     } else {
       // remove error before
       setInputs(checkedInputs);
+
+      // close modal
+      props.toggleDrawer(false, event);
+
       // send email
-      console.log("email sent ;)");
+      var templateParams = {
+        name: inputs.name.text,
+        email: inputs.email.text,
+        message: inputs.message.text,
+      };
+
+      emailjs
+        .send(
+          process.env.REACT_APP_EMAILJS_SERVICEID,
+          process.env.REACT_APP_EMAILJS_TEMPLATEID,
+          templateParams
+        )
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
     }
   };
 
