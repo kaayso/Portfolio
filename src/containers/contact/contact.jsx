@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Button from 'components/button/button';
 import emailjs from 'emailjs-com';
+import { useSnackbar } from 'notistack';
 
 export default function Contact(props) {
   const [inputs, setInputs] = React.useState({
@@ -21,6 +22,7 @@ export default function Contact(props) {
       error: false,
     },
   });
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleValue = (name) => (event) => {
     event.preventDefault();
@@ -41,7 +43,6 @@ export default function Contact(props) {
     ) {
       // set error
       setInputs(checkedInputs);
-      console.log(checkedInputs);
     } else {
       // remove error before
       setInputs(checkedInputs);
@@ -65,9 +66,25 @@ export default function Contact(props) {
         .then(
           function (response) {
             console.log('SUCCESS!', response.status, response.text);
+            enqueueSnackbar('Message envoyé !', {
+              variant: 'success',
+              anchorOrigin: {
+                vertical: 'top',
+                horizontal: 'right',
+              },
+              preventDuplicate: true,
+            });
           },
           function (error) {
             console.log('FAILED...', error);
+            enqueueSnackbar('Erreur: Message non envoyé', {
+              variant: 'error',
+              anchorOrigin: {
+                vertical: 'top',
+                horizontal: 'right',
+              },
+              preventDuplicate: true,
+            });
           }
         );
     }
