@@ -13,10 +13,10 @@ export default function PDescription() {
   const [currentP, setCurrentP] = React.useState(null);
   const [redirect, setRedirection] = React.useState(false);
   let { slug } = useParams();
-
+  const isClient = typeof window === "object";
   React.useEffect(() => {
     // Scroll to top
-    window.scrollTo(0, 0);
+    isClient && window.scrollTo(0, 0);
     const getCurrentP = () => {
       let result = null;
       Projects.forEach((p) => {

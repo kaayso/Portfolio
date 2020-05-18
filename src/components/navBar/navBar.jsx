@@ -42,7 +42,7 @@ export default function NavBar(props) {
   let location = useLocation();
 
   // Open/close the drawer for mobile
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = (open, event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -61,6 +61,11 @@ export default function NavBar(props) {
     }
   }, [location.pathname]);
 
+  const switchFromMenuToContactDrawer = () => (event) => {
+    props.toggleContactDrawer(true, event);
+    toggleDrawer(false, event);
+  };
+
   return (
     <Fragment>
       <div className={classes.sectionDesktop}>
@@ -69,33 +74,49 @@ export default function NavBar(props) {
             <img className="navBar__logo" src={LogoFB} alt="Faycel Benyoussa" />
           </Button>
           <div className="navBar__btn-container">
-            {links.map((text) => (
-              <Button
-                key={text}
-                href={`${
-                  text === `accueil`
-                    ? `/`
-                    : `#${text
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f-\s]/g, "")}`
-                }`}
-                size="small"
-                className="navBar__btn"
-              >
-                {text}
-                <div className="navbar__btn--hover">
-                  <div className="navbar__btn--left-line"></div>
-                  <div className="navbar__btn--point"></div>
-                  <div className="navbar__btn--right-line"></div>
-                </div>
-              </Button>
-            ))}
+            {links.map((text) =>
+              text === "contact" ? (
+                <Button
+                  key={text}
+                  onClick={(e) => props.toggleContactDrawer(true, e)}
+                  size="small"
+                  className="navBar__btn"
+                >
+                  {text}
+                  <div className="navbar__btn--hover">
+                    <div className="navbar__btn--left-line"></div>
+                    <div className="navbar__btn--point"></div>
+                    <div className="navbar__btn--right-line"></div>
+                  </div>
+                </Button>
+              ) : (
+                <Button
+                  key={text}
+                  href={`${
+                    text === `accueil`
+                      ? `/`
+                      : `#${text
+                          .normalize("NFD")
+                          .replace(/[\u0300-\u036f-\s]/g, "")}`
+                  }`}
+                  size="small"
+                  className="navBar__btn"
+                >
+                  {text}
+                  <div className="navbar__btn--hover">
+                    <div className="navbar__btn--left-line"></div>
+                    <div className="navbar__btn--point"></div>
+                    <div className="navbar__btn--right-line"></div>
+                  </div>
+                </Button>
+              )
+            )}
           </div>
         </Toolbar>
       </div>
       <div className={classes.sectionMobile}>
         <IconButton
-          onClick={toggleDrawer(true)}
+          onClick={(e) => toggleDrawer(true, e)}
           color="inherit"
           aria-label="menu"
         >
@@ -112,35 +133,48 @@ export default function NavBar(props) {
         <Drawer
           className="navBar__drawer-root"
           open={openBottom}
-          onClose={toggleDrawer(false)}
+          onClose={(e) => toggleDrawer(false, e)}
           anchor="bottom"
         >
           <List>
-            {links.map((text, index) => (
-              <a
-                href={`${
-                  text === `accueil`
-                    ? `/`
-                    : `#${text
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f-\s]/g, "")}`
-                }`}
-                onClick={toggleDrawer(false)}
-                className="navBar__drawer-link"
-                key={text}
-              >
-                <ListItem button>
+            {links.map((text) =>
+              text === "contact" ? (
+                <ListItem
+                  key={text}
+                  button
+                  onClick={switchFromMenuToContactDrawer()}
+                >
                   <ListItemText className="navBar__drawer-btn" primary={text} />
                 </ListItem>
-              </a>
-            ))}
+              ) : (
+                <a
+                  href={`${
+                    text === `accueil`
+                      ? `/`
+                      : `#${text
+                          .normalize("NFD")
+                          .replace(/[\u0300-\u036f-\s]/g, "")}`
+                  }`}
+                  className="navBar__drawer-link"
+                  onClick={(e) => toggleDrawer(false, e)}
+                  key={text}
+                >
+                  <ListItem button>
+                    <ListItemText
+                      className="navBar__drawer-btn"
+                      primary={text}
+                    />
+                  </ListItem>
+                </a>
+              )
+            )}
           </List>
           <Divider />
           <div
             className="navBar__drawer-content"
             role="presentation"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
+            onClick={(e) => toggleDrawer(false, e)}
+            onKeyDown={(e) => toggleDrawer(false, e)}
           >
             <img
               className="navBar__logo--mobile--drawer"
@@ -149,7 +183,7 @@ export default function NavBar(props) {
             />
           </div>
           <div
-            onClick={toggleDrawer(false)}
+            onClick={(e) => toggleDrawer(false, e)}
             className="navBar__drawer-content--closer"
           >
             X

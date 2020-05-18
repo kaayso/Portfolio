@@ -1,0 +1,158 @@
+@import "app.scss";
+
+.contact-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  height: auto;
+  background-color: $primary-brown;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 1em;
+
+  .contact-closer {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    right: 5px;
+    background-color: $primary-green;
+    line-height: 30px;
+    text-align: center;
+    color: $primary-brown;
+    font-family: 'poppins';
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  div {
+    width: 80%;
+
+  }
+}
+
+.contact-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: $primary-dark;
+}
+
+.contact-title {
+  font-family: 'poppins-extra-bold';
+  font-size: $paragraph-size;
+  text-align: center;
+  color: $primary-white;
+  padding-bottom: .5em;
+  text-transform: uppercase;
+  margin: auto;
+  margin-top: 1em;
+}
+
+
+.contact-input.MuiTextField-root {
+  width: 70%;
+  border: 0;
+  margin-top: 15px;
+
+  .MuiInputLabel-root {
+    font-family: 'poppins';
+    color: $primary-white;
+    font-size: .95em;
+    text-transform: capitalize;
+  }
+
+  .MuiFilledInput-root.MuiFilledInput-underline {
+    border-radius: 0;
+    background-color: #998585;
+
+    &::before {
+      border-bottom-color: transparent;
+    }
+
+    &::after {
+      border-bottom-color: $primary-white;
+
+    }
+
+    input {
+      font-family: 'poppins';
+      color: $primary-white;
+      font-size: $sm-font-size;
+    }
+  }
+
+}
+
+.contact-text-area {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 100%;
+  background-color: #998585;
+  font-family: 'poppins';
+  color: $primary-white;
+  font-size: 1em;
+  outline: none;
+  padding: 10px;
+
+  &:focus {
+    border: 2px solid $primary-white;
+  }
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'poppins';
+    color: $primary-white;
+    font-size: 1em;
+    /* Firefox */
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $primary-white;
+    font-size: 1em;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $primary-white;
+    font-size: 1em;
+  }
+}
+
+.contact-btn {
+  width: 100px;
+  margin-right: auto;
+  margin-top: .8em;
+  font-size: $sm-font-size;
+
+  span {
+    color: $primary-brown;
+    font-family: 'poppins';
+    font-weight: 580;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    div {
+      width: 95%;
+    }
+  }
+
+  .contact-input.MuiTextField-root {
+    width: 90%;
+  }
+
+  .contact-text-area {
+    width: 100%;
+  }
+
+  .contact-btn {
+    margin: .8em auto 0 auto;
+  }
+}
