@@ -26,7 +26,7 @@
 
 .accueil-right-container {
     position: relative;
-    background-image: url('../../assets/images/trees-on-mountain.png');
+    background-image: url('../../assets/images/volcano-erupting.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        background-color: $dark-filter;
+        background-color: transparent; // TODO : find the right color
     }
 
     .accueil-right-container__separator {

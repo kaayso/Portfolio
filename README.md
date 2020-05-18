@@ -10,4 +10,4 @@ To do at the end ✅
 [✅] set title in index.html
 [✅] footer
 [✅] contact modal
-[ ] notification with notistack
+[✅] notification with notistack
