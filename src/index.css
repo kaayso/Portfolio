@@ -17,6 +17,9 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
 
+html {
+  scroll-behavior: smooth; }
+
 @font-face {
   font-family: 'poppins';
   font-weight: normal;

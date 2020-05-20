@@ -10,7 +10,8 @@
 .PNavigator__left-btn.MuiButton-root,
 .PNavigator__right-btn.MuiButton-root {
   background-color: $primary-light-brown;
-  border-radius: 1px;
+  border-radius: 50%;
+  min-width: auto;
 
   &:hover {
     background-color: $primary-dark;
@@ -22,4 +23,9 @@
       fill: $primary-green;
     }
   }
+}
+
+.PNavigator__left-btn.MuiButton-text,
+.PNavigator__right-btn.MuiButton-text {
+  padding: 6px;
 }

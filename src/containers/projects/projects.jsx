@@ -1,14 +1,14 @@
-import React from "react";
-import "./projects.css";
-import Container from "@material-ui/core/Container";
-import Navigation from "components/navigation/navigation";
-import PViewer from "components/pViewer/pViewer";
-import SscrapingLogo from "assets/images/sscraping.svg";
-import ItarverneFormation from "assets/images/itarverne-formation.svg";
-import Braincube from "assets/images/braincube.svg";
-import Esat from "assets/images/esat.svg";
-import Picshare from "assets/images/picshare.svg";
-import PlayToLearn from "assets/images/playToLearn.svg";
+import React from 'react';
+import './projects.css';
+import Container from '@material-ui/core/Container';
+import Navigation from 'components/navigation/navigation';
+import PViewer from 'components/pViewer/pViewer';
+import SscrapingLogo from 'assets/images/sscraping.svg';
+import ItarverneFormation from 'assets/images/itarverne-formation.svg';
+import Braincube from 'assets/images/braincube.svg';
+import Esat from 'assets/images/esat.svg';
+import Picshare from 'assets/images/picshare.svg';
+import PlayToLearn from 'assets/images/playToLearn.svg';
 
 export default function Projects() {
   const [index, setIndex] = React.useState(0);
@@ -18,45 +18,45 @@ export default function Projects() {
     setPList([
       {
         logo: SscrapingLogo,
-        title: "Sscraping",
-        subTitle: "Développement web",
-        route: "/sscraping",
-        category: "pro",
+        title: 'Sscraping',
+        subTitle: 'Développement web',
+        route: '/sscraping',
+        category: 'pro',
       },
       {
         logo: ItarverneFormation,
-        title: "itarverne formation",
-        subTitle: "Développement web",
-        route: "/itarverne-formation",
-        category: "pro",
+        title: 'itarverne formation',
+        subTitle: 'Développement web',
+        route: '/itarverne-formation',
+        category: 'pro',
       },
       {
         logo: Braincube,
-        title: "console live",
-        subTitle: "Développement web",
-        route: "/braincube",
-        category: "pro",
+        title: 'console live',
+        subTitle: 'Développement web',
+        route: '/braincube',
+        category: 'pro',
       },
       {
         logo: Picshare,
-        title: "picshare",
-        subTitle: "Développement mobile",
-        route: "/picshare",
-        category: "perso&sco",
+        title: 'picshare',
+        subTitle: 'Développement mobile',
+        route: '/picshare',
+        category: 'perso&sco',
       },
       {
         logo: PlayToLearn,
-        title: "play to learn",
-        subTitle: "Développement mobile",
-        route: "/play-to-learn",
-        category: "perso&sco",
+        title: 'play to learn',
+        subTitle: 'Développement mobile',
+        route: '/play-to-learn',
+        category: 'perso&sco',
       },
       {
         logo: Esat,
-        title: "IME / ESAT",
-        subTitle: "Développement web",
-        route: "/esat",
-        category: "pro",
+        title: 'IME / ESAT',
+        subTitle: 'Développement web',
+        route: '/esat',
+        category: 'pro',
       },
     ]);
   }, []);
@@ -64,76 +64,75 @@ export default function Projects() {
   const rawCards = [
     {
       logo: SscrapingLogo,
-      title: "Sscraping",
-      subTitle: "Développement web",
-      route: "/sscraping",
-      category: "pro",
+      title: 'Sscraping',
+      subTitle: 'Développement web',
+      route: '/sscraping',
+      category: 'pro',
     },
     {
       logo: ItarverneFormation,
-      title: "itarverne formation",
-      subTitle: "Développement web",
-      route: "/itarverne-formation",
-      category: "pro",
+      title: 'itarverne formation',
+      subTitle: 'Développement web',
+      route: '/itarverne-formation',
+      category: 'pro',
     },
     {
       logo: Braincube,
-      title: "console de monitoring",
-      subTitle: "Développement web",
-      route: "/braincube",
-      category: "pro",
+      title: 'console de monitoring',
+      subTitle: 'Développement web',
+      route: '/braincube',
+      category: 'pro',
     },
     {
       logo: Picshare,
-      title: "picshare",
-      subTitle: "Développement mobile",
-      route: "/picshare",
-      category: "perso&sco",
+      title: 'picshare',
+      subTitle: 'Développement mobile',
+      route: '/picshare',
+      category: 'perso&sco',
     },
     {
       logo: PlayToLearn,
-      title: "play to learn",
-      subTitle: "Développement mobile",
-      route: "/play-to-learn",
-      category: "perso&sco",
+      title: 'play to learn',
+      subTitle: 'Développement mobile',
+      route: '/play-to-learn',
+      category: 'perso&sco',
     },
     {
       logo: Esat,
-      title: "IME / ESAT",
-      subTitle: "Développement web",
-      route: "/esat",
-      category: "pro",
+      title: 'IME / ESAT',
+      subTitle: 'Développement web',
+      route: '/esat',
+      category: 'pro',
     },
   ];
 
   const nav = [
     {
       _key: 0,
-      label: "tout",
+      label: 'tout',
     },
     {
       _key: 1,
-      label: "professionnels",
+      label: 'professionnels',
     },
     {
       _key: 2,
-      label: "Scolaires & perso",
+      label: 'Scolaires & perso',
     },
   ];
 
   const handleNavigationClick = (index) => {
     if (index === 1) {
-      setPList(rawCards.filter((i) => i.category === "pro"));
+      setPList(rawCards.filter((i) => i.category === 'pro'));
       setIndex(index);
     } else if (index === 2) {
-      setPList(rawCards.filter((i) => i.category === "perso&sco"));
+      setPList(rawCards.filter((i) => i.category === 'perso&sco'));
       setIndex(index);
     } else {
       setPList(rawCards);
       setIndex(index);
     }
   };
-
   return (
     <section id="creations">
       <Container className="creations__container" maxWidth="lg">
