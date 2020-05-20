@@ -1,22 +1,23 @@
-import React from "react";
-import "./pDescription.css";
-import { useParams, Redirect } from "react-router-dom";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import LanguageIcon from "@material-ui/icons/Language";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import Badge from "components/badge/badge";
-import Projects from "helpers/projects.js";
-import PNavigator from "components/pNavigator/pNavigator";
+import React from 'react';
+import './pDescription.css';
+import { useParams, Redirect } from 'react-router-dom';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import LanguageIcon from '@material-ui/icons/Language';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Badge from 'components/badge/badge';
+import Projects from 'helpers/projects.js';
+import PNavigator from 'components/pNavigator/pNavigator';
 
 export default function PDescription() {
   const [currentP, setCurrentP] = React.useState(null);
   const [redirect, setRedirection] = React.useState(false);
   let { slug } = useParams();
-  const isClient = typeof window === "object";
+  const isClient = typeof window === 'object';
   React.useEffect(() => {
     // Scroll to top
     isClient && window.scrollTo(0, 0);
+    // first load
     const getCurrentP = () => {
       let result = null;
       Projects.forEach((p) => {
@@ -48,7 +49,7 @@ export default function PDescription() {
   };
 
   if (redirect) {
-    return <Redirect to="/" />; // TODO : redirect to 404 not found page
+    return <Redirect to="/" />;
   } else {
     return (
       <Container className="pDescription" maxWidth="lg">
@@ -114,7 +115,7 @@ export default function PDescription() {
             </Grid>
             <div
               className={`pDescription__pImage ${
-                currentP.dev === "mobile" ? "pDescription__pImage--mobile" : ""
+                currentP.dev === 'mobile' ? 'pDescription__pImage--mobile' : ''
               }`}
             >
               {currentP.ressources.map((item) => {

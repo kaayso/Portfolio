@@ -1,10 +1,10 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import "./devItem.css";
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import './devItem.css';
 
 export default function DevItem(props) {
   React.useEffect(() => {
-    document.querySelector(".dev-text__content").innerHTML = props.content;
+    document.querySelector('.dev-text__content').innerHTML = props.content;
   }, [props.content]);
   return (
     <>
@@ -16,7 +16,7 @@ export default function DevItem(props) {
         className="carousel-container__left-part"
       >
         <div className="bg-logo"></div>
-        <div className={`animation-wrapper-${props.dev}`}>
+        <div className={`animation-wrapper-${props.dev} dev-img`}>
           <div className="animation-square">
             <div className="animation-circle-one"></div>
           </div>

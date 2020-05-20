@@ -1,81 +1,81 @@
-import React from "react";
-import "./route.css";
-import Container from "@material-ui/core/Container";
-import TimeLine from "components/timeLine/timeLine";
-import Grid from "@material-ui/core/Grid";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import ApartmentIcon from "@material-ui/icons/Apartment";
-import EventIcon from "@material-ui/icons/Event";
+import React from 'react';
+import './route.css';
+import Container from '@material-ui/core/Container';
+import TimeLine from 'components/timeLine/timeLine';
+import Grid from '@material-ui/core/Grid';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import EventIcon from '@material-ui/icons/Event';
 
 export default function Route() {
   const [activeIndex, setActiveIndex] = React.useState(1);
   const route = [
     {
       id: 0,
-      year: "2018",
-      society: "Braincube",
-      period: "Mai-Septembre 2018",
-      location: "Issoire",
+      year: '2018',
+      society: 'Braincube',
+      period: 'Mai-Septembre 2018',
+      location: 'Issoire',
       description: [
-        "Refonte graphique de la console de monitoring des Braincube Live.",
-        "Ajout de nouvelles fonctionnalités à l’application",
-        "Réalisation des tests de couvertures et tests unitaires.",
+        'Refonte graphique de la console de monitoring des Braincube Live.',
+        'Ajout de nouvelles fonctionnalités à l’application',
+        'Réalisation des tests de couvertures et tests unitaires.',
       ],
-      title: "Développeur front-end React",
-      subTitle: "stage",
+      title: 'Développeur front-end React',
+      subTitle: 'stage',
     },
     {
       id: 1,
-      year: "2019",
-      society: "ITArverne",
-      period: "Avril-Septembre 2019",
-      location: "Sayat",
+      year: '2019',
+      society: 'ITArverne',
+      period: 'Avril-Septembre 2019',
+      location: 'Sayat',
       description: [
         "Développement front-end de l'application Sscraping.",
-        "Réalisation des tests unitaires et de couvertures.",
+        'Réalisation des tests unitaires et de couvertures.',
         "Réalisation d'une API de chat avec keybase.",
         "Mise en place d'un bot pour le reporting des tests de couverture et des bugs sur keybase.",
-        "Intégration de Graphcool dans le projet.",
+        'Intégration de Graphcool dans le projet.',
       ],
-      title: "Développeur front-end React",
-      subTitle: "stage",
+      title: 'Développeur front-end React',
+      subTitle: 'stage',
     },
     {
       id: 2,
-      year: "2020",
-      society: "ITArverne",
-      period: "Décembre-Avril 2020",
-      location: "Volvic",
+      year: '2020',
+      society: 'ITArverne',
+      period: 'Décembre-Avril 2020',
+      location: 'Volvic',
       description: [
-        "Développement et maintenance des applications métiers.",
-        "Réalisation du site de formation de la société.",
-        "Réalisation des tests de couvertures et tests unitaires.",
-        "Rédaction de la documentation technique, offres de stage, et exercices de préselection des condidats.",
-        "Rédaction d’articles sur la technologie React.",
-        "Participation aux entretiens de stage.",
+        'Développement et maintenance des applications métiers.',
+        'Réalisation du site de formation de la société.',
+        'Réalisation des tests de couvertures et tests unitaires.',
+        'Rédaction de la documentation technique, offres de stage, et exercices de préselection des condidats.',
+        'Rédaction d’articles sur la technologie React.',
+        'Participation aux entretiens de stage.',
       ],
-      title: "Développeur full-stack React/Django",
-      subTitle: "cdd",
+      title: 'Développeur full-stack React/Django',
+      subTitle: 'cdd',
     },
   ];
 
   const navigate = (i) => {
     if (i < 0 || i > 2 || i === activeIndex) return;
     if (i < activeIndex) {
-      document.getElementById("parcours-content-wrapper").className =
-        " slide-right";
+      document.getElementById('parcours-content-wrapper').className =
+        ' slide-right';
       setTimeout(() => {
         setActiveIndex(i);
-        document.getElementById("parcours-content-wrapper").className =
-          " slide-from-left";
+        document.getElementById('parcours-content-wrapper').className =
+          ' slide-from-left';
       }, 100);
     } else {
-      document.getElementById("parcours-content-wrapper").className =
-        " slide-left";
+      document.getElementById('parcours-content-wrapper').className =
+        ' slide-left';
       setTimeout(() => {
         setActiveIndex(i);
-        document.getElementById("parcours-content-wrapper").className =
-          " slide-from-right";
+        document.getElementById('parcours-content-wrapper').className =
+          ' slide-from-right';
       }, 100);
     }
   };

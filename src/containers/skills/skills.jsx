@@ -2,8 +2,47 @@ import React from 'react';
 import './skills.css';
 import Grid from '@material-ui/core/Grid';
 import Badge from 'components/badge/badge';
+import { gsap } from 'gsap';
+import { useIntersection } from 'react-use';
 
 export default function Skills() {
+  const myRef = React.useRef(null);
+  const THRESHOLD = 0.1;
+  const intersection = useIntersection(myRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: THRESHOLD,
+  });
+
+  const animationsIn = (element1, element2) => {
+    gsap.to(element1, 1, {
+      ease: 'elastic',
+      x: 0,
+      opacity: 1,
+    });
+    gsap.to(element2, 1, {
+      ease: 'elastic',
+      x: 0,
+      opacity: 1,
+    });
+  };
+  const animationsOut = (element1, element2) => {
+    gsap.to(element1, 1, {
+      x: -120,
+      ease: 'power4.out',
+      opacity: 0,
+    });
+    gsap.to(element2, 1, {
+      ease: 'power4.out',
+      x: 120,
+      opacity: 0,
+    });
+  };
+
+  intersection && intersection.intersectionRatio > THRESHOLD
+    ? animationsIn('.skills-container--left', '.skills-container--right')
+    : animationsOut('.skills-container--left', '.skills-container--right');
+
   const rightWrapper = [
     {
       title: 'compétences',
@@ -60,9 +99,15 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills">
+    <section ref={myRef} id="skills">
       <Grid container className="skills-grid">
-        <Grid item sm={10} md={10} lg={4} className="skills-container">
+        <Grid
+          item
+          sm={10}
+          md={10}
+          lg={4}
+          className="skills-container skills-container--left"
+        >
           {leftWrapper.map((item, index) => (
             <div key={index} className="skills-item">
               <div className="skills-item__title">{item.title}</div>
@@ -80,7 +125,13 @@ export default function Skills() {
             </div>
           ))}
         </Grid>
-        <Grid className="skills-container" item sm={10} md={10} lg={4}>
+        <Grid
+          className="skills-container skills-container--right"
+          item
+          sm={10}
+          md={10}
+          lg={4}
+        >
           {rightWrapper.map((item, index) => (
             <div className="skills-item" key={index}>
               <div className="skills-item__title">{item.title}</div>

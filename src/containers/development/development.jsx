@@ -1,28 +1,30 @@
-import React from "react";
-import "./development.css";
-import Grid from "@material-ui/core/Grid";
-import DevItem from "components/devItem/devItem";
-import Navigator from "components/carouselNav/carouselNav";
-import Button from "components/button/button";
+import React from 'react';
+import './development.css';
+import Grid from '@material-ui/core/Grid';
+import DevItem from 'components/devItem/devItem';
+import Navigator from 'components/carouselNav/carouselNav';
+import Button from 'components/button/button';
+import { gsap } from 'gsap';
+import { useIntersection } from 'react-use';
 
 export default function Development() {
   const [index, setIndex] = React.useState(0);
   const dico = [
     {
-      subject: "dev-front",
-      title: "développement front",
+      subject: 'dev-front',
+      title: 'développement front',
       content:
         "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>AngularJS</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
     },
     {
-      subject: "dev-mob",
-      title: "développement mobile",
+      subject: 'dev-mob',
+      title: 'développement mobile',
       content:
         "Je suis capable de créer des applications mobile <b>cross-plateforme</b> (Android et IOS) en utilisant le framework <b>React-Native</b> avec la librairie <b>NativeBase</b>. Je suis également capable de réaliser des <b>applications 100% natives</b> (Android). Pour ce faire, j'utilise les languages <b>JAVA/XML</b> avec Android Studio.",
     },
     {
-      subject: "dev-back",
-      title: "développement back",
+      subject: 'dev-back',
+      title: 'développement back',
       content:
         "Le développement des fonctionnalités et le traitement des données sont réalisés à l'aide du framework <b>Express</b> ou <b>Django</b> avec <b>MongoDB</b> (NoSql) ou <b>PostgreSQL</b> (Relationelle). En terme d'architecture, j'utilise <b>l'architecture microservices</b> via <b>Docker</b> afin de séparer les différentes responsabilités d'une application.",
     },
@@ -31,26 +33,53 @@ export default function Development() {
   const navigate = (i) => {
     if (i < 0 || i > 2 || i === index) return;
     if (i < index) {
-      document.getElementById("devItem-wrapper").className =
-        "MuiGrid-root MuiGrid-container slide-right";
+      document.getElementById('devItem-wrapper').className =
+        'MuiGrid-root MuiGrid-container slide-right';
       setTimeout(() => {
         setIndex(i);
-        document.getElementById("devItem-wrapper").className =
-          "MuiGrid-root MuiGrid-container slide-from-left";
+        document.getElementById('devItem-wrapper').className =
+          'MuiGrid-root MuiGrid-container slide-from-left';
       }, 200);
     } else {
-      document.getElementById("devItem-wrapper").className =
-        "MuiGrid-root MuiGrid-container slide-left";
+      document.getElementById('devItem-wrapper').className =
+        'MuiGrid-root MuiGrid-container slide-left';
       setTimeout(() => {
         setIndex(i);
-        document.getElementById("devItem-wrapper").className =
-          "MuiGrid-root MuiGrid-container slide-from-right";
+        document.getElementById('devItem-wrapper').className =
+          'MuiGrid-root MuiGrid-container slide-from-right';
       }, 200);
     }
   };
 
+  const myRef = React.useRef(null);
+  const THRESHOLD = 0.2;
+  const intersection = useIntersection(myRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: THRESHOLD,
+  });
+
+  const animationsIn = (element1) => {
+    gsap.to(element1, 1, {
+      ease: 'power4.out',
+      opacity: 1,
+      scale: 0.95,
+    });
+  };
+  const animationsOut = (element1) => {
+    gsap.to(element1, 1, {
+      ease: 'power4.out',
+      opacity: 0,
+      scale: 0,
+    });
+  };
+
+  intersection && intersection.intersectionRatio > THRESHOLD
+    ? animationsIn('.dev-img')
+    : animationsOut('.dev-img');
+
   return (
-    <section id="dev">
+    <section ref={myRef} id="dev">
       <div className="carousel-container">
         <Navigator navigate={navigate} index={index} />
         <Grid id="devItem-wrapper" container>
