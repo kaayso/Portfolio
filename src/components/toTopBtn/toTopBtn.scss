@@ -1,0 +1,26 @@
+@import 'app.scss';
+
+.toTopBtn.MuiButtonBase-root {
+  position: fixed;
+  bottom: 25%;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: $primary-light-brown;
+  z-index: 98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 5%;
+
+  &:hover {
+    background-color: rgb(164, 151, 150);
+  }
+
+  svg {
+    path {
+      fill: #FFF;
+    }
+  }
+}

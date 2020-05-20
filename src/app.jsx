@@ -8,6 +8,7 @@ import Home from 'containers/home/home';
 import PDescription from 'containers/pDescription/pDescription';
 import Footer from 'containers/footer/footer';
 import Contact from 'containers/contact/contact';
+import ToTopBtn from 'components/toTopBtn/toTopBtn';
 
 function App() {
   const [visible, setLoaderVisibility] = useState(true);
@@ -44,6 +45,7 @@ function App() {
           position="bottom"
         />
         <NavBar toggleContactDrawer={toggleDrawer} />
+        <ToTopBtn />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/:slug" component={PDescription} />
