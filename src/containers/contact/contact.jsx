@@ -43,6 +43,14 @@ export default function Contact(props) {
     ) {
       // set error
       setInputs(checkedInputs);
+      enqueueSnackbar("Le formulaire envoyé n'est pas valide", {
+        variant: 'error',
+        anchorOrigin: {
+          vertical: 'top',
+          horizontal: 'right',
+        },
+        preventDuplicate: true,
+      });
     } else {
       // remove error before
       setInputs(checkedInputs);
