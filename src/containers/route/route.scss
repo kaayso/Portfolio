@@ -29,7 +29,8 @@
 }
 
 .parcours-content__title {
-  font-family: "poppins-extra-bold";
+  font-family: "Poppins";
+  font-weight: 800;
   color: $primary-white;
   font-size: $paragraph-size;
   text-align: center;
@@ -79,7 +80,7 @@
 
   ul {
     li {
-      font-family: "poppins";
+      font-family: "Poppins";
       font-size: 1.4em;
       text-align: center;
     }
@@ -134,6 +135,7 @@
 
 .li-number {
   color: $primary-green;
-  font-family: 'poppins-extra-bold';
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   font-size: 2em;
 }

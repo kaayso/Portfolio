@@ -26,13 +26,14 @@
   }
 
   .dev-text__content {
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     color: $primary-white;
     font-size: $paragraph-size;
     text-align: left;
 
     b {
-      font-family: 'poppins-extra-bold';
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
     }
   }
 }

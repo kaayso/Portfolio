@@ -43,12 +43,13 @@
 
 .projects__sub-title {
     font-size: 1.5em;
-    font-family: "poppins";
+    font-family: "Poppins";
     color: $brown-text;
     margin-bottom: 30px;
 
     b {
-        font-family: 'poppins-extra-bold';
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
     }
 }
 

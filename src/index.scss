@@ -25,44 +25,6 @@
 }
 
 
-
-@font-face {
-  font-family: 'poppins';
-  font-weight: normal;
-  font-style: normal;
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('opentype');
-}
-
-
-@font-face {
-  font-family: 'poppins-extra-bold';
-  font-weight: normal;
-  font-style: normal;
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-ExtraBold.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'poppins-light';
-  font-weight: normal;
-  font-style: normal;
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-Light.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'cookie';
-  font-weight: normal;
-  font-style: normal;
-  src: local('Cookie'), url(./fonts/Cookie/Cookie-Regular.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'pacifico';
-  font-weight: normal;
-  font-style: normal;
-  src: local('Pacifico'), url(./fonts/Pacifico/Pacifico-Regular.ttf) format('opentype');
-}
-
-
 // animations
 
 @-webkit-keyframes rotateIn {

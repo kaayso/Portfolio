@@ -23,7 +23,7 @@
     line-height: 30px;
     text-align: center;
     color: $primary-brown;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     cursor: pointer;
   }
@@ -41,7 +41,8 @@
 }
 
 .contact-title {
-  font-family: 'poppins-extra-bold';
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   font-size: $paragraph-size;
   text-align: center;
   color: $primary-white;
@@ -58,7 +59,7 @@
   margin-top: 15px;
 
   .MuiInputLabel-root {
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     color: $primary-white;
     font-size: .95em;
     text-transform: capitalize;
@@ -78,7 +79,7 @@
     }
 
     input {
-      font-family: 'poppins';
+      font-family: 'Poppins', sans-serif;
       color: $primary-white;
       font-size: $sm-font-size;
     }
@@ -91,7 +92,7 @@
   width: 100%;
   max-width: 100%;
   background-color: #998585;
-  font-family: 'poppins';
+  font-family: 'Poppins', sans-serif;
   color: $primary-white;
   font-size: 1em;
   outline: none;
@@ -104,7 +105,7 @@
 
   &::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     color: $primary-white;
     font-size: 1em;
     /* Firefox */
@@ -132,7 +133,7 @@
 
   span {
     color: $primary-brown;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 580;
   }
 

@@ -6,9 +6,12 @@ import Navigator from 'components/carouselNav/carouselNav';
 import Button from 'components/button/button';
 import { gsap } from 'gsap';
 import { useIntersection } from 'react-use';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export default function Development() {
   const [index, setIndex] = React.useState(0);
+  const mobileBreakPoint = useMediaQuery('(max-width:959px)');
+
   const dico = [
     {
       subject: 'dev-front',
@@ -74,9 +77,11 @@ export default function Development() {
     });
   };
 
-  intersection && intersection.intersectionRatio > THRESHOLD
-    ? animationsIn('.dev-img')
-    : animationsOut('.dev-img');
+  if (!mobileBreakPoint) {
+    intersection && intersection.intersectionRatio > THRESHOLD
+      ? animationsIn('.dev-img')
+      : animationsOut('.dev-img');
+  }
 
   return (
     <section ref={myRef} id="dev">

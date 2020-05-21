@@ -75,7 +75,8 @@
     color: #FFF;
     font-size: $huge-font-size;
     text-transform: uppercase;
-    font-family: "poppins-extra-bold";
+    font-family: "Poppins";
+    font-weight: 800;
 }
 
 .accueil-left-container__content {
@@ -89,7 +90,8 @@
     .accueil-left-container__title {
         font-size: $huge-font-size;
         text-transform: uppercase;
-        font-family: "poppins-extra-bold";
+        font-family: "Poppins";
+        font-weight: 800;
     }
 
     .accueil-left-container__sub-title {
@@ -106,7 +108,7 @@
 
     .accueil-left-container__paragraph {
         color: $primary-brown;
-        font-family: "poppins";
+        font-family: "Poppins";
         font-weight: 100;
         text-align: center;
         font-size: $paragraph-size;
@@ -114,7 +116,8 @@
         padding-bottom: 20px;
 
         b {
-            font-family: "poppins-extra-bold";
+            font-family: "Poppins";
+            font-weight: 800;
         }
     }
 }

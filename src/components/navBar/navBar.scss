@@ -6,7 +6,7 @@
 
 .navBar.MuiToolbar-root {
     background-color: $primary-dark;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     height: 6.25em;
     justify-content: space-between;
@@ -22,7 +22,8 @@
 .navBar__btn .MuiButton-label {
     color: $primary-white;
     text-transform: uppercase;
-    font-family: 'poppins-extra-bold';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
     font-size: $md-font-size;
     padding: 0 1.9em;
     margin-top: 15px;
@@ -74,7 +75,7 @@
 
 .navBar__drawer-btn span {
     color: $primary-white;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-size: $md-font-size;
 }
@@ -164,7 +165,7 @@
     line-height: 30px;
     text-align: center;
     color: $primary-dark;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     cursor: pointer;
 }
