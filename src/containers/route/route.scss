@@ -87,14 +87,26 @@
 }
 
 .parcours-grid__item--infos {
-  height: 200px;
+  height: 100px;
 
   ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
     li {
       font-family: "pacifico";
-      font-size: 1.5em;
+      font-weight: 600;
+      font-size: 1.25em;
       display: flex;
-      justify-content: center;
+      margin: 0 20px 4px 0 !important;
+
+      svg {
+        path {
+          fill: $primary-green;
+        }
+      }
     }
   }
 }

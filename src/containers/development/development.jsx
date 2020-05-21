@@ -60,7 +60,7 @@ export default function Development() {
   });
 
   const animationsIn = (element1) => {
-    gsap.to(element1, 1, {
+    gsap.to(element1, 2, {
       ease: 'power4.out',
       opacity: 1,
       scale: 0.95,

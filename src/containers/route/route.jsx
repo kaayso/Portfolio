@@ -8,7 +8,7 @@ import ApartmentIcon from '@material-ui/icons/Apartment';
 import EventIcon from '@material-ui/icons/Event';
 
 export default function Route() {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = React.useState(2);
   const route = [
     {
       id: 0,
@@ -22,7 +22,7 @@ export default function Route() {
         'Réalisation des tests de couvertures et tests unitaires.',
       ],
       title: 'Développeur front-end React',
-      subTitle: 'stage',
+      subTitle: '{ stage }',
     },
     {
       id: 1,
@@ -38,7 +38,7 @@ export default function Route() {
         'Intégration de Graphcool dans le projet.',
       ],
       title: 'Développeur front-end React',
-      subTitle: 'stage',
+      subTitle: '{ stage }',
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ export default function Route() {
         'Participation aux entretiens de stage.',
       ],
       title: 'Développeur full-stack React/Django',
-      subTitle: 'cdd',
+      subTitle: '{ cdd }',
     },
   ];
 
