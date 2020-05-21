@@ -16,7 +16,10 @@ export default function PDescription() {
   const isClient = typeof window === 'object';
   React.useEffect(() => {
     // Scroll to top
-    isClient && window.scrollTo(0, 0);
+    isClient &&
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
     // first load
     const getCurrentP = () => {
       let result = null;

@@ -9,45 +9,34 @@
     margin: 60px auto 30px auto;
 }
 
-.carouselNav__btn {
-    height: 40px;
-    width: 40px;
+
+.carouselNav__btn-left-btn.MuiButton-root,
+.carouselNav__btn-right-btn.MuiButton-root {
+    background-color: $primary-light-brown;
     border-radius: 50%;
-    border: solid 2px $primary-green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 20px;
-    cursor: pointer;
-
-    .back {
-        transform: rotate(-180deg) translateX(2px);
-    }
-
-    .forward {
-        transform: translateX(1px);
-    }
+    min-width: auto;
+    margin: 0 2em;
 
     &:hover {
-        svg {
-            path {
-                fill: $primary-brown;
-            }
+        background-color: $primary-dark;
+
+    }
+
+    svg {
+        path {
+            fill: $primary-green;
         }
-
-        background-color: $primary-green;
-        border-color: transparent;
     }
+}
 
-    &:active {
-        transform: scale(1.1);
-    }
-
+.carouselNav__btn-left-btn.MuiButton-text,
+.carouselNav__btn-right-btn.MuiButton-text {
+    padding: 6px;
 }
 
 .carouselNav__state {
-    height: 9px;
-    width: 9px;
+    height: 7px;
+    width: 7px;
     border-radius: 50%;
     background-color: $primary-white;
     margin: 10px;
@@ -55,11 +44,11 @@
 }
 
 .carouselNav__state--active {
-    height: 25px;
-    width: 25px;
+    height: 19px;
+    width: 19px;
     border-radius: 50%;
-    border: solid 2px $primary-green;
-    margin: 5px;
+    border: solid 1px $primary-green;
+    margin: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,8 +56,8 @@
     transition: border 300ms;
 
     div {
-        height: 15px;
-        width: 15px;
+        height: 9px;
+        width: 9px;
         border-radius: 50%;
         background-color: $primary-green;
         transition: background-color 3OOms;

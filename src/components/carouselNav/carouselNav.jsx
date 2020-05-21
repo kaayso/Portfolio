@@ -1,49 +1,47 @@
-import React from "react";
-import "./carouselNav.css";
+import React from 'react';
+import './carouselNav.css';
+import ChevronRight from '@material-ui/icons/ChevronRight';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
+import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export default function CarouselNav(props) {
   return (
     <div className="carouselNav">
-      <div
-        className="carouselNav__btn"
-        onClick={() => props.navigate(props.index - 1)}
-      >
-        <svg className="back" height="24" viewBox="0 0 24 24" width="24">
-          <path
-            fill="#69EE00"
-            d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
-          />
-        </svg>
-      </div>
+      <Tooltip title="Précédent">
+        <Button
+          onClick={() => props.navigate(props.index - 1)}
+          className="carouselNav__btn-left-btn"
+        >
+          <ChevronLeft />
+        </Button>
+      </Tooltip>
       <div
         onClick={() => props.navigate(0)}
-        className={`carouselNav__state${props.index === 0 ? "--active" : ""}`}
+        className={`carouselNav__state${props.index === 0 ? '--active' : ''}`}
       >
         <div />
       </div>
       <div
         onClick={() => props.navigate(1)}
-        className={`carouselNav__state${props.index === 1 ? "--active" : ""}`}
+        className={`carouselNav__state${props.index === 1 ? '--active' : ''}`}
       >
         <div />
       </div>
       <div
         onClick={() => props.navigate(2)}
-        className={`carouselNav__state${props.index === 2 ? "--active" : ""}`}
+        className={`carouselNav__state${props.index === 2 ? '--active' : ''}`}
       >
         <div />
       </div>
-      <div
-        className="carouselNav__btn"
-        onClick={() => props.navigate(props.index + 1)}
-      >
-        <svg className="forward" height="24" viewBox="0 0 24 24" width="24">
-          <path
-            fill="#69EE00"
-            d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
-          />
-        </svg>
-      </div>
+      <Tooltip title="Suivant">
+        <Button
+          onClick={() => props.navigate(props.index + 1)}
+          className="carouselNav__btn-right-btn"
+        >
+          <ChevronRight />
+        </Button>
+      </Tooltip>
     </div>
   );
 }
