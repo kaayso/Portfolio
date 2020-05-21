@@ -244,3 +244,15 @@
     transform: translateY(0); }
   to {
     transform: translateY(-35px); } }
+
+@-webkit-keyframes slide-right-linear {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(200%); } }
+
+@keyframes slide-right-linear {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(200%); } }

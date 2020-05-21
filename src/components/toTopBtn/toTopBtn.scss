@@ -24,3 +24,11 @@
     }
   }
 }
+
+.toTopBtn-slide-right {
+  animation: 400ms slide-right-linear forwards;
+}
+
+.toTopBtn-slide-from-right {
+  animation: 400ms slide-from-right forwards;
+}
