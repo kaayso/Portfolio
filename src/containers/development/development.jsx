@@ -55,7 +55,7 @@ export default function Development() {
   };
 
   const myRef = React.useRef(null);
-  const THRESHOLD = 0.5;
+  const THRESHOLD = 0.3;
   const intersection = useIntersection(myRef, {
     root: null,
     rootMargin: '0px',
