@@ -1,4 +1,4 @@
-## Project name
+## Project
 
 Portfolio website
 
@@ -6,7 +6,7 @@ Personal website created with React & Material-UI. the purpose of this project i
 
 ## Project Status
 
-This project is globaly done, you can visit it by following this link : https://faycel-benyoussa.com/
+This project is globaly finished.
 
 ## Installation and Setup Instructions
 
