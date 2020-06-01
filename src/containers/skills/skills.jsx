@@ -69,7 +69,7 @@ export default function Skills() {
       content: [
         'react',
         'docker',
-        'node',
+        'node.js',
         'django',
         'mongoDB',
         'PostgreSQL',
@@ -99,25 +99,25 @@ export default function Skills() {
   ];
 
   return (
-    <section ref={myRef} id="skills">
-      <Grid container className="skills-grid">
+    <section ref={myRef} id='skills'>
+      <Grid container className='skills-grid'>
         <Grid
           item
           sm={10}
           md={10}
           lg={4}
-          className="skills-container skills-container--left"
+          className='skills-container skills-container--left'
         >
           {leftWrapper.map((item, index) => (
-            <div key={index} className="skills-item">
-              <div className="skills-item__title">{item.title}</div>
-              <ul className="skills-item__content">
+            <div key={index} className='skills-item'>
+              <div className='skills-item__title'>{item.title}</div>
+              <ul className='skills-item__content'>
                 {item.badge
                   ? item.content.map((element, index) => (
-                      <Badge key={index} text={element} color="#716060" />
+                      <Badge key={index} text={element} color='#716060' />
                     ))
                   : item.content.map((element, index) => (
-                      <li key={index} className="skills-item__line">
+                      <li key={index} className='skills-item__line'>
                         {element}
                       </li>
                     ))}
@@ -126,16 +126,16 @@ export default function Skills() {
           ))}
         </Grid>
         <Grid
-          className="skills-container skills-container--right"
+          className='skills-container skills-container--right'
           item
           sm={10}
           md={10}
           lg={4}
         >
           {rightWrapper.map((item, index) => (
-            <div className="skills-item" key={index}>
-              <div className="skills-item__title">{item.title}</div>
-              <ul className="skills-item__content">
+            <div className='skills-item' key={index}>
+              <div className='skills-item__title'>{item.title}</div>
+              <ul className='skills-item__content'>
                 {item.content.map((element, index) => (
                   <li
                     key={index}
@@ -154,16 +154,16 @@ export default function Skills() {
         </Grid>
       </Grid>
       <svg
-        width="2291"
-        height="1785"
-        viewBox="0 0 2291 1785"
-        fill="none"
-        id="skills-separator"
-        preserveAspectRatio="none"
+        width='2291'
+        height='1785'
+        viewBox='0 0 2291 1785'
+        fill='none'
+        id='skills-separator'
+        preserveAspectRatio='none'
       >
         <path
-          d="M0 0L345.306 204.491L524.331 574.615L1040.38 831.981L1325.8 1295.75L2291 1785H0V0Z"
-          fill="#F8F2EC"
+          d='M0 0L345.306 204.491L524.331 574.615L1040.38 831.981L1325.8 1295.75L2291 1785H0V0Z'
+          fill='#F8F2EC'
         />
       </svg>
     </section>
