@@ -84,29 +84,29 @@ export default function Development() {
   }
 
   return (
-    <section ref={myRef} id="dev">
-      <div className="carousel-container">
-        <Navigator navigate={navigate} index={index} />
-        <Grid id="devItem-wrapper" container>
+    <section ref={myRef} id='dev'>
+      <div className='carousel-container'>
+        <Grid id='devItem-wrapper' container>
           <DevItem
             title={dico[index].title}
             content={dico[index].content}
             dev={dico[index].subject}
           />
         </Grid>
+        <Navigator navigate={navigate} index={index} />
       </div>
-      <Button className="dev__btn" href="#creations" title="mes créations" />
+      <Button className='dev__btn' href='#creations' title='mes créations' />
       <svg
-        width="1800"
-        height="194"
-        viewBox="0 0 1800 194"
-        fill="none"
-        className="dev__bottom-separator"
-        preserveAspectRatio="none"
+        width='1800'
+        height='194'
+        viewBox='0 0 1800 194'
+        fill='none'
+        className='dev__bottom-separator'
+        preserveAspectRatio='none'
       >
         <path
-          d="M1488 123.5L989.5 84.5005L588 123.5L217.501 123.5L-1.00002 178.498L-0.0359101 15.0005L2509.5 15.0006L2144 123.5L1836 84.5005L1488 123.5Z"
-          fill="#716060"
+          d='M1488 123.5L989.5 84.5005L588 123.5L217.501 123.5L-1.00002 178.498L-0.0359101 15.0005L2509.5 15.0006L2144 123.5L1836 84.5005L1488 123.5Z'
+          fill='#716060'
         />
       </svg>
     </section>
