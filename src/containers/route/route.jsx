@@ -17,9 +17,9 @@ export default function Route() {
       period: 'Mai-Septembre 2018',
       location: 'Issoire',
       description: [
-        'Refonte graphique de la console de monitoring des Braincube Live.',
-        'Ajout de nouvelles fonctionnalités à l’application',
-        'Réalisation des tests de couvertures et tests unitaires.',
+        'Réécriture de la partie front de l’application tout en proposant un nouveau design et un outil plus ergonomique.',
+        'Ajout de plusieurs fonctionnalités (front et back) : tri des éléments, liste de favoris, recherche dynamique, suivis des données au moyen d’un graphique sur les 24 dernières heures, classifications des erreurs selon leur type, pagination du contenu, etc...',
+        'Mise en place des tests unitaire (front et back) et snapshot.',
       ],
       title: 'Développeur front-end React',
       subTitle: '{ stage }',
@@ -31,11 +31,13 @@ export default function Route() {
       period: 'Avril-Septembre 2019',
       location: 'Sayat',
       description: [
-        "Développement front-end de l'application Sscraping.",
-        'Réalisation des tests unitaires et de couvertures.',
-        "Réalisation d'une API de chat avec keybase.",
-        "Mise en place d'un bot pour le reporting des tests de couverture et des bugs sur keybase.",
-        'Intégration de Graphcool dans le projet.',
+        'Intégration de maquettes (page de présentation du produit, dashboard, espace client, etc...).',
+        'Mise en place des tests de couvertures et tests unitaires.',
+        "Réalisation d'une API de chat avec keybase et Nodejs.",
+        "Développement d'un bot pour le reporting des tests de couverture et des bugs sur keybase.",
+        'Mise en place de EmailJS pour l’envoi de mails côté client.',
+        'Création de micro-services avec Docker.',
+        'Intégration continue pour réaliser les tests, et vérifier la qualité de code.',
       ],
       title: 'Développeur front-end React',
       subTitle: '{ stage }',
@@ -47,11 +49,12 @@ export default function Route() {
       period: 'Décembre-Avril 2020',
       location: 'Volvic',
       description: [
-        'Développement et maintenance des applications métiers.',
-        'Réalisation du site de formation de la société.',
+        'Maintenance & développement d’une application de gestion d’un établissement de santé et développement de nouvelles fonctionnalités.',
+        'Développement du site de formation de la société.',
         'Réalisation des tests de couvertures et tests unitaires.',
-        'Rédaction de la documentation technique, offres de stage, et exercices de préselection des condidats.',
-        'Rédaction d’articles sur la technologie React.',
+        'Amélioration du SEO.',
+        'Rédaction de la documentation technique, offres de stage, et exercices de présélection des candidats.',
+        'Rédaction d’articles sur la technologie ReactJs.',
         'Participation aux entretiens de stage.',
       ],
       title: 'Développeur full-stack React/Django',
@@ -81,25 +84,25 @@ export default function Route() {
   };
 
   return (
-    <section id="parcours">
-      <Container maxWidth="lg">
-        <div className="parcours__title">parcours</div>
-        <div className="parcours__wrapper">
+    <section id='parcours'>
+      <Container maxWidth='lg'>
+        <div className='parcours__title'>parcours</div>
+        <div className='parcours__wrapper'>
           <TimeLine
             route={route}
             setActiveIndex={navigate}
             activeIndex={activeIndex}
           />
-          <div id="parcours-content-wrapper">
-            <div className="parcours-content__title">
+          <div id='parcours-content-wrapper'>
+            <div className='parcours-content__title'>
               {route[activeIndex].title}
             </div>
-            <div className="parcours-content__sub-title">
+            <div className='parcours-content__sub-title'>
               {route[activeIndex].subTitle}
             </div>
-            <Grid container className="parcours-grid">
+            <Grid container className='parcours-grid'>
               <Grid
-                className="parcours-grid__item parcours-grid__item--infos"
+                className='parcours-grid__item parcours-grid__item--infos'
                 item
                 xs={12}
                 md={8}
@@ -121,7 +124,7 @@ export default function Route() {
                 </ul>
               </Grid>
               <Grid
-                className="parcours-grid__item parcours-grid__item--tasks"
+                className='parcours-grid__item parcours-grid__item--tasks'
                 item
                 xs={12}
                 md={8}
@@ -130,7 +133,7 @@ export default function Route() {
                 <ul>
                   {route[activeIndex].description.map((item, index) => (
                     <li key={index}>
-                      <span className="li-number">{index + 1}. </span>
+                      <span className='li-number'>{index + 1}. </span>
                       {item}
                     </li>
                   ))}
@@ -141,16 +144,16 @@ export default function Route() {
         </div>
       </Container>
       <svg
-        width="1219"
-        height="1249"
-        viewBox="0 0 1219 1249"
-        fill="none"
-        id="vertical-separator"
-        preserveAspectRatio="none"
+        width='1219'
+        height='1249'
+        viewBox='0 0 1219 1249'
+        fill='none'
+        id='vertical-separator'
+        preserveAspectRatio='none'
       >
         <path
-          d="M37 590.5L143.5 245.5L107 115.5L198.5 0H1238.5V568V1248.5H0L54 1156L44.5 1061.5L107 903L37 590.5Z"
-          fill="none"
+          d='M37 590.5L143.5 245.5L107 115.5L198.5 0H1238.5V568V1248.5H0L54 1156L44.5 1061.5L107 903L37 590.5Z'
+          fill='none'
         />
       </svg>
     </section>
