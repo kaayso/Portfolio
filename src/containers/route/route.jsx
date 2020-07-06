@@ -49,7 +49,7 @@ export default function Route() {
       period: 'Décembre-Avril 2020',
       location: 'Volvic',
       description: [
-        'Maintenance & développement d’une application de gestion d’un établissement de santé et développement de nouvelles fonctionnalités.',
+        "Maintenance & ajout de nouvelles fonctionnalités sur l'existant.",
         'Développement du site de formation de la société.',
         'Réalisation des tests de couvertures et tests unitaires.',
         'Amélioration du SEO.',
