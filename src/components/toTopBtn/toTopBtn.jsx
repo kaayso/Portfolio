@@ -20,8 +20,6 @@ export default function ToTopBtn() {
       document.getElementById('toTopBtn').className =
         'MuiButtonBase-root MuiIconButton-root toTopBtn toTopBtn-slide-from-right';
     } else {
-      console.log('up');
-
       document.getElementById('toTopBtn').className =
         'MuiButtonBase-root MuiIconButton-root toTopBtn toTopBtn-slide-right';
     }
