@@ -17,7 +17,7 @@ export default function Development() {
       subject: 'dev-front',
       title: 'développement front',
       content:
-        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>AngularJS</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
+        "J’utilise les langages <b>HTML5/CSS3</b>, <b>Javascript</b>, le préprocesseur <b>SASS</b> et également la librarie <b>React</b>. J'utilise aussi les frameworks CSS <b>SemanticUI, MaterialUI et Bootstrap</b>. En parrallèle de tout ça je m’auto-forme sur le framework <b>Angular</b>. Il est important pour moi de maitriser plusieurs technologies afin de m’adapter au mieux aux différents besoins...",
     },
     {
       subject: 'dev-mob',
