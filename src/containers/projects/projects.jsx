@@ -17,6 +17,13 @@ export default function Projects() {
   React.useEffect(() => {
     setPList([
       {
+        logo: PlayToLearn,
+        title: 'play to learn',
+        subTitle: 'Développement mobile',
+        route: '/play-to-learn',
+        category: 'perso&sco',
+      },
+      {
         logo: SscrapingLogo,
         title: 'Sscraping',
         subTitle: 'Développement web',
@@ -42,13 +49,6 @@ export default function Projects() {
         title: 'picshare',
         subTitle: 'Développement mobile',
         route: '/picshare',
-        category: 'perso&sco',
-      },
-      {
-        logo: PlayToLearn,
-        title: 'play to learn',
-        subTitle: 'Développement mobile',
-        route: '/play-to-learn',
         category: 'perso&sco',
       },
       {

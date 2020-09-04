@@ -73,7 +73,7 @@ export default function Development() {
     gsap.to(element1, 1, {
       ease: 'power4.out',
       opacity: 0,
-      scale: 0,
+      scale: 0.3,
     });
   };
 
