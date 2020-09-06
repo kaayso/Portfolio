@@ -4,7 +4,7 @@ import { useParams, Redirect } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import Code from '@material-ui/icons/Code';
 import Badge from 'components/badge/badge';
 import Projects from 'helpers/projects.js';
 import PNavigator from 'components/pNavigator/pNavigator';
@@ -68,7 +68,7 @@ export default function PDescription() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {currentP.sourceCode && <GitHubIcon />}
+                {currentP.sourceCode && <Code />}
               </a>
               <a
                 className="pDescription__link"

@@ -70,7 +70,7 @@ export default function Skills() {
         'react',
         'docker',
         'node.js',
-        'django',
+        'express',
         'mongoDB',
         'PostgreSQL',
         'redux',
@@ -83,7 +83,7 @@ export default function Skills() {
     },
     {
       title: 'auto-formation et initiations',
-      content: ['express', 'react-native', 'android', 'AngularJS', 'graphQL'],
+      content: ['django', 'react-native', 'android', 'Angular9', 'graphQL'],
       badge: true,
     },
     {

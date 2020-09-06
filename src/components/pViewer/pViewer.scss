@@ -64,6 +64,27 @@
     }
   }
 
+  .pViewer__polygone-left,
+  .pViewer__polygone-right {
+    animation: slide-in 300ms ease-out forwards;
+  }
+
+  .pViewer__logo {
+    img {
+      animation: zoom-in-translate-y 300ms ease-out forwards;
+      height: 180px;
+      width: 180px;
+    }
+  }
+
+  .pViewer__content {
+
+    .pViewer__title,
+    .pViewer__sub-title {
+      animation: down 300ms ease-in-out forwards;
+    }
+  }
+
 }
 
 .pViewer__polygone-left {

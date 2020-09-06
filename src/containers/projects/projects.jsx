@@ -70,13 +70,6 @@ export default function Projects() {
       category: 'pro',
     },
     {
-      logo: ItarverneFormation,
-      title: 'itarverne formation',
-      subTitle: 'Développement web',
-      route: '/itarverne-formation',
-      category: 'pro',
-    },
-    {
       logo: Braincube,
       title: 'console de monitoring',
       subTitle: 'Développement web',
@@ -96,6 +89,13 @@ export default function Projects() {
       subTitle: 'Développement mobile',
       route: '/play-to-learn',
       category: 'perso&sco',
+    },
+    {
+      logo: ItarverneFormation,
+      title: 'itarverne formation',
+      subTitle: 'Développement web',
+      route: '/itarverne-formation',
+      category: 'pro',
     },
     {
       logo: Esat,
@@ -123,16 +123,18 @@ export default function Projects() {
 
   const handleNavigationClick = (index) => {
     if (index === 1) {
-      setPList(rawCards.filter((i) => i.category === 'pro'));
-      setIndex(index);
+      const data = rawCards.filter((i) => i.category === 'pro');
+      setPList(data);
     } else if (index === 2) {
-      setPList(rawCards.filter((i) => i.category === 'perso&sco'));
-      setIndex(index);
+      const data = rawCards.filter((i) => i.category === 'perso&sco');
+      setPList(data);
     } else {
       setPList(rawCards);
-      setIndex(index);
     }
+    setIndex(index);
   };
+
+ 
   return (
     <section id="creations">
       <Container className="creations__container" maxWidth="lg">
