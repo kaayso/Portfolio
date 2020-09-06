@@ -7,7 +7,7 @@ import Button from 'components/button/button';
 import emailjs from 'emailjs-com';
 import { useSnackbar } from 'notistack';
 
-export default function Contact(props) {
+export default function Contact({toggleDrawer, position, visible}) {
   const [inputs, setInputs] = React.useState({
     name: {
       text: '',
@@ -56,7 +56,7 @@ export default function Contact(props) {
       setInputs(checkedInputs);
 
       // close modal
-      props.toggleDrawer(false, event);
+      toggleDrawer(false, event);
 
       // send email
       const templateParams = {
@@ -114,15 +114,15 @@ export default function Contact(props) {
 
   return (
     <SwipeableDrawer
-      anchor={props.position}
-      open={props.visible}
-      onClose={(e) => props.toggleDrawer(false, e)}
-      onOpen={(e) => props.toggleDrawer(true, e)}
+      anchor={position}
+      open={visible}
+      onClose={(e) => toggleDrawer(false, e)}
+      onOpen={(e) => toggleDrawer(true, e)}
     >
       <div className="contact-wrapper">
         <form noValidate className="contact-card">
           <div
-            onClick={(e) => props.toggleDrawer(false, e)}
+            onClick={(e) => toggleDrawer(false, e)}
             className="contact-closer"
           >
             X

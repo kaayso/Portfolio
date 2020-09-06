@@ -5,12 +5,12 @@ import ChevronLeft from "@material-ui/icons/ChevronLeft";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 
-export default function PNavigator(props) {
+export default function PNavigator({onPrevious, onNext}) {
   return (
     <div className="PNavigator">
       <Tooltip title="Projet précédent">
         <Button
-          onClick={() => props.onPrevious()}
+          onClick={() => onPrevious()}
           className="PNavigator__left-btn"
         >
           <ChevronLeft />
@@ -18,7 +18,7 @@ export default function PNavigator(props) {
       </Tooltip>
       <Tooltip title="Projet suivant">
         <Button
-          onClick={() => props.onNext()}
+          onClick={() => onNext()}
           className="PNavigator__right-btn"
         >
           <ChevronRight />

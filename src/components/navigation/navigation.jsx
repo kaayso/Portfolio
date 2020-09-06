@@ -2,22 +2,22 @@ import React from "react";
 import "./navigation.css";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-export default function Navigation(props) {
+export default function Navigation({className, items, click, index}) {
   const mobileBreakPoint = useMediaQuery("(max-width:440px)");
   return (
     <div
       className={`navigation ${mobileBreakPoint ? "navigation--mobile" : ""} ${
-        props.className ? props.className : ""
+        className ? className : ""
       }`}
     >
-      {props.items.map((item) => {
+      {items.map((item) => {
         return (
           <div
             className={`navigation__btn ${
-              props.index === item._key ? "navigation__btn--active" : ""
+              index === item._key ? "navigation__btn--active" : ""
             }`}
             key={item._key}
-            onClick={() => props.click(item._key)}
+            onClick={() => click(item._key)}
           >
             {item.label}
             <div className="navigation__btn--hover">

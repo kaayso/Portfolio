@@ -2,9 +2,9 @@
 import React from "react";
 import "./loader.css";
 
-export default function Loader(props) {
+export default function Loader({visible}) {
   return (
-    <div className={`loader${!props.visible ? "--hidden" : ""}`}>
+    <div className={`loader${!visible ? "--hidden" : ""}`}>
       <div className="loader__bubbles-container">
         <div className="loader__bubble1"></div>
         <div className="loader__bubble2"></div>

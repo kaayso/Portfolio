@@ -13,55 +13,7 @@ import PlayToLearn from 'assets/images/playToLearn.svg';
 export default function Projects() {
   const [index, setIndex] = React.useState(0);
   const [pList, setPList] = React.useState([]);
-
-  React.useEffect(() => {
-    setPList([
-      {
-        logo: PlayToLearn,
-        title: 'play to learn',
-        subTitle: 'Développement mobile',
-        route: '/play-to-learn',
-        category: 'perso&sco',
-      },
-      {
-        logo: SscrapingLogo,
-        title: 'Sscraping',
-        subTitle: 'Développement web',
-        route: '/sscraping',
-        category: 'pro',
-      },
-      {
-        logo: ItarverneFormation,
-        title: 'itarverne formation',
-        subTitle: 'Développement web',
-        route: '/itarverne-formation',
-        category: 'pro',
-      },
-      {
-        logo: Braincube,
-        title: 'console live',
-        subTitle: 'Développement web',
-        route: '/braincube',
-        category: 'pro',
-      },
-      {
-        logo: Picshare,
-        title: 'picshare',
-        subTitle: 'Développement mobile',
-        route: '/picshare',
-        category: 'perso&sco',
-      },
-      {
-        logo: Esat,
-        title: 'IME / ESAT',
-        subTitle: 'Développement web',
-        route: '/esat',
-        category: 'pro',
-      },
-    ]);
-  }, []);
-
-  const rawCards = [
+ const rawCards = [
     {
       logo: SscrapingLogo,
       title: 'Sscraping',
@@ -69,19 +21,19 @@ export default function Projects() {
       route: '/sscraping',
       category: 'pro',
     },
-    {
-      logo: Braincube,
-      title: 'console de monitoring',
-      subTitle: 'Développement web',
-      route: '/braincube',
-      category: 'pro',
-    },
-    {
+     {
       logo: Picshare,
       title: 'picshare',
       subTitle: 'Développement mobile',
       route: '/picshare',
       category: 'perso&sco',
+    },
+    {
+      logo: Braincube,
+      title: 'console live',
+      subTitle: 'Développement web',
+      route: '/braincube',
+      category: 'pro',
     },
     {
       logo: PlayToLearn,
@@ -105,6 +57,12 @@ export default function Projects() {
       category: 'pro',
     },
   ];
+
+  React.useEffect(() => {
+    const data = [...rawCards]
+    setPList(data);
+    // eslint-disable-next-line
+  }, []);
 
   const nav = [
     {
@@ -146,17 +104,17 @@ export default function Projects() {
           </p>
         </div>
         <Navigation click={handleNavigationClick} items={nav} index={index} />
-        <div className="projects__content-container">
-          {pList.map((item) => (
-            <PViewer
-              key={item.title}
-              logo={item.logo}
-              title={item.title}
-              subTitle={item.subTitle}
-              route={item.route}
-            />
-          ))}
-        </div>
+          <div className="projects__content-container">
+            {pList.map((item) => (
+              <PViewer
+                key={item.title}
+                logo={item.logo}
+                title={item.title}
+                subTitle={item.subTitle}
+                route={item.route}
+              />
+            ))}
+          </div>
       </Container>
       <svg
         width="1800"

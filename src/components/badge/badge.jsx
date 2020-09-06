@@ -1,10 +1,10 @@
 import React from "react";
 import "./badge.css";
 
-export default function Badge(props) {
+export default function Badge({color, text}) {
   return (
-    <li className="badge" style={{ backgroundColor: `${props.color}` }}>
-      {props.text}
+    <li className="badge" style={{ backgroundColor: `${color}` }}>
+      {text}
     </li>
   );
 }

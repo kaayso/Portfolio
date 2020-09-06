@@ -10,7 +10,6 @@
     background-color: #FFF;
     position: relative;
     min-height: 70vh;
-
     svg {
         position: absolute;
         bottom: -1px;
@@ -19,14 +18,14 @@
         z-index: 1;
 
         path {
-            fill: $primary-brown;
+            fill: $secondary-dark;
         }
     }
 }
 
 .accueil-right-container {
     position: relative;
-    background-image: url('../../assets/images/nature.jpg');
+    background-image: url('../../assets/images/me.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +37,7 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        background-color: transparent; // TODO : find the right color
+        background-color: rgba(#111, .3);
     }
 
     .accueil-right-container__separator {
@@ -49,7 +48,7 @@
         z-index: 1;
 
         path {
-            fill: $primary-brown;
+            fill: $secondary-dark;
         }
     }
 
@@ -77,6 +76,12 @@
     text-transform: uppercase;
     font-family: "Poppins";
     font-weight: 800;
+    span{
+        color: $primary-green;
+    }
+    span:nth-child(2){
+        color: $primary-red;
+    }
 }
 
 .accueil-left-container__content {
@@ -85,13 +90,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     margin-top: 17%;
 
     .accueil-left-container__title {
         font-size: $huge-font-size;
         text-transform: uppercase;
         font-family: "Poppins";
-        font-weight: 800;
+        font-weight: bolder;
     }
 
     .accueil-left-container__sub-title {
@@ -101,7 +107,7 @@
         width: 250px;
         font-weight: bold;
         text-align: center;
-        background-color: $primary-brown;
+        background-color: $primary-green;
         color: #FFF;
         padding: 5px;
     }

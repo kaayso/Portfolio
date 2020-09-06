@@ -114,7 +114,7 @@ export default function Skills() {
               <ul className='skills-item__content'>
                 {item.badge
                   ? item.content.map((element, index) => (
-                      <Badge key={index} text={element} color='#716060' />
+                      <Badge key={index} text={element} color='rgb(113 95 95)' />
                     ))
                   : item.content.map((element, index) => (
                       <li key={index} className='skills-item__line'>

@@ -6,13 +6,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px auto 30px auto;
+    margin: 60px auto 40px auto;
 }
 
 
 .carouselNav__btn-left-btn.MuiButton-root,
 .carouselNav__btn-right-btn.MuiButton-root {
-    background-color: $primary-light-brown;
+    background-color: #4b4b4b;
     border-radius: 50%;
     min-width: auto;
     margin: 0 2em;

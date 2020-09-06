@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar(props) {
+export default function NavBar({toggleContactDrawer}) {
   const classes = useStyles();
   const [openBottom, setOpenBottom] = useState(false);
   const [links, setLinks] = useState([]);
@@ -62,7 +62,7 @@ export default function NavBar(props) {
   }, [location.pathname]);
 
   const switchFromMenuToContactDrawer = () => (event) => {
-    props.toggleContactDrawer(true, event);
+    toggleContactDrawer(true, event);
     toggleDrawer(false, event);
   };
 
@@ -78,7 +78,7 @@ export default function NavBar(props) {
               text === "contact" ? (
                 <Button
                   key={text}
-                  onClick={(e) => props.toggleContactDrawer(true, e)}
+                  onClick={(e) => toggleContactDrawer(true, e)}
                   size="small"
                   className="navBar__btn"
                 >

@@ -62,22 +62,6 @@ export default function PDescription() {
 
             <div className="pDescription__header">
               <h1 className="pDescription__title">{currentP.name}</h1>
-              <a
-                className="pDescription__link"
-                href={currentP.sourceCode}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {currentP.sourceCode && <Code />}
-              </a>
-              <a
-                className="pDescription__link"
-                href={currentP.webSite}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {currentP.webSite && <LanguageIcon />}
-              </a>
             </div>
             <div className="pDescription__type">
               <div className="pDescription__point" />
@@ -90,14 +74,14 @@ export default function PDescription() {
             <Grid container wrap="wrap-reverse">
               <Grid item xs={12} md={6} lg={6}>
                 <h2 className="pDescription__purpose-title">objectifs</h2>
-                <div className="pDescription__text-content">
+                <article className="pDescription__text-content">
                   {currentP.purpose}
-                </div>
+                </article>
 
                 <h2 className="pDescription__description-title">description</h2>
-                <div className="pDescription__text-content">
+                <article className="pDescription__text-content">
                   {currentP.description}
-                </div>
+                </article>
 
                 <h2 className="pDescription__technos-title">technologies</h2>
                 <ul>
@@ -105,6 +89,24 @@ export default function PDescription() {
                     return <Badge key={item} text={item} />;
                   })}
                 </ul>
+                <div className="pDescription__links-wrapper">
+                  <a
+                    className="pDescription__link"
+                    href={currentP.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {currentP.sourceCode && <span><Code />Code source</span>} 
+                  </a>
+                  <a
+                    className="pDescription__link"
+                    href={currentP.webSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {currentP.webSite && <span><LanguageIcon /> Demo</span>}
+                  </a>
+                </div>
               </Grid>
               <Grid
                 item

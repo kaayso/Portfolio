@@ -8,7 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
 import Tooltip from '@material-ui/core/Tooltip';
 
-export default function Footer(props) {
+export default function Footer({toggleContactDrawer}) {
   const roadMap = [
     {
       link: '/',
@@ -57,7 +57,7 @@ export default function Footer(props) {
                     <Tooltip title={element.label} placement="top">
                       <Button
                         onClick={(event) =>
-                          props.toggleContactDrawer(true, event)
+                          toggleContactDrawer(true, event)
                         }
                       >
                         {element.label}
@@ -83,7 +83,7 @@ export default function Footer(props) {
                     <Tooltip title={element.label} placement="top">
                       <Button
                         onClick={(event) =>
-                          props.toggleContactDrawer(true, event)
+                          toggleContactDrawer(true, event)
                         }
                       >
                         {element.icon}

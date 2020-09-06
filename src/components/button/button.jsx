@@ -1,17 +1,18 @@
 import React from "react";
 import "./button.css";
 
-export default function LinkButton(props) {
+export default function LinkButton({href, className, target, download, title, onClick}) {
+  const btnStyle = `l-button ${className ? className : ""}`;
   return (
     <a
-      href={props.href}
-      className={`l-button ${props.className ? props.className : ""}`}
-      target={props.target}
-      download={props.download}
-      onClick={props.onClick}
+      href={href}
+      className={btnStyle}
+      target={target}
+      download={download}
+      onClick={onClick}
     >
       <div className="l-button__layout"></div>
-      <span>{props.title}</span>
+      <span>{title}</span>
     </a>
   );
 }

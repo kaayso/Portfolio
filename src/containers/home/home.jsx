@@ -8,13 +8,13 @@ import Skills from 'containers/skills/skills';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Introduction />
       <Development />
       <Cv />
       <Projects />
       <Route />
       <Skills />
-    </div>
+    </>
   );
 }

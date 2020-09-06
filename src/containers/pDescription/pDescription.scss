@@ -73,11 +73,27 @@
     margin-top: 5px;
 }
 
+.pDescription__links-wrapper{
+    margin-top: 15px;
+}
+
 .pDescription__link {
-    svg {
-        fill: $primary-orange;
-        margin: auto 15px;
+    text-decoration: none;
+    span{
+        svg {
+            fill: $primary-orange;
+            margin-right: 10px;
+        }
+        color: $brown-text;
+        font-size: $md-font-size;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        &:hover{
+            color: $primary-orange;
+        }
     }
+  
 }
 
 .pDescription__header {
@@ -89,8 +105,7 @@
 .pDescription__pImage {
     margin: auto;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 
     img {
         margin: 50px auto;

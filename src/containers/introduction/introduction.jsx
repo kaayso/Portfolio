@@ -65,6 +65,7 @@ export default function Introduction() {
               <path d="M0 115L691 0.5L899 19V115H0Z" fill="none" />
             </svg>
           )}
+          <div className="accueil-left-container__separator"/>
           <div className="accueil-left-container__content">
             <div className="accueil-left-container__title">bonjour</div>
             <div className="accueil-left-container__sub-title">
@@ -99,9 +100,9 @@ export default function Introduction() {
           <div className="accueil-right-container__filter"></div>
           <div className="accueil-right-container__content">
             dev <br />
-            web <br />
+           <span>web</span> <br />
             &amp; <br />
-            mobile
+            <span>mobile</span>
           </div>
         </Grid>
       </Grid>

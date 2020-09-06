@@ -23,13 +23,16 @@
     font-size: $lg-font-size;
     text-transform: capitalize;
     margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #efeae557;
+    padding-bottom: 1em;
   }
 
   .dev-text__content {
     font-family: 'Poppins', sans-serif;
     color: $primary-white;
-    font-size: $paragraph-size;
-    text-align: left;
+    font-size: 1.5em;
+    text-align: center;
 
     b {
       font-family: 'Poppins', sans-serif;
@@ -138,7 +141,7 @@
   width: 350px;
   position: relative;
   border-radius: 50%;
-  background-image: url('../../assets/images/dev_web.png');
+  background-image: url('../../assets/images/dev_front.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
