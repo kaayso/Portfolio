@@ -16,7 +16,7 @@ export default function Introduction() {
     threshold: THRESHOLD,
   });
 
-  const animationsIn = (element1, element2) => {
+  const animationsIn = (element1, element2, element3) => {
     gsap.to(element1, 1, {
       ease: 'elastic',
       x: 0,
@@ -27,8 +27,12 @@ export default function Introduction() {
       x: 0,
       opacity: 1,
     });
+    gsap.to(element3, 2.5, {
+        ease: 'bounce',
+        scale: 1,
+    });
   };
-  const animationsOut = (element1, element2) => {
+  const animationsOut = (element1, element2, element3) => {
     gsap.to(element1, 1, {
       x: -80,
       ease: 'power4.out',
@@ -39,16 +43,22 @@ export default function Introduction() {
       x: 80,
       opacity: 0,
     });
+    gsap.to(element3, 1, {
+        ease: 'elastic',
+        scale: 0,
+    });
   };
 
   intersection && intersection.intersectionRatio > THRESHOLD
     ? animationsIn(
         '.accueil-left-container__content',
-        '.accueil-right-container__content'
+        '.accueil-right-container__content',
+        '.accueil-left-container__sub-title'
       )
     : animationsOut(
         '.accueil-left-container__content',
-        '.accueil-right-container__content'
+        '.accueil-right-container__content',
+        '.accueil-left-container__sub-title'
       );
 
   return (
