@@ -1,129 +1,132 @@
-@import "app.scss";
+@import 'app.scss';
 
 #accueil {
-    min-height: calc(100vh - 6.25em);
-    position: relative;
-    background-color: #FFF;
+  min-height: calc(100vh - 6.25em);
+  position: relative;
+  background-color: #fff;
 }
 
 .accueil-left-container {
-    background-color: #FFF;
-    position: relative;
-    min-height: 70vh;
-    svg {
-        position: absolute;
-        bottom: -1px;
-        right: -1px;
-        width: 101%;
-        z-index: 1;
+  background-color: #fff;
+  position: relative;
+  min-height: 70vh;
 
-        path {
-            fill: $secondary-dark;
-        }
+  svg {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 101%;
+    z-index: 1;
+
+    path {
+      fill: $secondary-dark;
     }
+  }
 }
 
 .accueil-right-container {
-    position: relative;
-    background-image: url('../../assets/images/me.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 650px;
+  position: relative;
+  background-image: url('../../assets/images/me.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
 
-    .accueil-right-container__filter {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(#111, .3);
+  .accueil-right-container__filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(166, 146, 246, 0.28);
+  }
+
+  .accueil-right-container__separator {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 101%;
+    z-index: 1;
+
+    path {
+      fill: $secondary-dark;
     }
+  }
 
-    .accueil-right-container__separator {
-        position: absolute;
-        bottom: -1px;
-        left: -1px;
-        width: 101%;
-        z-index: 1;
+  .accueil-right-container__mobile-separator {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
 
-        path {
-            fill: $secondary-dark;
-        }
+    path {
+      fill: #fff;
     }
-
-    .accueil-right-container__mobile-separator {
-        position: absolute;
-        top: -15px;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        transform: rotate(180deg);
-
-        path {
-            fill: #FFF;
-        }
-    }
+  }
 }
 
 .accueil-right-container__content {
-    position: absolute;
-    margin-left: .8em;
-    margin-top: 17%;
-    z-index: 2;
-    color: #FFF;
-    font-size: $huge-font-size;
-    text-transform: uppercase;
-    font-family: "Poppins";
-    font-weight: 800;
-    span{
-        color: $primary-green;
-    }
-    span:nth-child(2){
-        color: $primary-red;
-    }
+  position: absolute;
+  margin-left: 0.8em;
+  margin-top: 17%;
+  z-index: 2;
+  color: #fff;
+  font-size: $huge-font-size;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  font-weight: 800;
+
+  span {
+    color: $primary-green;
+  }
+
+  span:nth-child(2) {
+    color: $primary-red;
+  }
 }
 
 .accueil-left-container__content {
-    width: 320px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 17%;
+  width: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17%;
 
-    .accueil-left-container__title {
-        font-size: $huge-font-size;
-        text-transform: uppercase;
-        font-family: "Poppins";
-        font-weight: bolder;
+  .accueil-left-container__title {
+    font-size: $huge-font-size;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: bolder;
+  }
+
+  .accueil-left-container__sub-title {
+    font-size: $lg-font-size;
+    font-family: 'pacifico';
+    text-transform: capitalize;
+    width: 250px;
+    font-weight: bold;
+    text-align: center;
+    background-color: $primary-green;
+    color: #fff;
+    padding: 5px;
+  }
+
+  .accueil-left-container__paragraph {
+    color: $primary-brown;
+    font-family: 'Poppins';
+    font-weight: 100;
+    text-align: center;
+    font-size: $paragraph-size;
+    line-height: 1.7em;
+    padding-bottom: 20px;
+
+    b {
+      font-family: 'Poppins';
+      font-weight: 800;
     }
-
-    .accueil-left-container__sub-title {
-        font-size: $lg-font-size;
-        font-family: "pacifico";
-        text-transform: capitalize;
-        width: 250px;
-        font-weight: bold;
-        text-align: center;
-        background-color: $primary-green;
-        color: #FFF;
-        padding: 5px;
-    }
-
-    .accueil-left-container__paragraph {
-        color: $primary-brown;
-        font-family: "Poppins";
-        font-weight: 100;
-        text-align: center;
-        font-size: $paragraph-size;
-        line-height: 1.7em;
-        padding-bottom: 20px;
-
-        b {
-            font-family: "Poppins";
-            font-weight: 800;
-        }
-    }
+  }
 }
