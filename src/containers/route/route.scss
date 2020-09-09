@@ -94,6 +94,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     li {
       font-family: "pacifico";
@@ -114,7 +115,6 @@
 .parcours-grid__item {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
 
   ul {
     margin: 15px;

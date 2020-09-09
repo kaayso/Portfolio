@@ -13,20 +13,20 @@ import PlayToLearn from 'assets/images/playToLearn.svg';
 export default function Projects() {
   const [index, setIndex] = React.useState(0);
   const [pList, setPList] = React.useState([]);
- const rawCards = [
+  const rawCards = [
+    {
+      logo: Picshare,
+      title: 'picshare',
+      subTitle: 'Développement mobile',
+      route: '/picshare',
+      category: 'perso&sco',
+    },
     {
       logo: SscrapingLogo,
       title: 'Sscraping',
       subTitle: 'Développement web',
       route: '/sscraping',
       category: 'pro',
-    },
-     {
-      logo: Picshare,
-      title: 'picshare',
-      subTitle: 'Développement mobile',
-      route: '/picshare',
-      category: 'perso&sco',
     },
     {
       logo: Braincube,
@@ -59,7 +59,7 @@ export default function Projects() {
   ];
 
   React.useEffect(() => {
-    const data = [...rawCards]
+    const data = [...rawCards];
     setPList(data);
     // eslint-disable-next-line
   }, []);
@@ -92,45 +92,44 @@ export default function Projects() {
     setIndex(index);
   };
 
- 
   return (
-    <section id="creations">
-      <Container className="creations__container" maxWidth="lg">
-        <div className="projects__title">créations</div>
-        <div className="projects__sub-title">
+    <section id='creations'>
+      <Container className='creations__container' maxWidth='lg'>
+        <div className='projects__title'>créations</div>
+        <div className='projects__sub-title'>
           <p>
             Un petit aperçus de mes projets <b>pro</b>,&nbsp;
             <b>scolaires</b> et <b>perso</b>.
           </p>
         </div>
         <Navigation click={handleNavigationClick} items={nav} index={index} />
-          <div className="projects__content-container">
-            {pList.map((item) => (
-              <PViewer
-                key={item.title}
-                logo={item.logo}
-                title={item.title}
-                subTitle={item.subTitle}
-                route={item.route}
-              />
-            ))}
-          </div>
+        <div className='projects__content-container'>
+          {pList.map((item) => (
+            <PViewer
+              key={item.title}
+              logo={item.logo}
+              title={item.title}
+              subTitle={item.subTitle}
+              route={item.route}
+            />
+          ))}
+        </div>
       </Container>
       <svg
-        width="1800"
-        height="95"
-        viewBox="0 0 1800 95"
-        fill="none"
-        className="creations__top-separator"
-        preserveAspectRatio="none"
+        width='1800'
+        height='95'
+        viewBox='0 0 1800 95'
+        fill='none'
+        className='creations__top-separator'
+        preserveAspectRatio='none'
       >
         <path
-          d="M0 0H2538.5L2331.5 46L2100 66.5L1919.5 46H1732.5L1322 86L847.5 62L410.5 95L0 50V0Z"
-          fill="#353535"
+          d='M0 0H2538.5L2331.5 46L2100 66.5L1919.5 46H1732.5L1322 86L847.5 62L410.5 95L0 50V0Z'
+          fill='#353535'
         />
         <path
-          d="M0 0H2538.5L2331.5 46L2100 66.5L1919.5 46H1732.5L1322 86L847.5 62L410.5 95L0 50V0Z"
-          fill="#353535"
+          d='M0 0H2538.5L2331.5 46L2100 66.5L1919.5 46H1732.5L1322 86L847.5 62L410.5 95L0 50V0Z'
+          fill='#353535'
         />
       </svg>
     </section>
