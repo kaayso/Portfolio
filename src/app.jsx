@@ -35,20 +35,20 @@ function App() {
   };
 
   return (
-    <div id="app-root">
+    <div id='app-root'>
       <Router>
         <CssBaseline />
         <Loader visible={visible} />
         <Contact
           visible={cVisible}
           toggleDrawer={toggleDrawer}
-          position="bottom"
+          position='bottom'
         />
         <NavBar toggleContactDrawer={toggleDrawer} />
         <ToTopBtn />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/:slug" component={PDescription} />
+          <Route exact path='/' component={Home} />
+          <Route path='/:slug' component={PDescription} />
         </Switch>
         <Footer toggleContactDrawer={toggleDrawer} />
       </Router>

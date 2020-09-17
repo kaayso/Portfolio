@@ -73,27 +73,30 @@
     margin-top: 5px;
 }
 
-.pDescription__links-wrapper{
+.pDescription__links-wrapper {
     margin-top: 15px;
 }
 
 .pDescription__link {
     text-decoration: none;
-    span{
+
+    span {
         svg {
             fill: $primary-orange;
             margin-right: 10px;
         }
+
         color: $brown-text;
         font-size: $md-font-size;
         font-weight: bold;
         display: flex;
         align-items: center;
-        &:hover{
+
+        &:hover {
             color: $primary-orange;
         }
     }
-  
+
 }
 
 .pDescription__header {
@@ -103,10 +106,6 @@
 }
 
 .pDescription__pImage {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-
     img {
         margin: 50px auto;
         width: 100%;
@@ -115,10 +114,14 @@
 }
 
 .pDescription__pImage--mobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
     img {
         margin: 50px auto;
         width: 100%;
         max-width: 400px;
-        height: auto;
+        height: 100%;
     }
 }
