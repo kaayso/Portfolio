@@ -27,8 +27,43 @@ const Ptl8 = require("assets/images/ptl8.png");
 const Esat0 = require("assets/images/esat0.png");
 const Esat1 = require("assets/images/esat1.png");
 const Esat2 = require("assets/images/esat2.png");
+const RecipeFinder = require("assets/images/recipe-finder.svg");
+const RecipeFinder1 = require("assets/images/recipe-finder1.png");
+const RecipeFinder2 = require("assets/images/recipe-finder2.png");
+const RecipeFinder3 = require("assets/images/recipe-finder3.png");
+const RecipeFinder4 = require("assets/images/recipe-finder4.png");
 
 const projects = [{
+    id: "recipeFinder",
+    name: "recipe finder",
+    type: "Projet personnel",
+    period: "Juillet 2020 - septembre 2020",
+    society: "-",
+    technos: ["Angular9", "JWT", "Node.js", "MongoDB", "BEM CSS", "Docker", "Heroku", "Vercel", "Firebase"],
+    description: "L'application Recipe Finder permet de retrouver des recettes de cuisine réalisables à partir des ingrédients que vous avez à votre disposition. En plus de la liste des recettes proposées par l'application, vous avez également la possibilité de créer et de gérer vos propres recettes.",
+    purpose: "Développement full-stack & auto-formation sur le framework Angular9.",
+    image: RecipeFinder,
+    dev: 'web',
+    ressources: [{
+        id: 'RecipeFinder1',
+        img: RecipeFinder1
+      },
+      {
+        id: 'RecipeFinder2',
+        img: RecipeFinder2
+      },
+      {
+        id: 'RecipeFinder3',
+        img: RecipeFinder3
+      },
+      {
+        id: 'RecipeFinder4',
+        img: RecipeFinder4
+      }
+    ],
+    webSite: "https://recipe-finder-seven.vercel.app/",
+    sourceCode : "https://github.com/kaayso/Recipe-finder"
+  }, {
     id: "sscraping",
     name: "sscraping",
     type: "Projet professionnel",

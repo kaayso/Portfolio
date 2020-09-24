@@ -9,11 +9,19 @@ import Braincube from 'assets/images/braincube.svg';
 import Esat from 'assets/images/esat.svg';
 import Picshare from 'assets/images/picshare.svg';
 import PlayToLearn from 'assets/images/playToLearn.svg';
+import RecipeFinder from 'assets/images/recipe-finder.svg';
 
 export default function Projects() {
   const [index, setIndex] = React.useState(0);
   const [pList, setPList] = React.useState([]);
   const rawCards = [
+    {
+      logo: RecipeFinder,
+      title: 'Recipe Finder',
+      subTitle: 'Développement web',
+      route: '/recipeFinder',
+      category: 'perso&sco',
+    },
     {
       logo: Picshare,
       title: 'picshare',
